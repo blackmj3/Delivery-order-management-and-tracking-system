@@ -14,20 +14,25 @@ const ratingSchema = new mongoose.Schema({
          default: '' 
         } ,
     
-    userId : [{
+    userId :{
         type : mongoose.Schema.Types.ObjectId ,
-        ref : "User"
-    }] ,
+        ref : "User",
+        required: true
+    },
 
-     driverId : [{
+     driverId : {
         type : mongoose.Schema.Types.ObjectId ,
-        ref : "User"
-    }] ,
+        ref : "User",
+        required: true
+    },
     
-    orderId : [{
+    orderId : {
         type : mongoose.Schema.Types.ObjectId ,
-        ref : "Order"
-    }]
+        ref : "Order",
+        required: true,
+        unique: true
+        
+    }
         
 } , {timestamps : true});
 
