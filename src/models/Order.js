@@ -1,39 +1,47 @@
-const mogoose = require("mogoose");
-const Order = mongoose.model("Order",new mogoose.Schema({
+const mongoose = require('mongoose');
+
+const orderSchema = new mongoose.Schema(
+  {
+    client: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User',
+      required: true
+    },
+
+    driver: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User',
+      default: null
+    },
+
     pickupAddress: {
       type: String,
       required: true
-  },
-    dropoffAddress: {
+    },
+
+    deliveryAddress: {
       type: String,
       required: true
-  },
-   description: {
-     type: String,
-     required: true
-  },
+    },
+
+    description: {
+      type: String,
+      required: true
+    },
+
+    status: {
+      type: String,
+      enum: ['PENDING', 'ACCEPTED', 'ON_THE_WAY', 'DELIVERED', 'CANCELLED'],
+      default: 'PENDING'
+    },
+
     expectedTime: {
-     type: String,
-     required: true
+      type: Date
+    }
   },
-   status: {
-     type: String,
-     enum: ['pending', 'in_progress', 'delivered','cancelled'],
-     default: 'pending'
-  },
-  //ref
-  client: {
-     type: Schema.Types.ObjectId,
-     ref: 'User',
-     required: true
-  },
-  driver: {
-    type: Schema.Types.ObjectId,
-    ref: 'User',
-    default: null 
-  }
-}),
-{
+  {
     timestamps: true
-});
-module.exports = Order;
+  }
+);
+
+module.exports = mongoose.model('Order', orderSchema);
