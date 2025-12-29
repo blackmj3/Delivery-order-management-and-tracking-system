@@ -1,8 +1,7 @@
 const mongoose = require('mongoose');
-const User = require ('');
-const Order = require ('');
+
 const LogSchema = new mongoose.Schema({
- admainId: {
+ adminId: {
    type: mongoose.Schema.Types.ObjectId,
    ref : 'User',
  },
@@ -20,4 +19,4 @@ const LogSchema = new mongoose.Schema({
  }
 });
 
-module.exports = mongoose.model('Admin', LogSchema); 
+module.exports = mongoose.model('AdminLog', LogSchema); 
