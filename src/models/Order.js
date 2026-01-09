@@ -19,9 +19,25 @@ const orderSchema = new mongoose.Schema(
       required: true
     },
 
-    deliveryAddress: {
+   /* deliveryAddress: {
       type: String,
-      required: true
+      required: true 
+    },*/
+    deliveryLocation: {
+      type: {
+        type: String,
+        enum: ["Point"],
+        default: "Point",
+      },
+      coordinates: {
+        type: [Number], // [longitude, latitude]
+        required: true,
+      },
+    },
+
+    isNearNotified: {
+      type: Boolean,
+      default: false,
     },
 
     description: {
@@ -42,6 +58,8 @@ const orderSchema = new mongoose.Schema(
   {
     timestamps: true
   }
-);
+); 
+//To calculate distance
+orderSchema.index({ deliveryLocation: "2dsphere" });
 
 module.exports = mongoose.model('Order', orderSchema);

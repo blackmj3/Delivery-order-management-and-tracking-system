@@ -1,12 +1,12 @@
 {
   "name": "delivery-order-management-and-tracking-system",
   "version": "1.0.0",
-  "description": "",
+  "description": "��#\u0000 \u0000D\u0000e\u0000l\u0000i\u0000v\u0000e\u0000r\u0000y\u0000-\u0000o\u0000r\u0000d\u0000e\u0000r\u0000-\u0000m\u0000a\u0000n\u0000a\u0000g\u0000e\u0000m\u0000e\u0000n\u0000t\u0000-\u0000a\u0000n\u0000d\u0000-\u0000t\u0000r\u0000a\u0000c\u0000k\u0000i\u0000n\u0000g\u0000-\u0000s\u0000y\u0000s\u0000t\u0000e\u0000m\u0000\r\u0000 \u0000",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js"
-   
+    "dev": "nodemon server.js",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -17,12 +17,24 @@
   },
   "dependencies": {
     "argon2": "^0.44.0",
+    "cookie-parser": "^1.4.7",
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
+    "express-rate-limit": "^8.2.1",
     "express-validator": "^7.3.1",
-    "mongoose": "^9.0.2",
+    "helmet": "^8.1.0",
+    "mongoose": "^9.1.1",
     "morgan": "^1.10.1",
     "socket.io": "^4.8.3",
-    "socket.io-client": "^4.8.3"
-  }
+    "socket.io-client": "^4.8.3",
+    "winston": "^3.19.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blackmj3/Delivery-order-management-and-tracking-system.git"
+  },
+  "bugs": {
+    "url": "https://github.com/blackmj3/Delivery-order-management-and-tracking-system/issues"
+  },
+  "homepage": "https://github.com/blackmj3/Delivery-order-management-and-tracking-system#readme"
 }
