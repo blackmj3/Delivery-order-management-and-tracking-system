@@ -4,7 +4,7 @@ const ratingSchema = new mongoose.Schema({
 
     score: { 
         type: Number
-       , min: 1 ,
+       , min: 0 ,
         max: 5 , 
         required: true 
     },
@@ -31,9 +31,9 @@ const ratingSchema = new mongoose.Schema({
         ref : "Order",
         required: true,
         unique: true
-        
+    
     }
-        
+     
 } , {timestamps : true});
 
 const Rating = mongoose.model("Rating", ratingSchema) 

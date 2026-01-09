@@ -1,128 +1,142 @@
 const User = require("../models/User");
 const uploadToCloudinary = require("../utils/cloudinary")
+const logger = require('../utils/logger');
+const cache = require('../utils/cacheService');   
+const responseService = require('../utils/responseService');    
 
-class UserController{
+class UserController{   
 
-async addUser(req, res) {
+// get user profile
 
-        const { name, phone } = req.body;
+async getUserById(req, res) {
+    const { id } = req.params;
+
+    const cachedUser = await cache.get(`user_${id}`);
+    if (cachedUser) {
+        logger.info(`User ${id} retrieved from cache.`);
+        return responseService.success(res, 200 , cachedUser);
+    }
+
+        const userId = await User.findById(id);
         
-        const userProfile = await User.create({ 
-            name, 
-            phone
-        });
-
-        return res.status(201).json({success: true,data: userProfile});
-}
-   
-
-async getAllUser (req , res){
-    const getUsers = await User.find().populate("rating");
-    return res.status(200).json({success : true , data : getUsers})
-}
-
-async getUserById (req , res){
-    const {id} = req.params;
-    const userId = await User.findById(id).populate("rating");
-    if(!userId){
-        return res.status(404).json({success : false , data : null });
-    }
-    return res.status(200).json({success : true , data : userId})
-}
-
-
-async updateUserProfile(req, res) {
-
-            const { id } = req.params;
-
-            const { name , phone } = req.body;
-
-            const updateUser = await User.findById(id);
-
-            if(!updateUser) {
-                return res.status(404).json({success: false , data: null });
-            }
-
-            const newUser = await User.findByIdAndUpdate(
-                id, 
-                {name , phone},
-                { new: true }
-            );
-
-            return res.status(200).json({success: true , data: newUser});
-    }
-
-    
- async changeRole(req , res) {
-            const {id} = req.params ;
-            const userrole = await User.findById(id)
-            if(!userrole){
-               return res.status(404).json({success : false , user : null})
-            }
-            const { userRoleChange } = req.body ;
-            userrole.role = userRoleChange  ;
-            return res.status(200).json({message : "the role of user change successfully" , data : userrole})
+        if (!userId) {
+            logger.warn(`User ${id} not found.`);
+            return responseService.error(res, 404 , null);
         }
 
+        await cache.set(`user_${id}, userId`);
+
+        logger.info(`User ${id} retrieved from database.`);
+        return responseService.success(res, 200 , userId);
+}
 
 
-        uploadLocalByMulter = async(req, res) => {
-        if(!req.file) {
-            throw new Error("You Must Select file");
+// Update user profile
+
+async updateUserProfile(req, res) {
+    const { id } = req.params;
+    const { name, phone, email } = req.body;
+
+        const updateUser = await User.findById(id);
+
+        if (!updateUser) {
+            logger.warn(`User ${id} not found for update.`);
+            return responseService.error(res, 404 , null);
+        }
+
+        const newUser = await User.findByIdAndUpdate(
+            id,
+            { name, phone, email },
+            { new: true }
+        );
+
+        await cache.set(`user_${id}, newUser`);
+
+        logger.info(`User ${id} updated successfully.`);
+        return responseService.success(res, 200 , newUser);
+}
+
+
+// upload avatar user by multer
+
+uploadLocalByMulter = async (req, res) => {
+
+        if (!req.file) {
+            logger.warn("File upload failed: No file selected.");
+            return responseService.error(res, 400 , { message: "You must select a file." });
         }
 
         const fileUrl = `${req.protocol}://${req.get('host')}/${req.file.path.replace('uploads/', '')}`;
         
-         const {id} = req.params;
-         const AddUserAvatar = await User.findById(id);
-        if(!AddUserAvatar){
-          return res.status(400).json({Success : false , data : null})
-        }
-
-        AddUserAvatar.avatar = [...AddUserAvatar.avatar , fileUrl];
-        await AddUserAvatar.save();
-        return res.status(201).json({Success : true , data : AddUserAvatar})
-
-    }
-
-
-    uploadCloudByCloudinary = async(req, res) => {
-        if(!req.file) {
-            throw new Error("File Must be uploaded")
-        }
-
-        const path = await uploadToCloudinary(req.file)
-        
-        const {id} = req.params;
-         const AddUserAvatarCloud = await User.findById(id);
-        if(!AddUserAvatarCloud){
-          return res.status(400).json({Success : false , data : null})
-        }
-
-        AddUserAvatarCloud.avatar = [...AddUserAvatarCloud.avatar , path];
-        await AddUserAvatarCloud.save();
-        return res.status(201).json({Success : true , data : AddUserAvatarCloud})
-
-    }
-
-
-    async DeleteUser (req , res){
         const { id } = req.params;
-        const deleteuser =  await User.findByIdAndDelete(id);
-        return res.status(200).json({message: "Deleted User Successfully", data : deleteuser })
-    }
-
-    async AddLocationForDriver (req , res){
-        const {id} = req.params ;
-        const locationUser = await User.findById(id);
-        if(!locationUser){
-            return res.status(400).json({Success : false , data : null})
+        const addUserAvatar = await User.findById(id);
+        
+        if (!addUserAvatar) {
+            logger.warn(`User with ID ${id} not found.`);
+            return responseService.error(res, 404 , { message: "User not found." });
         }
-        const {locationId} = req.body;
-        locationUser.location = [...locationUser.location , locationId]
-        await locationUser.save();
-        return res.status(201).json({message : "Add Location Successfully" , data : locationUser })
-    }
+
+        addUserAvatar.avatar =  fileUrl ;
+        await addUserAvatar.save();
+
+        await cache.set(`user_${id}, addUserAvatar`);
+
+        logger.info(`Avatar uploaded successfully for user ${id}.`);
+        return responseService.success(res, 201 , addUserAvatar);
+}
+
+
+// upload avatar user by cloudinary
+
+uploadCloudByCloudinary = async (req, res) => {
     
+        if (!req.file) {
+            logger.warn("File upload failed: No file selected.");
+            return responseService.error(res, 400 , { message: "File must be uploaded." });
+        }
+
+        const path = await uploadToCloudinary(req.file);
+        
+        const { id } = req.params;
+        const addUserAvatarCloud = await User.findById(id);
+        
+        if (!addUserAvatarCloud) {
+            logger.warn(`User with ID ${id} not found.`);
+            return responseService.error(res, 404 , { message: "User not found." });
+        }
+
+        addUserAvatarCloud.avatar =  path ;
+        await addUserAvatarCloud.save();
+
+        await cache.set(`user_${id}, addUserAvatarCloud`);
+
+        logger.info(`Avatar uploaded successfully for user ${id}.`);
+        return responseService.success(res, 201 , addUserAvatarCloud);
+}
+
+
+DeleteAvatarUser = async (req, res) => {
+    
+        const { id } = req.params;
+        const deleteUserAvatar = await User.findById(id);
+        
+        if (!deleteUserAvatar) {
+            logger.warn(`User with ID ${id} not found.`);
+            return responseService.error(res, 404 , { message: "User not found." });
+        }
+
+        if (!deleteUserAvatar.avatar) {
+            logger.warn(`Avatar not found for user with ID ${id}.`);
+            return responseService.error(res, 404, { message: "Avatar not found." });
+        }
+
+        deleteUserAvatar.avatar = null;
+        await deleteUserAvatar.save();
+
+        logger.info(`Avatar deleted successfully for user ${id}.`);
+        return responseService.success(res, 200, { message: "Avatar deleted successfully." });
+}
+
+
 }
 module.exports = new UserController();
