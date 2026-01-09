@@ -1,17 +1,23 @@
-require("dotenv").config();
-
+// app.js
 const express = require("express");
-const logger = require("./src/utils/logger");
+const authRoutes = require("./src/routes/authRoutes");
+
+
+const cookieParser = require('cookie-parser');
+
 const app = express();
 app.use(express.json());
-app.use(express.static("public"));
-app.use((req, res, next) => {
-  req.log = logger.child({
-    requestId: req.headers["x-request-id"] || Date.now(),
-    ip: req.ip,
-  });
-  next();
-});
-app.use("/api/locations", require("./src/routes/locationRoutes"));
-app.use("/api/notifications", require("./src/routes/notificationRoute"));
+app.use(cookieParser());
+
+//
+app.use("/api/auth", authRoutes);
+
+//
+
+// app.post("/api/auth/register", (req, res) => {
+//   res.json({ ok: true, body: req.body });
+// });
+
+app.get("/", (req, res) => res.send("Hello world"));
+
 module.exports = app;

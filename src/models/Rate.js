@@ -1,41 +1,39 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
-const ratingSchema = new mongoose.Schema({
+const ratingSchema = new mongoose.Schema(
+  {
+    order: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Order',
+      required: true,
+      unique: true
+    },
 
-    score: { 
-        type: Number
-       , min: 1 ,
-        max: 5 , 
-        required: true 
+    client: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User',
+      required: true
+    },
+
+    driver: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User',
+      required: true
+    },
+
+    score: {
+      type: Number,
+      min: 1,
+      max: 5,
+      required: true
     },
 
     comment: {
-        type: String ,
-         default: '' 
-        } ,
-    
-    userId :{
-        type : mongoose.Schema.Types.ObjectId ,
-        ref : "User",
-        required: true
-    },
-
-     driverId : {
-        type : mongoose.Schema.Types.ObjectId ,
-        ref : "User",
-        required: true
-    },
-    
-    orderId : {
-        type : mongoose.Schema.Types.ObjectId ,
-        ref : "Order",
-        required: true,
-        unique: true
-        
+      type: String,
+      default: ''
     }
-        
-} , {timestamps : true});
+  },
+  { timestamps: true }
+);
 
-const Rating = mongoose.model("Rating", ratingSchema) 
-
-module.exports = Rating ;
+module.exports = mongoose.model('Rating', ratingSchema);
