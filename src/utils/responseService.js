@@ -1,9 +1,23 @@
 const success = (data = null, message = 'Success', status = 200) => {
-  return { success: true, message, data, status };
+  
+  return {
+    success: true,
+    status,
+    message,
+    data
+  };
 };
 
 const error = (message = 'Error', status = 400, errors = null) => {
-  return { success: false, message, errors, status };
+  return {
+    success: false,
+    status,
+    message,
+    errors
+  };
 };
 
-module.exports = { success, error };
+module.exports = {
+  success,
+  error
+};
