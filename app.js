@@ -6,18 +6,47 @@ const authRoutes = require("./src/routes/authRoutes");
 const cookieParser = require('cookie-parser');
 
 const app = express();
-app.use(express.json());
-app.use(cookieParser());
+const cookies = require("cookie-parser");
+const { apiLimiter } = require("./src/middlewares/limiter");
 
-//
-app.use("/api/auth", authRoutes);
+const helmet = require("helmet");
+//const xssSanitize = require("./middlewares/xss");
 
-//
+app.use(express.json())
+app.use(cookies())
 
-// app.post("/api/auth/register", (req, res) => {
-//   res.json({ ok: true, body: req.body });
-// });
+// protect from xss
+//app.use(xssSanitize);
 
-app.get("/", (req, res) => res.send("Hello world"));
+// Enhanced security headers specifically for auth
+app.use(helmet({
+    contentSecurityPolicy: {
+        directives: {
+            defaultSrc: ["'self'"],
+            /* styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"], */
+            scriptSrc: ["'self'", "'unsafe-inline'"],
+            imgSrc: ["'self'", "data:", "https:"],
+            /* connectSrc: ["'self'", "https://api.yourdomain.com"],
+            fontSrc: ["'self'", "https://fonts.gstatic.com"], */
+            frameAncestors: ["'none'"], // Prevent clickjacking
+            formAction: ["'self'"] // Restrict form submissions
+        },
+    },
+    crossOriginEmbedderPolicy: false,
+    hsts: {
+        maxAge: 31536000, // 1 year
+        includeSubDomains: true,
+        preload: true
+    },
+    referrerPolicy: { policy: 'strict-origin-when-cross-origin' }
+}));
+// Rate Limiter
+app.use(apiLimiter);
 
+app.use("/api/v1/orders", require("./src/routes/orders.routes"));
+// Error Middleware
+app.use(require("./src/middlewares/errorMiddleware"));
+
+// Not Found
+//app.use(require("./middlewares/notFound"));
 module.exports = app;

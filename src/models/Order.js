@@ -19,6 +19,11 @@ const orderSchema = new mongoose.Schema(
       required: true,
     },
 
+   /* deliveryAddress: {
+      type: String,
+      required: true 
+    },*/
+    
     deliveryLocation: {
       type: {
         type: String,
@@ -54,7 +59,7 @@ const orderSchema = new mongoose.Schema(
   {
     timestamps: true,
   }
-);
+); 
 //To calculate distance
 orderSchema.index({ deliveryLocation: "2dsphere" });
 
