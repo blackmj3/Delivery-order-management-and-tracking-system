@@ -1,16 +1,23 @@
 const mongoose = require('mongoose');
 
-const adminLogSchema = new mongoose.Schema(
+const activityLogSchema = new mongoose.Schema(
   {
-    adminId: {
+    userId: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'User',
       required: true
     },
 
+    role: {
+      type: String,
+      enum: ['ADMIN', 'CLIENT', 'DRIVER'],
+      required: true
+    },
+
     orderId: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'Order'
+      ref: 'Order',
+      default: null
     },
 
     action: {
@@ -26,4 +33,5 @@ const adminLogSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model('AdminLog', adminLogSchema);
+module.exports = mongoose.model('ActivityLog', activityLogSchema);
+

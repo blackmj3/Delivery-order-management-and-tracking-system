@@ -1,6 +1,10 @@
-require("dotenv").config();
-
+// app.js
 const express = require("express");
+const authRoutes = require("./src/routes/authRoutes");
+
+
+const cookieParser = require('cookie-parser');
+
 const app = express();
 const cookies = require("cookie-parser");
 const { apiLimiter } = require("./src/middlewares/limiter");

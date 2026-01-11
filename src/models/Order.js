@@ -1,23 +1,32 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const orderSchema = new mongoose.Schema(
   {
     client: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'User',
-      required: true
+      ref: "User",
+      required: true,
     },
 
     driver: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'User',
-      default: null
+      ref: "User",
+      default: null,
     },
 
     pickupAddress: {
       type: String,
-      required: true
+      required: true,
     },
+<<<<<<< HEAD
+=======
+
+   /* deliveryAddress: {
+      type: String,
+      required: true 
+    },*/
+    
+>>>>>>> 7bb867dc3e94625f9a278500747a8c881ac2a66b
     deliveryLocation: {
       type: {
         type: String,
@@ -37,24 +46,24 @@ const orderSchema = new mongoose.Schema(
 
     description: {
       type: String,
-      required: true
+      required: true,
     },
 
     status: {
       type: String,
-      enum: ['PENDING', 'ACCEPTED', 'ON_THE_WAY', 'DELIVERED', 'CANCELLED'],
-      default: 'PENDING'
+      enum: ["PENDING", "ACCEPTED", "ON_THE_WAY", "DELIVERED", "CANCELLED"],
+      default: "PENDING",
     },
 
     expectedTime: {
-      type: Date
-    }
+      type: Date,
+    },
   },
   {
-    timestamps: true
+    timestamps: true,
   }
 ); 
 //To calculate distance
 orderSchema.index({ deliveryLocation: "2dsphere" });
 
-module.exports = mongoose.model('Order', orderSchema);
+module.exports = mongoose.model("Order", orderSchema);
