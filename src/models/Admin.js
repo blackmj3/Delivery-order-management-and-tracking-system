@@ -10,7 +10,7 @@ const activityLogSchema = new mongoose.Schema(
 
     role: {
       type: String,
-      enum: ['admin', 'user', 'driver'],
+      enum: ['ADMIN', 'CLIENT', 'DRIVER'],
       required: true
     },
 
