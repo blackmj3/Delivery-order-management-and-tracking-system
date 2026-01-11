@@ -18,11 +18,6 @@ const orderSchema = new mongoose.Schema(
       type: String,
       required: true
     },
-
-   /* deliveryAddress: {
-      type: String,
-      required: true 
-    },*/
     deliveryLocation: {
       type: {
         type: String,
