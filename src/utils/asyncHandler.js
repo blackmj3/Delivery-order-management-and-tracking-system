@@ -9,4 +9,8 @@ const asyncHandler = (fn) => (req, res, next) => {
     .catch(next);
 };
 
+<<<<<<< HEAD
 module.exports = asyncHandler;
+=======
+module.exports = asyncHandler;
+>>>>>>> main
