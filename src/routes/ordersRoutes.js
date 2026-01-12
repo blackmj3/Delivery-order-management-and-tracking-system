@@ -1,16 +1,15 @@
 const express = require("express");
 const router = express.Router();
 
-const orderController = require("../controllers/order.controller");
+const orderController = require("../controllers/orderController");
 const asyncHandler = require("../utils/asyncHandler");
-const validate = require("../middlewares/validate");
-const requireAuth = require("../middlewares/requireAuth");
-const authorize = require("../middlewares/authorize");
+const validate = require("../middlewares/validationMiddleware");
+const { requireAuth, authorize } = require("../middlewares/authMiddleware");
 const {
   createOrderValidate,
   orderIdValidate,
   updateOrderStatusValidate,
-} = require("../validations/order.validate");
+} = require("../validations/orderValidate");
 
 
 // Get my orders
