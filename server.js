@@ -1,7 +1,8 @@
 require("dotenv").config();
 const app = require("./app");
 const mongoose = require("mongoose");
-
+const trackSocket = require("./src/sockets/trackSocket");
+const notificationController = require("./src/controllers/notificationController");
 const http = require("http");
 const { Server } = require("socket.io");
 //http server
@@ -14,6 +15,9 @@ const io = new Server(server, {
   },
 });
 // init socket logic
+const connectedUsers = new Map();
+trackSocket(io, connectedUsers);
+notificationController.setIo(io, connectedUsers);
 
 const PORT = process.env.PORT || 3000;
 const MONGOURL = process.env.MONGO_URL;

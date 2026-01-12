@@ -1,6 +1,7 @@
 let ioInstance = null;
 let connectedUsers = null;
 const Notification = require("../models/Notification");
+const logger = require("../utils/logger");
 const { success, error } = require("../utils/responseService");
 class NotificationController {
   setIo = (io, usersMap) => {
@@ -11,7 +12,7 @@ class NotificationController {
   async newOrderNotification(req, res) {
     const { driver, order } = req.body;
     //log
-    req.log.info("Order arrived", {
+    logger.info("Order arrived", {
       event: "ORDER_ARRIVED",
       order,
       driver,
@@ -27,14 +28,24 @@ class NotificationController {
       const driverSocketId = connectedUsers.get(driver.toString());
       if (driverSocketId) {
         ioInstance.to(driverSocketId).emit("newNotification", notification);
+        logger.info("Notification emitted to driver", {
+          driver,
+          socketId: driverSocketId,
+        });
+      } else {
+        logger.warn("Driver is not connected, notification not sent", {
+          driver,
+        });
       }
     }
-    success(res, notification, "new order notification", 200);
+    return res
+      .status(200)
+      .json(success(notification, "Notification created and broadcasted"));
   }
   async acceptOrderNotification(req, res) {
     const { driver, order, client } = req.body;
     //log
-    req.log.info("Order accepted", {
+    logger.info("Order accepted", {
       event: "ORDER_ACCEPTED",
       order,
       driver,
@@ -51,18 +62,32 @@ class NotificationController {
       //after driver accept order send notification to client then join driver and client to order room
       if (clientSocketId) {
         ioInstance.to(clientSocketId).emit("newNotification", notification);
-        ioInstance.to(clientSocketId).emit("orderAccepted", {
-          orderId: order,
+        ioInstance.to(clientSocketId).emit("orderAccepted", { orderId: order });
+        logger.info("Notification emitted to client", {
+          client,
+          socketId: clientSocketId,
+        });
+      } else {
+        logger.warn("Client is not connected, notification not sent", {
+          client,
         });
       }
       const driverSocketId = connectedUsers.get(driver.toString());
       if (driverSocketId) {
-        ioInstance.to(driverSocketId).emit("orderAccepted", {
-          orderId: order,
+        ioInstance.to(driverSocketId).emit("orderAccepted", { orderId: order });
+        logger.info("Order accepted event emitted to driver", {
+          driver,
+          socketId: driverSocketId,
+        });
+      } else {
+        logger.warn("Driver is not connected, orderAccepted event not sent", {
+          driver,
         });
       }
     }
-    success(res, notification, "order accepted notification", 200);
+    return res
+      .status(200)
+      .json(success(notification, "Order accepted notification sent"));
   }
   async markNotificationAsRead(req, res) {
     const { id } = req.params;
@@ -72,9 +97,14 @@ class NotificationController {
       { new: true }
     );
     if (!notification) {
-      error(res, "notification not found", 404, notification);
+      logger.warn("Notification not found", { notificationId: id });
+      return res.status(404).json(error("Notification not found", 404));
     }
-    success(res, notification, "notification mark as read", 200);
+
+    logger.info("Notification marked as read", { notificationId: id });
+    return res
+      .status(200)
+      .json(success(notification, "Notification marked as read"));
   }
 }
 module.exports = new NotificationController();
