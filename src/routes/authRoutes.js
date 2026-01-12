@@ -2,7 +2,7 @@ const express = require("express");
 const authController = require("../controllers/authController");
 
 const { requireAuth } = require("../middlewares/authMiddleware");
-const { loginLimiter } = require("../middlewares/limiter");
+const { apiLimiter, loginLimiter  } = require("../middlewares/limiter");
 
 const {
   registerValidation,
@@ -16,7 +16,7 @@ const router = express.Router();
 
 
 // POST - Register
-router.post('/register', registerValidation, validate, authController.register);
+router.post('/register', apiLimiter, registerValidation, validate, authController.register);
 
 // GET - Verify email
 router.get('/verify-email/:token', authController.verifyEmail);
