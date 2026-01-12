@@ -10,13 +10,13 @@ const cookies = require("cookie-parser");
 const { apiLimiter } = require("./src/middlewares/limiter");
 
 const helmet = require("helmet");
-//const xssSanitize = require("./middlewares/xss");
+const xssSanitize = require("./src/middlewares/xssMiddleware");
 
 app.use(express.json())
 app.use(cookies())
 
 // protect from xss
-//app.use(xssSanitize);
+app.use(xssSanitize);
 
 // Enhanced security headers specifically for auth
 app.use(helmet({
@@ -43,10 +43,16 @@ app.use(helmet({
 // Rate Limiter
 app.use(apiLimiter);
 
+// User APIS
+app.use("/users" , require("./src/routes/userRoute"));
+
+// Rating APIS
+app.use("/Rating" , require("./src/routes/rateRoute"));
+
 app.use("/api/v1/orders", require("./src/routes/orders.routes"));
 // Error Middleware
 app.use(require("./src/middlewares/errorMiddleware"));
 
 // Not Found
-//app.use(require("./middlewares/notFound"));
+app.use(require("./middlewares/notFound"));
 module.exports = app;
