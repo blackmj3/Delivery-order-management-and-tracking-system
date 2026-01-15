@@ -8,14 +8,16 @@ const { success, error } = require("../utils/responseService");
 class LocationController {
   async addLocation(req, res) {
     const { driver, order, latitude, longitude } = req.body;
-    // log location
-    logger.info("Driver location added", {
-      event: "LOCATION_UPDATE",
-      order,
-      driver,
-      latitude,
-      longitude,
-    });
+    //check if driver exist
+    const driverExists = await User.findById(driver).lean();
+    if (!driverExists) {
+      return res.status(404).json(error("Driver not found", 404));
+    }
+    //check if order exist
+    const orderExists = await Order.findById(order).lean();
+    if (!orderExists) {
+      return res.status(404).json(error("Order not found", 404));
+    }
 
     const location = await Location.findOneAndUpdate(
       { driver, order },
@@ -29,6 +31,14 @@ class LocationController {
       },
       { new: true, upsert: true }
     );
+    // log location
+    logger.info("Driver location added", {
+      event: "LOCATION_UPDATE",
+      order,
+      driver,
+      latitude,
+      longitude,
+    });
 
     return res
       .status(200)
@@ -36,7 +46,7 @@ class LocationController {
   }
 
   async getOrderLocation(req, res) {
-    const orderId = req.params.orderId;
+    const orderId = req.params.id;
     const order = await Order.findById(orderId);
     if (!order) {
       logger.warn("Order not found", { orderId });

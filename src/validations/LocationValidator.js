@@ -1,4 +1,4 @@
-const { body } = require("express-validator");
+const { body, params } = require("express-validator");
 const validateCreateLocation = [
   body("driver")
     .notEmpty()

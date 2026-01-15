@@ -85,7 +85,7 @@ class AuthController {
     const user = await User.findOne({ email }).select('+password');
     if (!user) {
       cache.set(cacheKey, attempts + 1, 900);
-      const resp = error('Invalid credentials', 401);
+      const resp = error('Invalid email or password', 401);
       return res.status(resp.status).json(resp);
     }
 
@@ -98,7 +98,7 @@ class AuthController {
     if (!isValid) {
       cache.set(cacheKey, attempts + 1, 900);
       await this.handledFailedLogin(user);
-      const resp = error('Invalid credentials', 401);
+      const resp = error('Invalid email or password', 401);
       return res.status(resp.status).json(resp);
     }
 

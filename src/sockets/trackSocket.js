@@ -27,7 +27,7 @@ module.exports = (io, connectedUsers) => {
           client: "695ae34503480665b8f821ed",
           driver: "65f8e1b9a2d9c1234567890a",
           deliveryLocation: {
-            coordinates: [46.6748, 24.7122],
+            coordinates: [35.91055, 31.9539],
           },
         };
       } //return
@@ -55,7 +55,7 @@ module.exports = (io, connectedUsers) => {
       const locationCacheKey = `order:${order}:location`;
       cache.set(
         locationCacheKey,
-        { driver, order, latitude, longitude, updatedAt: Date.now() },
+        { driver, order, longitude, latitude, updatedAt: Date.now() },
         30
       );
       //update in database but every 15 seconds
@@ -75,6 +75,7 @@ module.exports = (io, connectedUsers) => {
           },
           { new: true, upsert: true }
         );
+
         cache.set(dbCacheKey, Date.now(), 60);
         logger.info("update on database and cache", {
           dbCacheKey,
@@ -92,7 +93,6 @@ module.exports = (io, connectedUsers) => {
       //get order document from cache to get client location
       const orderCached = cache.get(`order:${order}`);
       if (!orderCached) return;
-
       const [clientLng, clientLat] = orderCached.deliveryLocation.coordinates;
       //calculate distance
       const result = await Location.aggregate([
@@ -120,9 +120,7 @@ module.exports = (io, connectedUsers) => {
           const notification = await Notification.create({
             user: clientId,
             title: "Driver Nearby",
-            message: `Your driver is ${Math.round(
-              result[0].distance
-            )} meters away`,
+            message: `Your driver is just a few meters away`,
             type: "ORDER_NEARBY",
             order,
           });

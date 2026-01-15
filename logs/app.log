@@ -124,3 +124,810 @@
 {"event":"register","level":"info","message":"User registered via socket","socketId":"2sod2PbC3tWSCHM-AAAB","timestamp":"2026-01-12 13:16:11","userId":"695ae34503480665b8f821ed"}
 {"event":"register","level":"info","message":"User registered via socket","socketId":"FHLtXQxn-xLEUJRnAAAD","timestamp":"2026-01-12 13:16:12","userId":"65f8e1b9a2d9c1234567890a"}
 {"level":"info","message":"Notification marked as read","notificationId":"695d508d0073dd4cfff84423","timestamp":"2026-01-12 13:20:08"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"LOCATION_UPDATE","latitude":33.5138,"level":"info","longitude":36.2765,"message":"Driver location added","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 14:19:04"}
+{"level":"warn","message":"Order not found","orderId":"64f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 14:19:14"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ARRIVED","level":"info","message":"Order arrived","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 14:19:18"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"warn","message":"Driver is not connected, notification not sent","timestamp":"2026-01-12 14:19:18"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"mR_5Rq7BeIEgXDoHAAAB","timestamp":"2026-01-12 14:19:48","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"81jCYGEajONGcBTjAAAD","timestamp":"2026-01-12 14:19:48","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"CCJ3qKRs-kauQtfZAAAF","timestamp":"2026-01-12 14:20:12","userId":"695ae34503480665b8f821ed"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ARRIVED","level":"info","message":"Order arrived","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 14:20:16"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Notification emitted to driver","socketId":"81jCYGEajONGcBTjAAAD","timestamp":"2026-01-12 14:20:17"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 14:20:25"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"CCJ3qKRs-kauQtfZAAAF","timestamp":"2026-01-12 14:20:25"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"81jCYGEajONGcBTjAAAD","timestamp":"2026-01-12 14:20:25"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"81jCYGEajONGcBTjAAAD","timestamp":"2026-01-12 14:20:26"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"CCJ3qKRs-kauQtfZAAAF","timestamp":"2026-01-12 14:20:26"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 14:20:31"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768213231050,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 14:20:51"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"sw2FZhmLDWvfVfsjAAAB","timestamp":"2026-01-12 17:10:58","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"7x-Alu0CNhMwGgymAAAD","timestamp":"2026-01-12 17:10:59","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"ul0R-qLAe9Axf3ZKAAAF","timestamp":"2026-01-12 17:12:09","userId":"695ae34503480665b8f821ed"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 17:12:50"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"ul0R-qLAe9Axf3ZKAAAF","timestamp":"2026-01-12 17:12:51"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"7x-Alu0CNhMwGgymAAAD","timestamp":"2026-01-12 17:12:51"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"7x-Alu0CNhMwGgymAAAD","timestamp":"2026-01-12 17:12:51"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"ul0R-qLAe9Axf3ZKAAAF","timestamp":"2026-01-12 17:12:51"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 17:12:56"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768223576123,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 17:13:16"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"rwC0pQ4NvHJ1WS_-AAAD","timestamp":"2026-01-12 17:16:45","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"WMCWajLdglIuIuBJAAAF","timestamp":"2026-01-12 17:17:29","userId":"65f8e1b9a2d9c1234567890a"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 17:17:35"}
+{"client":"695ae34503480665b8f821ed","level":"warn","message":"Client is not connected, notification not sent","timestamp":"2026-01-12 17:17:35"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"WMCWajLdglIuIuBJAAAF","timestamp":"2026-01-12 17:17:35"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"WMCWajLdglIuIuBJAAAF","timestamp":"2026-01-12 17:17:35"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"qFhUP6ymK9X89yVJAAAB","timestamp":"2026-01-12 17:20:21","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"IToV1wMe8tGrd32NAAAD","timestamp":"2026-01-12 17:20:25","userId":"65f8e1b9a2d9c1234567890a"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 17:20:32"}
+{"client":"695ae34503480665b8f821ed","level":"warn","message":"Client is not connected, notification not sent","timestamp":"2026-01-12 17:20:32"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"warn","message":"Driver is not connected, orderAccepted event not sent","timestamp":"2026-01-12 17:20:32"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"-NncTeRXBkvP6l5zAAAD","timestamp":"2026-01-12 17:20:36","userId":"695ae34503480665b8f821ed"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"MZ6hufcQByQl-8bjAAAF","timestamp":"2026-01-12 17:20:41","userId":"695ae34503480665b8f821ed"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 17:20:52"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"MZ6hufcQByQl-8bjAAAF","timestamp":"2026-01-12 17:20:52"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"warn","message":"Driver is not connected, orderAccepted event not sent","timestamp":"2026-01-12 17:20:52"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"MZ6hufcQByQl-8bjAAAF","timestamp":"2026-01-12 17:20:52"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"_GaEms7WNarz0A2GAAAD","timestamp":"2026-01-12 17:21:39","userId":"65f8e1b9a2d9c1234567890a"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 17:21:44"}
+{"client":"695ae34503480665b8f821ed","level":"warn","message":"Client is not connected, notification not sent","timestamp":"2026-01-12 17:21:44"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"_GaEms7WNarz0A2GAAAD","timestamp":"2026-01-12 17:21:44"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"_GaEms7WNarz0A2GAAAD","timestamp":"2026-01-12 17:21:44"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 17:21:49"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"MP3DjpsDZWjMf4kqAAAF","timestamp":"2026-01-12 17:22:05","userId":"695ae34503480665b8f821ed"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768224109851,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 17:22:09"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"v59dZQ7n8HdsnI9DAAAH","timestamp":"2026-01-12 17:22:40","userId":"695ae34503480665b8f821ed"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"_TX9ujvF15vdOPW3AAAJ","timestamp":"2026-01-12 17:22:45","userId":"695ae34503480665b8f821ed"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"wNlWZzqjlyDA6SRUAAAL","timestamp":"2026-01-12 17:22:54","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"Cn8r3b_MhaAJPXurAAAN","timestamp":"2026-01-12 17:23:08","userId":"695ae34503480665b8f821ed"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 17:23:24"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"Cn8r3b_MhaAJPXurAAAN","timestamp":"2026-01-12 17:23:24"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"wNlWZzqjlyDA6SRUAAAL","timestamp":"2026-01-12 17:23:24"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"Cn8r3b_MhaAJPXurAAAN","timestamp":"2026-01-12 17:23:24"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"wNlWZzqjlyDA6SRUAAAL","timestamp":"2026-01-12 17:23:24"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 17:23:29"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768224209280,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 17:23:49"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"NV1c6m49vBYvKCtyAAAD","timestamp":"2026-01-12 17:26:38","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"-82tuMUSlG7cmrtnAAAD","timestamp":"2026-01-12 17:28:02","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"utaMPyMEvZvkjhQcAAAF","timestamp":"2026-01-12 17:28:09","userId":"695ae34503480665b8f821ed"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 17:28:14"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"utaMPyMEvZvkjhQcAAAF","timestamp":"2026-01-12 17:28:15"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"-82tuMUSlG7cmrtnAAAD","timestamp":"2026-01-12 17:28:15"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"-82tuMUSlG7cmrtnAAAD","timestamp":"2026-01-12 17:28:15"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"utaMPyMEvZvkjhQcAAAF","timestamp":"2026-01-12 17:28:15"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 17:28:20"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768224500117,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 17:28:40"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768224520136,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 17:29:00"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768224540189,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 17:29:20"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"yX3kdmST_NrsHavdAAAD","timestamp":"2026-01-12 17:30:11","userId":"65f8e1b9a2d9c1234567890a"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 17:30:18"}
+{"client":"695ae34503480665b8f821ed","level":"warn","message":"Client is not connected, notification not sent","timestamp":"2026-01-12 17:30:18"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"yX3kdmST_NrsHavdAAAD","timestamp":"2026-01-12 17:30:18"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"yX3kdmST_NrsHavdAAAD","timestamp":"2026-01-12 17:30:18"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 17:30:23"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768224623557,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 17:30:43"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768224643583,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 17:31:03"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768224663610,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 17:31:23"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"zTHfpbgi5PXbVJVhAAAD","timestamp":"2026-01-12 17:31:43","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"gtvMEbJY9TLWZP3oAAAB","timestamp":"2026-01-12 17:33:16","userId":"65f8e1b9a2d9c1234567890a"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 17:33:22"}
+{"client":"695ae34503480665b8f821ed","level":"warn","message":"Client is not connected, notification not sent","timestamp":"2026-01-12 17:33:22"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"gtvMEbJY9TLWZP3oAAAB","timestamp":"2026-01-12 17:33:22"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"gtvMEbJY9TLWZP3oAAAB","timestamp":"2026-01-12 17:33:23"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 17:33:28"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"I84tqJKMfQ1rQCgXAAAF","timestamp":"2026-01-12 17:33:33","userId":"695ae34503480665b8f821ed"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"nOjKZcG4VHKUkGcVAAAH","timestamp":"2026-01-12 17:33:41","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"ppedeoj6X5CgUaOLAAAD","timestamp":"2026-01-12 17:33:54","userId":"65f8e1b9a2d9c1234567890a"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 17:33:58"}
+{"client":"695ae34503480665b8f821ed","level":"warn","message":"Client is not connected, notification not sent","timestamp":"2026-01-12 17:33:58"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"ppedeoj6X5CgUaOLAAAD","timestamp":"2026-01-12 17:33:58"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"ppedeoj6X5CgUaOLAAAD","timestamp":"2026-01-12 17:33:58"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 17:34:03"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"D5jP2SJHHbbC1XeCAAAF","timestamp":"2026-01-12 17:34:20","userId":"695ae34503480665b8f821ed"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768224843240,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 17:34:23"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768224863269,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 17:34:43"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"l9xohx1rrTJa_HXfAAAD","timestamp":"2026-01-12 17:35:09","userId":"65f8e1b9a2d9c1234567890a"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 17:35:12"}
+{"client":"695ae34503480665b8f821ed","level":"warn","message":"Client is not connected, notification not sent","timestamp":"2026-01-12 17:35:12"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"l9xohx1rrTJa_HXfAAAD","timestamp":"2026-01-12 17:35:12"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"l9xohx1rrTJa_HXfAAAD","timestamp":"2026-01-12 17:35:12"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 17:35:18"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"4IZ9fJQho5pFZ0_RAAAF","timestamp":"2026-01-12 17:35:36","userId":"695ae34503480665b8f821ed"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768224918009,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 17:35:38"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"2vXDytQdqtpHrQUiAAAH","timestamp":"2026-01-12 17:35:38","userId":"695ae34503480665b8f821ed"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768224938024,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 17:35:58"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"-YfwerwSyu1npvhuAAAJ","timestamp":"2026-01-12 17:36:05","userId":"695ae34503480665b8f821ed"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"wwh96aGu4iyarb9zAAAL","timestamp":"2026-01-12 17:36:14","userId":"65f8e1b9a2d9c1234567890a"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 17:36:19"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"-YfwerwSyu1npvhuAAAJ","timestamp":"2026-01-12 17:36:19"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"wwh96aGu4iyarb9zAAAL","timestamp":"2026-01-12 17:36:19"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"wwh96aGu4iyarb9zAAAL","timestamp":"2026-01-12 17:36:19"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"-YfwerwSyu1npvhuAAAJ","timestamp":"2026-01-12 17:36:19"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768224958057,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 17:36:24"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768224984889,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 17:36:44"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768225004910,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 17:37:04"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768225024928,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 17:37:24"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"q_sIQlIaMNT50vx7AAAD","timestamp":"2026-01-12 17:40:10","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"XDpIdRyS-70yELoAAAAD","timestamp":"2026-01-12 17:40:46","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"kd-a2IsgxUFaLskhAAAD","timestamp":"2026-01-12 17:41:02","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"P5JihCBIruudrZNzAAAF","timestamp":"2026-01-12 17:41:07","userId":"695ae34503480665b8f821ed"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 17:41:13"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"P5JihCBIruudrZNzAAAF","timestamp":"2026-01-12 17:41:13"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"kd-a2IsgxUFaLskhAAAD","timestamp":"2026-01-12 17:41:13"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"P5JihCBIruudrZNzAAAF","timestamp":"2026-01-12 17:41:13"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"kd-a2IsgxUFaLskhAAAD","timestamp":"2026-01-12 17:41:13"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 17:41:18"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768225278680,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 17:41:38"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768225298698,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 17:41:58"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"VZ7B-4L_XZjG9MnRAAAD","timestamp":"2026-01-12 17:43:09","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"cZLaCscGZjrCIx3_AAAF","timestamp":"2026-01-12 17:43:17","userId":"695ae34503480665b8f821ed"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 17:43:24"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"cZLaCscGZjrCIx3_AAAF","timestamp":"2026-01-12 17:43:24"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"VZ7B-4L_XZjG9MnRAAAD","timestamp":"2026-01-12 17:43:24"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"VZ7B-4L_XZjG9MnRAAAD","timestamp":"2026-01-12 17:43:24"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"cZLaCscGZjrCIx3_AAAF","timestamp":"2026-01-12 17:43:24"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 17:43:29"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768225409634,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 17:43:49"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768225429629,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 17:44:09"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"U2e5ctkIhXgHtAdtAAAD","timestamp":"2026-01-12 17:44:36","userId":"65f8e1b9a2d9c1234567890a"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 17:44:36"}
+{"client":"695ae34503480665b8f821ed","level":"warn","message":"Client is not connected, notification not sent","timestamp":"2026-01-12 17:44:36"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"U2e5ctkIhXgHtAdtAAAD","timestamp":"2026-01-12 17:44:36"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"U2e5ctkIhXgHtAdtAAAD","timestamp":"2026-01-12 17:44:36"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 17:44:41"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"iBvu5tqmFMec58j5AAAF","timestamp":"2026-01-12 17:44:45","userId":"695ae34503480665b8f821ed"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 17:44:48"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"iBvu5tqmFMec58j5AAAF","timestamp":"2026-01-12 17:44:49"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"U2e5ctkIhXgHtAdtAAAD","timestamp":"2026-01-12 17:44:49"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"iBvu5tqmFMec58j5AAAF","timestamp":"2026-01-12 17:44:49"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"U2e5ctkIhXgHtAdtAAAD","timestamp":"2026-01-12 17:44:49"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768225481574,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 17:45:01"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768225501608,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 17:45:21"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"8y3_9WUzkHYFey11AAAF","timestamp":"2026-01-12 17:58:21","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"Q_PEe7giru093LQ_AAAH","timestamp":"2026-01-12 17:58:27","userId":"695ae34503480665b8f821ed"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 17:58:33"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"Q_PEe7giru093LQ_AAAH","timestamp":"2026-01-12 17:58:33"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"8y3_9WUzkHYFey11AAAF","timestamp":"2026-01-12 17:58:33"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"8y3_9WUzkHYFey11AAAF","timestamp":"2026-01-12 17:58:33"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"Q_PEe7giru093LQ_AAAH","timestamp":"2026-01-12 17:58:33"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 17:58:38"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768226318410,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 17:58:58"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768226338456,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 17:59:18"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"5UVt6QpZtyRsnDjLAAAF","timestamp":"2026-01-12 18:04:25","userId":"695ae34503480665b8f821ed"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 18:05:05"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"5UVt6QpZtyRsnDjLAAAF","timestamp":"2026-01-12 18:05:05"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"warn","message":"Driver is not connected, orderAccepted event not sent","timestamp":"2026-01-12 18:05:05"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"5UVt6QpZtyRsnDjLAAAF","timestamp":"2026-01-12 18:05:05"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"-spZMY3NpT1LHFmDAAAH","timestamp":"2026-01-12 18:05:18","userId":"65f8e1b9a2d9c1234567890a"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 18:05:22"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"5UVt6QpZtyRsnDjLAAAF","timestamp":"2026-01-12 18:05:22"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"-spZMY3NpT1LHFmDAAAH","timestamp":"2026-01-12 18:05:22"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"-spZMY3NpT1LHFmDAAAH","timestamp":"2026-01-12 18:05:22"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"5UVt6QpZtyRsnDjLAAAF","timestamp":"2026-01-12 18:05:22"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 18:05:27"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768226727999,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 18:05:48"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768226748009,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 18:06:08"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"Bbo3sJXdxGcVS8-dAAAJ","timestamp":"2026-01-12 18:06:35","userId":"695ae34503480665b8f821ed"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"mQkcks5KAYWsVAgDAAAL","timestamp":"2026-01-12 18:07:44","userId":"695ae34503480665b8f821ed"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 18:08:05"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"mQkcks5KAYWsVAgDAAAL","timestamp":"2026-01-12 18:08:05"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"-spZMY3NpT1LHFmDAAAH","timestamp":"2026-01-12 18:08:05"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"mQkcks5KAYWsVAgDAAAL","timestamp":"2026-01-12 18:08:05"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"-spZMY3NpT1LHFmDAAAH","timestamp":"2026-01-12 18:08:05"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"GR06o-MU4wt9KPFjAAAN","timestamp":"2026-01-12 18:08:45","userId":"65f8e1b9a2d9c1234567890a"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 18:08:49"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"mQkcks5KAYWsVAgDAAAL","timestamp":"2026-01-12 18:08:50"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"GR06o-MU4wt9KPFjAAAN","timestamp":"2026-01-12 18:08:50"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"mQkcks5KAYWsVAgDAAAL","timestamp":"2026-01-12 18:08:50"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"GR06o-MU4wt9KPFjAAAN","timestamp":"2026-01-12 18:08:50"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 18:08:55"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768226935137,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 18:09:15"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768226955168,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 18:09:35"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"YqiimGhgSYELq86dAAAD","timestamp":"2026-01-12 18:13:27","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"68MZ5UVQVmF8zRZoAAAF","timestamp":"2026-01-12 18:13:49","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"h2DGc7IlgKH9tODRAAAH","timestamp":"2026-01-12 18:13:55","userId":"695ae34503480665b8f821ed"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 18:13:59"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"h2DGc7IlgKH9tODRAAAH","timestamp":"2026-01-12 18:13:59"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"68MZ5UVQVmF8zRZoAAAF","timestamp":"2026-01-12 18:13:59"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"h2DGc7IlgKH9tODRAAAH","timestamp":"2026-01-12 18:13:59"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"68MZ5UVQVmF8zRZoAAAF","timestamp":"2026-01-12 18:13:59"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 18:14:04"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768227244726,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 18:14:24"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768227264753,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 18:14:44"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768227284785,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 18:15:04"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768227304808,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 18:15:24"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"q819B-LxekZQqFzQAAAD","timestamp":"2026-01-12 20:22:15","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"PbjHOmSrpnahiGDAAAAF","timestamp":"2026-01-12 20:22:15","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"mmQ-Gp_EXri1ymB4AAAH","timestamp":"2026-01-12 20:22:25","userId":"695ae34503480665b8f821ed"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 20:22:30"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"mmQ-Gp_EXri1ymB4AAAH","timestamp":"2026-01-12 20:22:30"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"PbjHOmSrpnahiGDAAAAF","timestamp":"2026-01-12 20:22:30"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"PbjHOmSrpnahiGDAAAAF","timestamp":"2026-01-12 20:22:30"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"mmQ-Gp_EXri1ymB4AAAH","timestamp":"2026-01-12 20:22:30"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 20:22:35"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768234955565,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 20:22:56"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"xf2N1jN3KQ219tO6AAAD","timestamp":"2026-01-12 20:26:44","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"T-A4fawVdV3gaqn4AAAF","timestamp":"2026-01-12 20:27:07","userId":"695ae34503480665b8f821ed"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 20:27:10"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"T-A4fawVdV3gaqn4AAAF","timestamp":"2026-01-12 20:27:10"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"warn","message":"Driver is not connected, orderAccepted event not sent","timestamp":"2026-01-12 20:27:10"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"T-A4fawVdV3gaqn4AAAF","timestamp":"2026-01-12 20:27:10"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 20:27:32"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"T-A4fawVdV3gaqn4AAAF","timestamp":"2026-01-12 20:27:32"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"warn","message":"Driver is not connected, orderAccepted event not sent","timestamp":"2026-01-12 20:27:32"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"T-A4fawVdV3gaqn4AAAF","timestamp":"2026-01-12 20:27:32"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"cH8vgQ7B5o40sChrAAAD","timestamp":"2026-01-12 20:28:07","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"b5JVj5UE0_q-c_JVAAAF","timestamp":"2026-01-12 20:28:12","userId":"695ae34503480665b8f821ed"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 20:28:16"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"b5JVj5UE0_q-c_JVAAAF","timestamp":"2026-01-12 20:28:16"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"cH8vgQ7B5o40sChrAAAD","timestamp":"2026-01-12 20:28:16"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"cH8vgQ7B5o40sChrAAAD","timestamp":"2026-01-12 20:28:16"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"b5JVj5UE0_q-c_JVAAAF","timestamp":"2026-01-12 20:28:16"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 20:28:21"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768235301251,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 20:28:41"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768235321270,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 20:29:01"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768235341319,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 20:29:21"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"MjOIJOJKujnFOmc7AAAC","timestamp":"2026-01-12 20:33:09","userId":"695ae34503480665b8f821ed"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"7JK6M-h2TUNXY3WRAAAE","timestamp":"2026-01-12 20:33:17","userId":"65f8e1b9a2d9c1234567890a"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 20:33:24"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"MjOIJOJKujnFOmc7AAAC","timestamp":"2026-01-12 20:33:24"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"7JK6M-h2TUNXY3WRAAAE","timestamp":"2026-01-12 20:33:24"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"7JK6M-h2TUNXY3WRAAAE","timestamp":"2026-01-12 20:33:24"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"MjOIJOJKujnFOmc7AAAC","timestamp":"2026-01-12 20:33:24"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 20:33:25"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"MjOIJOJKujnFOmc7AAAC","timestamp":"2026-01-12 20:33:25"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"7JK6M-h2TUNXY3WRAAAE","timestamp":"2026-01-12 20:33:25"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"MjOIJOJKujnFOmc7AAAC","timestamp":"2026-01-12 20:33:25"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"7JK6M-h2TUNXY3WRAAAE","timestamp":"2026-01-12 20:33:25"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 20:33:26"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"MjOIJOJKujnFOmc7AAAC","timestamp":"2026-01-12 20:33:26"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"7JK6M-h2TUNXY3WRAAAE","timestamp":"2026-01-12 20:33:26"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"7JK6M-h2TUNXY3WRAAAE","timestamp":"2026-01-12 20:33:26"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"MjOIJOJKujnFOmc7AAAC","timestamp":"2026-01-12 20:33:26"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 20:33:27"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"MjOIJOJKujnFOmc7AAAC","timestamp":"2026-01-12 20:33:27"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"7JK6M-h2TUNXY3WRAAAE","timestamp":"2026-01-12 20:33:27"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"7JK6M-h2TUNXY3WRAAAE","timestamp":"2026-01-12 20:33:27"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"MjOIJOJKujnFOmc7AAAC","timestamp":"2026-01-12 20:33:27"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 20:33:27"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"MjOIJOJKujnFOmc7AAAC","timestamp":"2026-01-12 20:33:27"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"7JK6M-h2TUNXY3WRAAAE","timestamp":"2026-01-12 20:33:27"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"7JK6M-h2TUNXY3WRAAAE","timestamp":"2026-01-12 20:33:27"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"MjOIJOJKujnFOmc7AAAC","timestamp":"2026-01-12 20:33:27"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 20:33:29"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768235609341,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 20:33:49"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768235629373,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 20:34:09"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768235649409,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 20:34:29"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768235669439,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 20:34:49"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"i52uddgz-zao4velAAAG","timestamp":"2026-01-12 20:35:06","userId":"695ae34503480665b8f821ed"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"D10Mbn2rR2mnTtZiAAAD","timestamp":"2026-01-12 20:36:02","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"26X0NkmGJpQUAzCRAAAF","timestamp":"2026-01-12 20:36:07","userId":"65f8e1b9a2d9c1234567890a"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 20:36:14"}
+{"client":"695ae34503480665b8f821ed","level":"warn","message":"Client is not connected, notification not sent","timestamp":"2026-01-12 20:36:14"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"26X0NkmGJpQUAzCRAAAF","timestamp":"2026-01-12 20:36:14"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"26X0NkmGJpQUAzCRAAAF","timestamp":"2026-01-12 20:36:14"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 20:36:20"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 20:36:26"}
+{"client":"695ae34503480665b8f821ed","level":"warn","message":"Client is not connected, notification not sent","timestamp":"2026-01-12 20:36:26"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"26X0NkmGJpQUAzCRAAAF","timestamp":"2026-01-12 20:36:26"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"26X0NkmGJpQUAzCRAAAF","timestamp":"2026-01-12 20:36:26"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"ebQNkTIIOKsskwhqAAAH","timestamp":"2026-01-12 20:36:36","userId":"695ae34503480665b8f821ed"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768235780011,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 20:36:40"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"rc49yk_IACzjnpeqAAAD","timestamp":"2026-01-12 20:37:09","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"qtwssNNs8H98kyb7AAAF","timestamp":"2026-01-12 20:37:15","userId":"695ae34503480665b8f821ed"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 20:37:31"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"qtwssNNs8H98kyb7AAAF","timestamp":"2026-01-12 20:37:31"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"rc49yk_IACzjnpeqAAAD","timestamp":"2026-01-12 20:37:31"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"qtwssNNs8H98kyb7AAAF","timestamp":"2026-01-12 20:37:31"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"rc49yk_IACzjnpeqAAAD","timestamp":"2026-01-12 20:37:31"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 20:37:36"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768235856822,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 20:37:56"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768235876834,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 20:38:16"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768235896861,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 20:38:36"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768235916868,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 20:38:56"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"LuSHSa_FTfa_Vp2nAAAD","timestamp":"2026-01-12 20:41:28","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"f8a2FQlmkchcjzHNAAAB","timestamp":"2026-01-12 20:42:05","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"Z4Uo3_uIBuuOHxtJAAAD","timestamp":"2026-01-12 20:42:07","userId":"695ae34503480665b8f821ed"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 20:42:12"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"Z4Uo3_uIBuuOHxtJAAAD","timestamp":"2026-01-12 20:42:12"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"f8a2FQlmkchcjzHNAAAB","timestamp":"2026-01-12 20:42:12"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"Z4Uo3_uIBuuOHxtJAAAD","timestamp":"2026-01-12 20:42:12"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"f8a2FQlmkchcjzHNAAAB","timestamp":"2026-01-12 20:42:12"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 20:42:17"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768236137655,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 20:42:37"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768236157695,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 20:42:57"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"JdzIYHw3d04NQVAfAAAD","timestamp":"2026-01-12 20:43:45","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"oUVo8FIjC-MmJIxIAAAF","timestamp":"2026-01-12 20:43:57","userId":"695ae34503480665b8f821ed"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"5gaArevAsl2V_Y6uAAAD","timestamp":"2026-01-12 20:45:18","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"sZ6_4zQISUoz4jTtAAAD","timestamp":"2026-01-12 20:45:36","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"b4dCLc-1Vczznm4AAAAD","timestamp":"2026-01-12 20:45:57","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"eecg3bVPuLAxBymYAAAD","timestamp":"2026-01-12 20:46:16","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"8whsYXlD6JW1-UFFAAAD","timestamp":"2026-01-12 20:46:50","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"raAi_y2Kuye-YCU0AAAF","timestamp":"2026-01-12 20:47:01","userId":"695ae34503480665b8f821ed"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 20:47:07"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"raAi_y2Kuye-YCU0AAAF","timestamp":"2026-01-12 20:47:07"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"warn","message":"Driver is not connected, orderAccepted event not sent","timestamp":"2026-01-12 20:47:07"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"raAi_y2Kuye-YCU0AAAF","timestamp":"2026-01-12 20:47:07"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 20:47:10"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"raAi_y2Kuye-YCU0AAAF","timestamp":"2026-01-12 20:47:10"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"warn","message":"Driver is not connected, orderAccepted event not sent","timestamp":"2026-01-12 20:47:10"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"raAi_y2Kuye-YCU0AAAF","timestamp":"2026-01-12 20:47:10"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 20:47:27"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"raAi_y2Kuye-YCU0AAAF","timestamp":"2026-01-12 20:47:27"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"warn","message":"Driver is not connected, orderAccepted event not sent","timestamp":"2026-01-12 20:47:27"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"raAi_y2Kuye-YCU0AAAF","timestamp":"2026-01-12 20:47:27"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"KQRS-FSEs2pcidvfAAAD","timestamp":"2026-01-12 20:47:51","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"61HnUYGIuLr04pB7AAAF","timestamp":"2026-01-12 20:48:00","userId":"695ae34503480665b8f821ed"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 20:48:04"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"61HnUYGIuLr04pB7AAAF","timestamp":"2026-01-12 20:48:04"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"KQRS-FSEs2pcidvfAAAD","timestamp":"2026-01-12 20:48:04"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"KQRS-FSEs2pcidvfAAAD","timestamp":"2026-01-12 20:48:04"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"61HnUYGIuLr04pB7AAAF","timestamp":"2026-01-12 20:48:04"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"sUQU1tRyw37bshmKAAAD","timestamp":"2026-01-12 20:48:52","userId":"65f8e1b9a2d9c1234567890a"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 20:48:54"}
+{"client":"695ae34503480665b8f821ed","level":"warn","message":"Client is not connected, notification not sent","timestamp":"2026-01-12 20:48:54"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"sUQU1tRyw37bshmKAAAD","timestamp":"2026-01-12 20:48:54"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"sUQU1tRyw37bshmKAAAD","timestamp":"2026-01-12 20:48:55"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"nwPdbDTYE_KxEC-wAAAB","timestamp":"2026-01-12 20:49:12","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"grKOtwV2AuPKy236AAAD","timestamp":"2026-01-12 20:51:00","userId":"65f8e1b9a2d9c1234567890a"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 20:51:04"}
+{"client":"695ae34503480665b8f821ed","level":"warn","message":"Client is not connected, notification not sent","timestamp":"2026-01-12 20:51:04"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"grKOtwV2AuPKy236AAAD","timestamp":"2026-01-12 20:51:04"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"grKOtwV2AuPKy236AAAD","timestamp":"2026-01-12 20:51:04"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 20:51:09"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"myj3bAld3_rSekusAAAF","timestamp":"2026-01-12 20:51:22","userId":"695ae34503480665b8f821ed"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"YV5LD4XJ0iS4ytroAAAH","timestamp":"2026-01-12 20:51:27","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"epCgBe-NNEcso4XBAAAD","timestamp":"2026-01-12 20:51:44","userId":"65f8e1b9a2d9c1234567890a"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 20:51:49"}
+{"client":"695ae34503480665b8f821ed","level":"warn","message":"Client is not connected, notification not sent","timestamp":"2026-01-12 20:51:49"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"epCgBe-NNEcso4XBAAAD","timestamp":"2026-01-12 20:51:49"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"epCgBe-NNEcso4XBAAAD","timestamp":"2026-01-12 20:51:49"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 20:51:54"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768236714824,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 20:52:14"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"r3npEc4kG9sGeTBaAAAH","timestamp":"2026-01-12 20:52:23","userId":"695ae34503480665b8f821ed"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"65tEkfer91a7EPqmAAAJ","timestamp":"2026-01-12 20:53:04","userId":"65f8e1b9a2d9c1234567890a"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 20:53:11"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"r3npEc4kG9sGeTBaAAAH","timestamp":"2026-01-12 20:53:11"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"65tEkfer91a7EPqmAAAJ","timestamp":"2026-01-12 20:53:11"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"65tEkfer91a7EPqmAAAJ","timestamp":"2026-01-12 20:53:11"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"r3npEc4kG9sGeTBaAAAH","timestamp":"2026-01-12 20:53:11"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 20:53:16"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768236796198,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 20:53:36"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"-tvOWzQ26dgRvMLzAAAD","timestamp":"2026-01-12 20:54:33","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"6Yat0LYYyza_h7ejAAAD","timestamp":"2026-01-12 20:54:44","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"yn7BQCyYQHdx4B-rAAAF","timestamp":"2026-01-12 20:54:47","userId":"695ae34503480665b8f821ed"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 20:54:52"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"yn7BQCyYQHdx4B-rAAAF","timestamp":"2026-01-12 20:54:52"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"6Yat0LYYyza_h7ejAAAD","timestamp":"2026-01-12 20:54:52"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"yn7BQCyYQHdx4B-rAAAF","timestamp":"2026-01-12 20:54:52"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"6Yat0LYYyza_h7ejAAAD","timestamp":"2026-01-12 20:54:52"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 20:54:57"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768236897221,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 20:55:17"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"gv_ls2tRprYx0o2xAAAH","timestamp":"2026-01-12 20:55:52","userId":"695ae34503480665b8f821ed"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"XkPQx89q9bJT5qAEAAAJ","timestamp":"2026-01-12 20:55:58","userId":"65f8e1b9a2d9c1234567890a"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 20:56:03"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"gv_ls2tRprYx0o2xAAAH","timestamp":"2026-01-12 20:56:03"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"XkPQx89q9bJT5qAEAAAJ","timestamp":"2026-01-12 20:56:03"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"XkPQx89q9bJT5qAEAAAJ","timestamp":"2026-01-12 20:56:03"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"gv_ls2tRprYx0o2xAAAH","timestamp":"2026-01-12 20:56:03"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768236917261,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 20:56:08"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768236968939,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 20:56:28"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"hc1J2uDXNhrCeYacAAAL","timestamp":"2026-01-12 20:57:10","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"qVJRHw4gwGwk8bFiAAAN","timestamp":"2026-01-12 20:57:14","userId":"695ae34503480665b8f821ed"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 20:57:18"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"qVJRHw4gwGwk8bFiAAAN","timestamp":"2026-01-12 20:57:18"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"hc1J2uDXNhrCeYacAAAL","timestamp":"2026-01-12 20:57:18"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"hc1J2uDXNhrCeYacAAAL","timestamp":"2026-01-12 20:57:18"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"qVJRHw4gwGwk8bFiAAAN","timestamp":"2026-01-12 20:57:18"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768236988948,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 20:57:23"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768237043401,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 20:57:43"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"bJ5y9yLNi_miG-LrAAAD","timestamp":"2026-01-12 20:59:24","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"1ylYn2xbNd0CNOlOAAAF","timestamp":"2026-01-12 20:59:26","userId":"695ae34503480665b8f821ed"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-12 20:59:30"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"1ylYn2xbNd0CNOlOAAAF","timestamp":"2026-01-12 20:59:30"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"bJ5y9yLNi_miG-LrAAAD","timestamp":"2026-01-12 20:59:30"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"bJ5y9yLNi_miG-LrAAAD","timestamp":"2026-01-12 20:59:30"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"1ylYn2xbNd0CNOlOAAAF","timestamp":"2026-01-12 20:59:30"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 20:59:35"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768237175985,"level":"info","message":"update on database and cache","timestamp":"2026-01-12 20:59:55"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"7EFkJ-ZejiaMdBS7AAAU","timestamp":"2026-01-13 11:54:06","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"UTzDFkt-Gnq9Tc0xAAAW","timestamp":"2026-01-13 11:54:06","userId":"65f8e1b9a2d9c1234567890a"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-13 11:54:19"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"1ylYn2xbNd0CNOlOAAAF","timestamp":"2026-01-13 11:54:20"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"UTzDFkt-Gnq9Tc0xAAAW","timestamp":"2026-01-13 11:54:20"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"UTzDFkt-Gnq9Tc0xAAAW","timestamp":"2026-01-13 11:54:20"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-13 11:54:25"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"KoQpILLsZ1R_5lxrAAAY","timestamp":"2026-01-13 11:54:28","userId":"695ae34503480665b8f821ed"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"-2LWJHzKXsqDuhMKAAAa","timestamp":"2026-01-13 11:54:36","userId":"65f8e1b9a2d9c1234567890a"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-13 11:54:39"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"KoQpILLsZ1R_5lxrAAAY","timestamp":"2026-01-13 11:54:39"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"-2LWJHzKXsqDuhMKAAAa","timestamp":"2026-01-13 11:54:39"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"-2LWJHzKXsqDuhMKAAAa","timestamp":"2026-01-13 11:54:39"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"KoQpILLsZ1R_5lxrAAAY","timestamp":"2026-01-13 11:54:39"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768290865528,"level":"info","message":"update on database and cache","timestamp":"2026-01-13 11:54:44"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768290884487,"level":"info","message":"update on database and cache","timestamp":"2026-01-13 11:55:04"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"BAXfmCVYsft4RLLXAAAc","timestamp":"2026-01-13 11:55:26","userId":"695ae34503480665b8f821ed"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"soF00AP1LseG5pIzAAAe","timestamp":"2026-01-13 11:55:47","userId":"65f8e1b9a2d9c1234567890a"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-13 11:55:52"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"BAXfmCVYsft4RLLXAAAc","timestamp":"2026-01-13 11:55:52"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"soF00AP1LseG5pIzAAAe","timestamp":"2026-01-13 11:55:52"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"soF00AP1LseG5pIzAAAe","timestamp":"2026-01-13 11:55:52"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"BAXfmCVYsft4RLLXAAAc","timestamp":"2026-01-13 11:55:52"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768290904544,"level":"info","message":"update on database and cache","timestamp":"2026-01-13 11:55:57"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768290957799,"level":"info","message":"update on database and cache","timestamp":"2026-01-13 11:56:17"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"j9qMcheNBIwtsL3MAAAg","timestamp":"2026-01-13 11:57:07","userId":"695ae34503480665b8f821ed"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"lYKV16KtInOjZpsNAAAi","timestamp":"2026-01-13 11:57:40","userId":"65f8e1b9a2d9c1234567890a"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-13 11:57:46"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"j9qMcheNBIwtsL3MAAAg","timestamp":"2026-01-13 11:57:46"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"lYKV16KtInOjZpsNAAAi","timestamp":"2026-01-13 11:57:46"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"lYKV16KtInOjZpsNAAAi","timestamp":"2026-01-13 11:57:46"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"j9qMcheNBIwtsL3MAAAg","timestamp":"2026-01-13 11:57:46"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-13 11:57:51"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"xrcKpncCWo4QB0MoAAAk","timestamp":"2026-01-13 11:58:02","userId":"695ae34503480665b8f821ed"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"Cu1yt2Sq8AqtJAMwAAAm","timestamp":"2026-01-13 11:58:12","userId":"65f8e1b9a2d9c1234567890a"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-13 11:58:16"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"xrcKpncCWo4QB0MoAAAk","timestamp":"2026-01-13 11:58:16"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"Cu1yt2Sq8AqtJAMwAAAm","timestamp":"2026-01-13 11:58:16"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"Cu1yt2Sq8AqtJAMwAAAm","timestamp":"2026-01-13 11:58:17"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"xrcKpncCWo4QB0MoAAAk","timestamp":"2026-01-13 11:58:17"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768291071221,"level":"info","message":"update on database and cache","timestamp":"2026-01-13 11:58:22"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768291102044,"level":"info","message":"update on database and cache","timestamp":"2026-01-13 11:58:42"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"uBImhc1pd7OeW0IRAAAF","timestamp":"2026-01-13 12:27:46","userId":"695ae34503480665b8f821ed"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"V0ARJx0OtcA8GV40AAAD","timestamp":"2026-01-13 12:59:45","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"mJfrCYsLQXVTu6wMAAAF","timestamp":"2026-01-13 13:18:08","userId":"695ae34503480665b8f821ed"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"bKwWmOnnRFWZ8L2YAAAH","timestamp":"2026-01-13 13:18:08","userId":"695ae34503480665b8f821ed"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-13 13:18:14"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"bKwWmOnnRFWZ8L2YAAAH","timestamp":"2026-01-13 13:18:14"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"warn","message":"Driver is not connected, orderAccepted event not sent","timestamp":"2026-01-13 13:18:14"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"bKwWmOnnRFWZ8L2YAAAH","timestamp":"2026-01-13 13:18:14"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-13 13:18:38"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"bKwWmOnnRFWZ8L2YAAAH","timestamp":"2026-01-13 13:18:39"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"warn","message":"Driver is not connected, orderAccepted event not sent","timestamp":"2026-01-13 13:18:39"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"bKwWmOnnRFWZ8L2YAAAH","timestamp":"2026-01-13 13:18:39"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"W5NwJ_eWQSDDUAqtAAAB","timestamp":"2026-01-13 13:19:05","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"DyeLsOdZp31V-pIEAAAF","timestamp":"2026-01-13 13:19:08","userId":"695ae34503480665b8f821ed"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-13 13:19:11"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"DyeLsOdZp31V-pIEAAAF","timestamp":"2026-01-13 13:19:11"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"W5NwJ_eWQSDDUAqtAAAB","timestamp":"2026-01-13 13:19:11"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"W5NwJ_eWQSDDUAqtAAAB","timestamp":"2026-01-13 13:19:12"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"DyeLsOdZp31V-pIEAAAF","timestamp":"2026-01-13 13:19:12"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-13 13:19:17"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768295957081,"level":"info","message":"update on database and cache","timestamp":"2026-01-13 13:19:37"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"9Hm1u_wJSBB54C4EAAAB","timestamp":"2026-01-13 13:20:07","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"iqebSNO2NZM36MDVAAAF","timestamp":"2026-01-13 13:20:11","userId":"695ae34503480665b8f821ed"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"UUq7Oic5lruPJTpKAAAH","timestamp":"2026-01-13 13:20:14","userId":"695ae34503480665b8f821ed"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-13 13:20:17"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"UUq7Oic5lruPJTpKAAAH","timestamp":"2026-01-13 13:20:17"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"9Hm1u_wJSBB54C4EAAAB","timestamp":"2026-01-13 13:20:17"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"9Hm1u_wJSBB54C4EAAAB","timestamp":"2026-01-13 13:20:17"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"UUq7Oic5lruPJTpKAAAH","timestamp":"2026-01-13 13:20:17"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-13 13:20:22"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":1768296022911,"level":"info","message":"update on database and cache","timestamp":"2026-01-13 13:20:42"}
+{"driver":"695ae34503480665b8f821ed","event":"LOCATION_UPDATE","latitude":33.5138,"level":"info","longitude":36.2765,"message":"Driver location added","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-13 14:57:59"}
+{"level":"warn","message":"Order not found","orderId":"64f8e1b9a2d9c1234567890a","timestamp":"2026-01-13 14:59:54"}
+{"level":"warn","message":"Order not found","orderId":"64f8e1b9a2d9c1234567890a","timestamp":"2026-01-13 15:00:10"}
+{"level":"info","location":{"_id":"695e1019db15aeed86288364","createdAt":"2026-01-07T07:49:45.086Z","driver":{"_id":"695ae34503480665b8f821ed","name":"majd User","phone":"0771234567"},"location":{"coordinates":[46.6772,24.71445],"type":"Point"}},"message":"Latest order location retrieved","orderId":"64f8e1b9a2d9c1234567890a","timestamp":"2026-01-13 15:00:47"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ARRIVED","level":"info","message":"Order arrived","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-13 15:06:50"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"warn","message":"Driver is not connected, notification not sent","timestamp":"2026-01-13 15:06:50"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"OwZYalKPkB1c4Yz_AAAD","timestamp":"2026-01-13 15:06:57","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"v-xRu8cJJDcwbeIRAAAF","timestamp":"2026-01-13 15:06:58","userId":"65f8e1b9a2d9c1234567890a"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ARRIVED","level":"info","message":"Order arrived","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-13 15:07:01"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Notification emitted to driver","socketId":"v-xRu8cJJDcwbeIRAAAF","timestamp":"2026-01-13 15:07:01"}
+{"client":"695ae34503480665b8f821ed","level":"warn","message":"Client is not connected, notification not sent","timestamp":"2026-01-13 15:16:30"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"warn","message":"Driver is not connected, orderAccepted event not sent","timestamp":"2026-01-13 15:16:30"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-13 15:16:30"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"xRwcQHetHzWu0s5bAAAD","timestamp":"2026-01-13 15:17:04","userId":"65f8e1b9a2d9c1234567890a"}
+{"client":"695ae34503480665b8f821ed","level":"warn","message":"Client is not connected, notification not sent","timestamp":"2026-01-13 15:17:10"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"xRwcQHetHzWu0s5bAAAD","timestamp":"2026-01-13 15:17:10"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","order":"62f8e1b9a2d9c1234567890a","timestamp":"2026-01-13 15:17:10"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"62f8e1b9a2d9c1234567890a","socketId":"xRwcQHetHzWu0s5bAAAD","timestamp":"2026-01-13 15:17:11"}
+{"dbCacheKey":"order:62f8e1b9a2d9c1234567890a:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-13 15:17:16"}
+{"level":"info","message":"Notification marked as read","notificationId":"695d508d0073dd4cfff84423","timestamp":"2026-01-13 15:17:52"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"2qd89B9kYG758Ti2AAAB","timestamp":"2026-01-15 00:04:37","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"eygDrHSWUZqnX8k8AAAD","timestamp":"2026-01-15 00:04:37","userId":"65f8e1b9a2d9c1234567890a"}
+{"clientId":"695ae34503480665b8f821ed","level":"info","message":"Order created","orderId":"6967f97c6fd130822c3d3abb","timestamp":"2026-01-15 00:15:57"}
+{"clientId":"695ae34503480665b8f821ed","level":"info","message":"Order created","orderId":"6967fa6c9b997b47d92195aa","timestamp":"2026-01-15 00:19:56"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ARRIVED","level":"info","message":"Order arrived","timestamp":"2026-01-15 00:19:56"}
+{"clientId":"695ae34503480665b8f821ed","level":"info","message":"Order created","orderId":"6967fb08cced47d915fd80d3","timestamp":"2026-01-15 00:22:32"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ARRIVED","level":"info","message":"Order arrived","timestamp":"2026-01-15 00:22:32"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"warn","message":"Driver is not connected, notification not sent","timestamp":"2026-01-15 00:22:32"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"gVfVGdag8ndHjMmtAAAD","timestamp":"2026-01-15 00:22:52","userId":"65f8e1b9a2d9c1234567890a"}
+{"clientId":"695ae34503480665b8f821ed","level":"info","message":"Order created","orderId":"6967fb231ea899e90cee4655","timestamp":"2026-01-15 00:23:00"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ARRIVED","level":"info","message":"Order arrived","timestamp":"2026-01-15 00:23:00"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Notification emitted to driver","socketId":"gVfVGdag8ndHjMmtAAAD","timestamp":"2026-01-15 00:23:00"}
+{"clientId":"695ae34503480665b8f821ed","level":"info","message":"Order created","orderId":"6967fefaa6396a2a73d5f4da","timestamp":"2026-01-15 00:39:23"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ARRIVED","level":"info","message":"Order arrived","timestamp":"2026-01-15 00:39:23"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"warn","message":"Driver is not connected, notification not sent","timestamp":"2026-01-15 00:39:23"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"6Wla8qUU3jNkHjreAAAD","timestamp":"2026-01-15 00:40:13","userId":""}
+{"driverId":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted","orderId":"6967fefaa6396a2a73d5f4da","timestamp":"2026-01-15 00:41:51"}
+{"client":"695ae34503480665b8f821ed","level":"warn","message":"Client is not connected, notification not sent","timestamp":"2026-01-15 00:41:51"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"warn","message":"Driver is not connected, orderAccepted event not sent","timestamp":"2026-01-15 00:41:51"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","timestamp":"2026-01-15 00:41:51"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"sVYXitHNAvP03gDGAAAF","timestamp":"2026-01-15 00:42:36","userId":""}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"_3O_xwlBOwrTJDHSAAAH","timestamp":"2026-01-15 00:42:40","userId":"65f8e1b9a2d9c1234567890a"}
+{"driverId":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted","orderId":"6967fefaa6396a2a73d5f4da","timestamp":"2026-01-15 00:43:21"}
+{"client":"695ae34503480665b8f821ed","level":"warn","message":"Client is not connected, notification not sent","timestamp":"2026-01-15 00:43:21"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"warn","message":"Driver is not connected, orderAccepted event not sent","timestamp":"2026-01-15 00:43:21"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","timestamp":"2026-01-15 00:43:21"}
+{"driverId":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted","orderId":"6967fefaa6396a2a73d5f4da","timestamp":"2026-01-15 00:44:16"}
+{"client":"695ae34503480665b8f821ed","level":"warn","message":"Client is not connected, notification not sent","timestamp":"2026-01-15 00:44:16"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"warn","message":"Driver is not connected, orderAccepted event not sent","timestamp":"2026-01-15 00:44:16"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","timestamp":"2026-01-15 00:44:16"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"XwkjyY-1tlSpHh19AAAB","timestamp":"2026-01-15 00:45:42","userId":"695ae34503480665b8f821ed"}
+{"driverId":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted","orderId":"6967fefaa6396a2a73d5f4da","timestamp":"2026-01-15 00:45:49"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"XwkjyY-1tlSpHh19AAAB","timestamp":"2026-01-15 00:45:49"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"warn","message":"Driver is not connected, orderAccepted event not sent","timestamp":"2026-01-15 00:45:49"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","timestamp":"2026-01-15 00:45:49"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"XwkjyY-1tlSpHh19AAAB","timestamp":"2026-01-15 00:45:49"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"6v9mAsK5JJiWkQ46AAAB","timestamp":"2026-01-15 00:47:11","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"Lb-yff7XACAYAKiFAAAD","timestamp":"2026-01-15 00:47:14","userId":"695ae34503480665b8f821ed"}
+{"driverId":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted","orderId":"6967fefaa6396a2a73d5f4da","timestamp":"2026-01-15 00:47:18"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"Lb-yff7XACAYAKiFAAAD","timestamp":"2026-01-15 00:47:18"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"6v9mAsK5JJiWkQ46AAAB","timestamp":"2026-01-15 00:47:18"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","timestamp":"2026-01-15 00:47:18"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"6v9mAsK5JJiWkQ46AAAB","timestamp":"2026-01-15 00:47:18"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"Lb-yff7XACAYAKiFAAAD","timestamp":"2026-01-15 00:47:18"}
+{"dbCacheKey":"order:undefined:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 00:47:23"}
+{"dbCacheKey":"order:undefined:lastDbSave","lastDbSave":1768423643913,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 00:47:43"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"5VCMSwl-WJsk5pqjAAAB","timestamp":"2026-01-15 00:50:24","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"p3IbptJzSGfpOivQAAAD","timestamp":"2026-01-15 00:50:27","userId":"695ae34503480665b8f821ed"}
+{"driverId":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted","orderId":"6967fefaa6396a2a73d5f4da","timestamp":"2026-01-15 00:50:33"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"p3IbptJzSGfpOivQAAAD","timestamp":"2026-01-15 00:50:33"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"5VCMSwl-WJsk5pqjAAAB","timestamp":"2026-01-15 00:50:33"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","timestamp":"2026-01-15 00:50:33"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"p3IbptJzSGfpOivQAAAD","timestamp":"2026-01-15 00:50:33"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"5VCMSwl-WJsk5pqjAAAB","timestamp":"2026-01-15 00:50:33"}
+{"dbCacheKey":"order:undefined:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 00:50:38"}
+{"dbCacheKey":"order:undefined:lastDbSave","lastDbSave":1768423838300,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 00:50:58"}
+{"driverId":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted","orderId":"6967fefaa6396a2a73d5f4da","timestamp":"2026-01-15 00:51:43"}
+{"client":"695ae34503480665b8f821ed","level":"warn","message":"Client is not connected, notification not sent","timestamp":"2026-01-15 00:51:43"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"warn","message":"Driver is not connected, orderAccepted event not sent","timestamp":"2026-01-15 00:51:43"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","timestamp":"2026-01-15 00:51:43"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"1Ix7uTPUoNTuEFQJAAAF","timestamp":"2026-01-15 00:51:48","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"8wr8fUF4qKN1W5gSAAAH","timestamp":"2026-01-15 00:51:52","userId":"695ae34503480665b8f821ed"}
+{"driverId":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted","orderId":"6967fefaa6396a2a73d5f4da","timestamp":"2026-01-15 00:51:55"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"8wr8fUF4qKN1W5gSAAAH","timestamp":"2026-01-15 00:51:56"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"1Ix7uTPUoNTuEFQJAAAF","timestamp":"2026-01-15 00:51:56"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","timestamp":"2026-01-15 00:51:56"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"1Ix7uTPUoNTuEFQJAAAF","timestamp":"2026-01-15 00:51:56"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"8wr8fUF4qKN1W5gSAAAH","timestamp":"2026-01-15 00:51:56"}
+{"dbCacheKey":"order:undefined:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 00:52:01"}
+{"dbCacheKey":"order:undefined:lastDbSave","lastDbSave":1768423921097,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 00:52:21"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"KnU1Ikh8coqRbf_xAAAF","timestamp":"2026-01-15 01:01:14","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"G-14wdFUGZZ1S_PdAAAH","timestamp":"2026-01-15 01:01:18","userId":"695ae34503480665b8f821ed"}
+{"driverId":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted","orderId":"6967fefaa6396a2a73d5f4da","timestamp":"2026-01-15 01:01:21"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"G-14wdFUGZZ1S_PdAAAH","timestamp":"2026-01-15 01:01:21"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"KnU1Ikh8coqRbf_xAAAF","timestamp":"2026-01-15 01:01:21"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","timestamp":"2026-01-15 01:01:21"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"G-14wdFUGZZ1S_PdAAAH","timestamp":"2026-01-15 01:01:21"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"KnU1Ikh8coqRbf_xAAAF","timestamp":"2026-01-15 01:01:21"}
+{"dbCacheKey":"order:undefined:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 01:01:26"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"zm4r123fJOM9c9FfAAAB","timestamp":"2026-01-15 01:02:37","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"Z74D0a9TPOy_B-83AAAD","timestamp":"2026-01-15 01:02:40","userId":"695ae34503480665b8f821ed"}
+{"driverId":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted","orderId":"6967fefaa6396a2a73d5f4da","timestamp":"2026-01-15 01:02:43"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"Z74D0a9TPOy_B-83AAAD","timestamp":"2026-01-15 01:02:43"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"zm4r123fJOM9c9FfAAAB","timestamp":"2026-01-15 01:02:43"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","timestamp":"2026-01-15 01:02:43"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"Z74D0a9TPOy_B-83AAAD","timestamp":"2026-01-15 01:02:43"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"zm4r123fJOM9c9FfAAAB","timestamp":"2026-01-15 01:02:43"}
+{"dbCacheKey":"order:undefined:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 01:02:48"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"wm9Eboh7MlAGq7ibAAAB","timestamp":"2026-01-15 01:09:15","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"0fc_WrOSXf-4pYHEAAAD","timestamp":"2026-01-15 01:09:16","userId":"695ae34503480665b8f821ed"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"USttrgT8pc0TT3_VAAAF","timestamp":"2026-01-15 01:09:18","userId":"695ae34503480665b8f821ed"}
+{"driverId":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted","orderId":"6967fefaa6396a2a73d5f4da","timestamp":"2026-01-15 01:09:21"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"USttrgT8pc0TT3_VAAAF","timestamp":"2026-01-15 01:09:21"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"wm9Eboh7MlAGq7ibAAAB","timestamp":"2026-01-15 01:09:21"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","timestamp":"2026-01-15 01:09:21"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"wm9Eboh7MlAGq7ibAAAB","timestamp":"2026-01-15 01:09:21"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"USttrgT8pc0TT3_VAAAF","timestamp":"2026-01-15 01:09:21"}
+{"dbCacheKey":"order:undefined:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 01:09:26"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"xozXUkBgX0c9JTeZAAAB","timestamp":"2026-01-15 01:10:27","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"gQY7PNgH2xzgQ2b-AAAD","timestamp":"2026-01-15 01:10:30","userId":"695ae34503480665b8f821ed"}
+{"driverId":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted","orderId":"6967fefaa6396a2a73d5f4da","timestamp":"2026-01-15 01:10:36"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"gQY7PNgH2xzgQ2b-AAAD","timestamp":"2026-01-15 01:10:36"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"xozXUkBgX0c9JTeZAAAB","timestamp":"2026-01-15 01:10:36"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","timestamp":"2026-01-15 01:10:36"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"xozXUkBgX0c9JTeZAAAB","timestamp":"2026-01-15 01:10:36"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"gQY7PNgH2xzgQ2b-AAAD","timestamp":"2026-01-15 01:10:36"}
+{"dbCacheKey":"order:undefined:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 01:10:41"}
+{"dbCacheKey":"order:undefined:lastDbSave","lastDbSave":1768425041410,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 01:11:01"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"D114cag_Tr9GBWdpAAAF","timestamp":"2026-01-15 01:12:43","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"0GhPsauEpcFGK9x1AAAH","timestamp":"2026-01-15 01:12:46","userId":"695ae34503480665b8f821ed"}
+{"driverId":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted","orderId":"6967fefaa6396a2a73d5f4da","timestamp":"2026-01-15 01:12:51"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"0GhPsauEpcFGK9x1AAAH","timestamp":"2026-01-15 01:12:51"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"D114cag_Tr9GBWdpAAAF","timestamp":"2026-01-15 01:12:51"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","timestamp":"2026-01-15 01:12:51"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"0GhPsauEpcFGK9x1AAAH","timestamp":"2026-01-15 01:12:51"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"D114cag_Tr9GBWdpAAAF","timestamp":"2026-01-15 01:12:51"}
+{"dbCacheKey":"order:undefined:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 01:12:56"}
+{"dbCacheKey":"order:undefined:lastDbSave","lastDbSave":1768425176812,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 01:13:16"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"0ocIDDir4vwsgj0oAAAJ","timestamp":"2026-01-15 01:14:09","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"0ctKmlSpQUnC1PbJAAAL","timestamp":"2026-01-15 01:14:26","userId":"695ae34503480665b8f821ed"}
+{"driverId":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted","orderId":"6967fefaa6396a2a73d5f4da","timestamp":"2026-01-15 01:14:32"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"0ctKmlSpQUnC1PbJAAAL","timestamp":"2026-01-15 01:14:33"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"0ocIDDir4vwsgj0oAAAJ","timestamp":"2026-01-15 01:14:33"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","timestamp":"2026-01-15 01:14:33"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"0ctKmlSpQUnC1PbJAAAL","timestamp":"2026-01-15 01:14:33"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"0ocIDDir4vwsgj0oAAAJ","timestamp":"2026-01-15 01:14:33"}
+{"dbCacheKey":"order:undefined:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 01:14:38"}
+{"dbCacheKey":"order:undefined:lastDbSave","lastDbSave":1768425278105,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 01:14:58"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"LOCATION_UPDATE","latitude":31.945073172249863,"level":"info","longitude":35.926171185303986,"message":"Driver location added","order":"6967fefaa6396a2a73d5f4da","timestamp":"2026-01-15 01:19:13"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"A1m-cXmE_hlmL9B9AAAD","timestamp":"2026-01-15 01:19:32","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"P2FZDeSWHXBlQLdGAAAF","timestamp":"2026-01-15 01:19:36","userId":"695ae34503480665b8f821ed"}
+{"driverId":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted","orderId":"6967fefaa6396a2a73d5f4da","timestamp":"2026-01-15 01:19:42"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"P2FZDeSWHXBlQLdGAAAF","timestamp":"2026-01-15 01:19:42"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"A1m-cXmE_hlmL9B9AAAD","timestamp":"2026-01-15 01:19:42"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","timestamp":"2026-01-15 01:19:42"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"P2FZDeSWHXBlQLdGAAAF","timestamp":"2026-01-15 01:19:42"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"A1m-cXmE_hlmL9B9AAAD","timestamp":"2026-01-15 01:19:42"}
+{"dbCacheKey":"order:undefined:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 01:19:47"}
+{"dbCacheKey":"order:undefined:lastDbSave","lastDbSave":1768425587805,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 01:20:07"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"vswBrN8utgm_Id3hAAAF","timestamp":"2026-01-15 01:29:39","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"HXdwu7cCp3Ab9Vd8AAAH","timestamp":"2026-01-15 01:29:43","userId":"695ae34503480665b8f821ed"}
+{"driverId":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted","orderId":"6967fefaa6396a2a73d5f4da","timestamp":"2026-01-15 01:29:47"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"HXdwu7cCp3Ab9Vd8AAAH","timestamp":"2026-01-15 01:29:47"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"vswBrN8utgm_Id3hAAAF","timestamp":"2026-01-15 01:29:47"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","timestamp":"2026-01-15 01:29:47"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"vswBrN8utgm_Id3hAAAF","timestamp":"2026-01-15 01:29:47"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"HXdwu7cCp3Ab9Vd8AAAH","timestamp":"2026-01-15 01:29:47"}
+{"dbCacheKey":"order:undefined:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 01:29:52"}
+{"dbCacheKey":"order:undefined:lastDbSave","lastDbSave":1768426192304,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 01:30:12"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"gY2c3acaBvgnIGd-AAAF","timestamp":"2026-01-15 01:31:40","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"gi8TKogwnhkumlhWAAAH","timestamp":"2026-01-15 01:33:44","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"CXZ-k-U8NLSa-w4HAAAJ","timestamp":"2026-01-15 01:33:48","userId":"695ae34503480665b8f821ed"}
+{"driverId":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted","orderId":"6967fefaa6396a2a73d5f4da","timestamp":"2026-01-15 01:33:53"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"CXZ-k-U8NLSa-w4HAAAJ","timestamp":"2026-01-15 01:33:53"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"gi8TKogwnhkumlhWAAAH","timestamp":"2026-01-15 01:33:53"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","timestamp":"2026-01-15 01:33:53"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"gi8TKogwnhkumlhWAAAH","timestamp":"2026-01-15 01:33:53"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"CXZ-k-U8NLSa-w4HAAAJ","timestamp":"2026-01-15 01:33:53"}
+{"dbCacheKey":"order:undefined:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 01:33:58"}
+{"dbCacheKey":"order:undefined:lastDbSave","lastDbSave":1768426438744,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 01:34:13"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"SEd8kHUAWHCqrvKFAAAD","timestamp":"2026-01-15 01:34:29","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"TOQBU4c-2hIZ3k-IAAAH","timestamp":"2026-01-15 01:34:43","userId":"695ae34503480665b8f821ed"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"ORqgZ_CcoWsDy4ZEAAAJ","timestamp":"2026-01-15 01:34:47","userId":"65f8e1b9a2d9c1234567890a"}
+{"driverId":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted","orderId":"6967fefaa6396a2a73d5f4da","timestamp":"2026-01-15 01:34:50"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"TOQBU4c-2hIZ3k-IAAAH","timestamp":"2026-01-15 01:34:50"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"ORqgZ_CcoWsDy4ZEAAAJ","timestamp":"2026-01-15 01:34:50"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","timestamp":"2026-01-15 01:34:50"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"ORqgZ_CcoWsDy4ZEAAAJ","timestamp":"2026-01-15 01:34:50"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"TOQBU4c-2hIZ3k-IAAAH","timestamp":"2026-01-15 01:34:50"}
+{"dbCacheKey":"order:undefined:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 01:34:55"}
+{"dbCacheKey":"order:undefined:lastDbSave","lastDbSave":1768426495613,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 01:35:10"}
+{"dbCacheKey":"order:undefined:lastDbSave","lastDbSave":1768426510664,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 01:35:25"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"AYisV-9nx6rmO0sAAAAH","timestamp":"2026-01-15 01:35:55","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"8K1advJxOfXLC6BQAAAJ","timestamp":"2026-01-15 01:35:59","userId":"695ae34503480665b8f821ed"}
+{"driverId":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted","orderId":"6967fefaa6396a2a73d5f4da","timestamp":"2026-01-15 01:36:02"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"8K1advJxOfXLC6BQAAAJ","timestamp":"2026-01-15 01:36:02"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"AYisV-9nx6rmO0sAAAAH","timestamp":"2026-01-15 01:36:02"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","timestamp":"2026-01-15 01:36:02"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"AYisV-9nx6rmO0sAAAAH","timestamp":"2026-01-15 01:36:02"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"8K1advJxOfXLC6BQAAAJ","timestamp":"2026-01-15 01:36:02"}
+{"dbCacheKey":"order:undefined:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 01:36:07"}
+{"dbCacheKey":"order:undefined:lastDbSave","lastDbSave":1768426567472,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 01:36:22"}
+{"dbCacheKey":"order:undefined:lastDbSave","lastDbSave":1768426582470,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 01:36:37"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"-Roj1skaAMYs1KZrAAAB","timestamp":"2026-01-15 01:38:31","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"EguGSRiHZhsM0FFVAAAH","timestamp":"2026-01-15 01:38:34","userId":"695ae34503480665b8f821ed"}
+{"driverId":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted","orderId":"6967fefaa6396a2a73d5f4da","timestamp":"2026-01-15 01:38:37"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"EguGSRiHZhsM0FFVAAAH","timestamp":"2026-01-15 01:38:37"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"-Roj1skaAMYs1KZrAAAB","timestamp":"2026-01-15 01:38:37"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","timestamp":"2026-01-15 01:38:37"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"-Roj1skaAMYs1KZrAAAB","timestamp":"2026-01-15 01:38:37"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"EguGSRiHZhsM0FFVAAAH","timestamp":"2026-01-15 01:38:37"}
+{"dbCacheKey":"order:undefined:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 01:38:42"}
+{"dbCacheKey":"order:undefined:lastDbSave","lastDbSave":1768426722646,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 01:39:02"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"K-zjuT0Ut3DaL8PNAAAD","timestamp":"2026-01-15 01:46:26","userId":"695ae34503480665b8f821ed"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"8-agTXhM9K0ElgN_AAAH","timestamp":"2026-01-15 01:46:33","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"rOGe7urAJvmUawgMAAAJ","timestamp":"2026-01-15 01:46:37","userId":"695ae34503480665b8f821ed"}
+{"driverId":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted","orderId":"6967fefaa6396a2a73d5f4da","timestamp":"2026-01-15 01:46:56"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"rOGe7urAJvmUawgMAAAJ","timestamp":"2026-01-15 01:46:56"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"8-agTXhM9K0ElgN_AAAH","timestamp":"2026-01-15 01:46:56"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","timestamp":"2026-01-15 01:46:56"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"8-agTXhM9K0ElgN_AAAH","timestamp":"2026-01-15 01:46:56"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"rOGe7urAJvmUawgMAAAJ","timestamp":"2026-01-15 01:46:56"}
+{"dbCacheKey":"order:undefined:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 01:47:01"}
+{"dbCacheKey":"order:undefined:lastDbSave","lastDbSave":1768427221924,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 01:47:21"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"FwhhPtA9XP1bLUKEAAAH","timestamp":"2026-01-15 01:49:37","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"YPuRZyoZ_22wG7FDAAAJ","timestamp":"2026-01-15 01:49:40","userId":"695ae34503480665b8f821ed"}
+{"driverId":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted","orderId":"6967fefaa6396a2a73d5f4da","timestamp":"2026-01-15 01:49:43"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"YPuRZyoZ_22wG7FDAAAJ","timestamp":"2026-01-15 01:49:43"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"FwhhPtA9XP1bLUKEAAAH","timestamp":"2026-01-15 01:49:43"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","timestamp":"2026-01-15 01:49:43"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"FwhhPtA9XP1bLUKEAAAH","timestamp":"2026-01-15 01:49:43"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"YPuRZyoZ_22wG7FDAAAJ","timestamp":"2026-01-15 01:49:43"}
+{"dbCacheKey":"order:undefined:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 01:49:48"}
+{"dbCacheKey":"order:undefined:lastDbSave","lastDbSave":1768427388803,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 01:50:08"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"SDYkxe-6Gt9ad0ABAAAD","timestamp":"2026-01-15 01:50:49","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"YhPUz9agUET0H7vaAAAH","timestamp":"2026-01-15 01:50:53","userId":"695ae34503480665b8f821ed"}
+{"driverId":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted","orderId":"6967fefaa6396a2a73d5f4da","timestamp":"2026-01-15 01:50:56"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"YhPUz9agUET0H7vaAAAH","timestamp":"2026-01-15 01:50:56"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"SDYkxe-6Gt9ad0ABAAAD","timestamp":"2026-01-15 01:50:56"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","timestamp":"2026-01-15 01:50:56"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"SDYkxe-6Gt9ad0ABAAAD","timestamp":"2026-01-15 01:50:56"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"YhPUz9agUET0H7vaAAAH","timestamp":"2026-01-15 01:50:56"}
+{"dbCacheKey":"order:undefined:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 01:51:01"}
+{"dbCacheKey":"order:undefined:lastDbSave","lastDbSave":1768427461944,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 01:51:21"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"upmuefYdndSjhds1AAAH","timestamp":"2026-01-15 01:52:08","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"k_UAJeSJh8FVqGakAAAJ","timestamp":"2026-01-15 01:52:10","userId":"695ae34503480665b8f821ed"}
+{"driverId":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted","orderId":"6967fefaa6396a2a73d5f4da","timestamp":"2026-01-15 01:52:13"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"k_UAJeSJh8FVqGakAAAJ","timestamp":"2026-01-15 01:52:13"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"upmuefYdndSjhds1AAAH","timestamp":"2026-01-15 01:52:13"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","timestamp":"2026-01-15 01:52:13"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"upmuefYdndSjhds1AAAH","timestamp":"2026-01-15 01:52:13"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"k_UAJeSJh8FVqGakAAAJ","timestamp":"2026-01-15 01:52:13"}
+{"dbCacheKey":"order:undefined:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 01:52:18"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"t0W_aYwLJ_Oh7mlSAAAF","timestamp":"2026-01-15 01:57:48","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"G6t0MM42e3QeDAEaAAAH","timestamp":"2026-01-15 01:57:52","userId":"695ae34503480665b8f821ed"}
+{"driverId":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted","orderId":"6967fefaa6396a2a73d5f4da","timestamp":"2026-01-15 01:57:55"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"G6t0MM42e3QeDAEaAAAH","timestamp":"2026-01-15 01:57:55"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"t0W_aYwLJ_Oh7mlSAAAF","timestamp":"2026-01-15 01:57:55"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","timestamp":"2026-01-15 01:57:55"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"G6t0MM42e3QeDAEaAAAH","timestamp":"2026-01-15 01:57:55"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"t0W_aYwLJ_Oh7mlSAAAF","timestamp":"2026-01-15 01:57:55"}
+{"dbCacheKey":"order:undefined:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 01:58:00"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"rJlFFS6qFhg_vTxEAAAF","timestamp":"2026-01-15 01:59:13","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"S4pATBj9K46_IEHrAAAH","timestamp":"2026-01-15 01:59:17","userId":"695ae34503480665b8f821ed"}
+{"driverId":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted","orderId":"6967fefaa6396a2a73d5f4da","timestamp":"2026-01-15 01:59:20"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"S4pATBj9K46_IEHrAAAH","timestamp":"2026-01-15 01:59:20"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"rJlFFS6qFhg_vTxEAAAF","timestamp":"2026-01-15 01:59:20"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","timestamp":"2026-01-15 01:59:20"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"rJlFFS6qFhg_vTxEAAAF","timestamp":"2026-01-15 01:59:20"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"S4pATBj9K46_IEHrAAAH","timestamp":"2026-01-15 01:59:20"}
+{"dbCacheKey":"order:undefined:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 01:59:25"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"wQaUgxNsdb-yL5PPAAAF","timestamp":"2026-01-15 02:03:55","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"6Vv8GlyNT9C52YE2AAAH","timestamp":"2026-01-15 02:03:58","userId":"695ae34503480665b8f821ed"}
+{"driverId":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted","orderId":"6967fefaa6396a2a73d5f4da","timestamp":"2026-01-15 02:04:08"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"6Vv8GlyNT9C52YE2AAAH","timestamp":"2026-01-15 02:04:08"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"wQaUgxNsdb-yL5PPAAAF","timestamp":"2026-01-15 02:04:08"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","timestamp":"2026-01-15 02:04:08"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"wQaUgxNsdb-yL5PPAAAF","timestamp":"2026-01-15 02:04:09"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"6Vv8GlyNT9C52YE2AAAH","timestamp":"2026-01-15 02:04:09"}
+{"dbCacheKey":"order:undefined:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 02:04:14"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"gyTsI5o1qlGAOTBbAAAD","timestamp":"2026-01-15 02:07:36","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"x5N68z2EaxvDtfktAAAF","timestamp":"2026-01-15 02:07:48","userId":"695ae34503480665b8f821ed"}
+{"driverId":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted","orderId":"6967fefaa6396a2a73d5f4da","timestamp":"2026-01-15 02:07:51"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"x5N68z2EaxvDtfktAAAF","timestamp":"2026-01-15 02:07:51"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"gyTsI5o1qlGAOTBbAAAD","timestamp":"2026-01-15 02:07:51"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","timestamp":"2026-01-15 02:07:51"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"x5N68z2EaxvDtfktAAAF","timestamp":"2026-01-15 02:07:51"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"gyTsI5o1qlGAOTBbAAAD","timestamp":"2026-01-15 02:07:51"}
+{"dbCacheKey":"order:undefined:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 02:07:56"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"IaLjwiPUgO1zgxV6AAAD","timestamp":"2026-01-15 02:09:26","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"QtRzo9sDrHJX5im6AAAF","timestamp":"2026-01-15 02:09:27","userId":"695ae34503480665b8f821ed"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"FfaZ5yYagZvejzn6AAAH","timestamp":"2026-01-15 02:09:30","userId":"695ae34503480665b8f821ed"}
+{"driverId":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted","orderId":"6967fefaa6396a2a73d5f4da","timestamp":"2026-01-15 02:09:37"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"FfaZ5yYagZvejzn6AAAH","timestamp":"2026-01-15 02:09:37"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"IaLjwiPUgO1zgxV6AAAD","timestamp":"2026-01-15 02:09:37"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","timestamp":"2026-01-15 02:09:37"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"FfaZ5yYagZvejzn6AAAH","timestamp":"2026-01-15 02:09:37"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"IaLjwiPUgO1zgxV6AAAD","timestamp":"2026-01-15 02:09:37"}
+{"dbCacheKey":"order:undefined:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 02:09:42"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"4d_NNX-k-TRVp0ppAAAB","timestamp":"2026-01-15 02:11:30","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"0mgREYlRic7lFNlVAAAF","timestamp":"2026-01-15 02:11:33","userId":"695ae34503480665b8f821ed"}
+{"driverId":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted","orderId":"6967fefaa6396a2a73d5f4da","timestamp":"2026-01-15 02:11:37"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"0mgREYlRic7lFNlVAAAF","timestamp":"2026-01-15 02:11:37"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"4d_NNX-k-TRVp0ppAAAB","timestamp":"2026-01-15 02:11:37"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","timestamp":"2026-01-15 02:11:37"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"4d_NNX-k-TRVp0ppAAAB","timestamp":"2026-01-15 02:11:37"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","socketId":"0mgREYlRic7lFNlVAAAF","timestamp":"2026-01-15 02:11:37"}
+{"dbCacheKey":"order:undefined:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 02:11:42"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"EPymAi6VTeYWOMxYAAAF","timestamp":"2026-01-15 02:20:27","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"XmPdmoIaylRfs7W4AAAH","timestamp":"2026-01-15 02:20:31","userId":"695ae34503480665b8f821ed"}
+{"driverId":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted","orderId":"6967fefaa6396a2a73d5f4da","timestamp":"2026-01-15 02:20:35"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"XmPdmoIaylRfs7W4AAAH","timestamp":"2026-01-15 02:20:35"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"EPymAi6VTeYWOMxYAAAF","timestamp":"2026-01-15 02:20:35"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","orderId":"6967fefaa6396a2a73d5f4da","timestamp":"2026-01-15 02:20:35"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"6967fefaa6396a2a73d5f4da","socketId":"EPymAi6VTeYWOMxYAAAF","timestamp":"2026-01-15 02:20:35"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"6967fefaa6396a2a73d5f4da","socketId":"XmPdmoIaylRfs7W4AAAH","timestamp":"2026-01-15 02:20:35"}
+{"dbCacheKey":"order:6967fefaa6396a2a73d5f4da:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 02:20:40"}
+{"dbCacheKey":"order:6967fefaa6396a2a73d5f4da:lastDbSave","lastDbSave":1768429240274,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 02:21:00"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"OA1s0Q_VSm-ML3WFAAAH","timestamp":"2026-01-15 02:21:21","userId":"65f8e1b9a2d9c1234567890a"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"ujlCfbI6W3XQXyVmAAAJ","timestamp":"2026-01-15 02:21:25","userId":"695ae34503480665b8f821ed"}
+{"driverId":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted","orderId":"6967fefaa6396a2a73d5f4da","timestamp":"2026-01-15 02:21:28"}
+{"client":"695ae34503480665b8f821ed","level":"info","message":"Notification emitted to client","socketId":"ujlCfbI6W3XQXyVmAAAJ","timestamp":"2026-01-15 02:21:28"}
+{"driver":"65f8e1b9a2d9c1234567890a","level":"info","message":"Order accepted event emitted to driver","socketId":"OA1s0Q_VSm-ML3WFAAAH","timestamp":"2026-01-15 02:21:28"}
+{"driver":"65f8e1b9a2d9c1234567890a","event":"ORDER_ACCEPTED","level":"info","message":"Order accepted","orderId":"6967fefaa6396a2a73d5f4da","timestamp":"2026-01-15 02:21:28"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"6967fefaa6396a2a73d5f4da","socketId":"OA1s0Q_VSm-ML3WFAAAH","timestamp":"2026-01-15 02:21:28"}
+{"event":"joinOrderRoom","level":"info","message":"Socket joined order room","orderId":"6967fefaa6396a2a73d5f4da","socketId":"ujlCfbI6W3XQXyVmAAAJ","timestamp":"2026-01-15 02:21:28"}
+{"dbCacheKey":"order:6967fefaa6396a2a73d5f4da:lastDbSave","lastDbSave":null,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 02:21:33"}
+{"dbCacheKey":"order:6967fefaa6396a2a73d5f4da:lastDbSave","lastDbSave":1768429293719,"level":"info","message":"update on database and cache","timestamp":"2026-01-15 02:21:53"}
+{"event":"register","level":"info","message":"User registered via socket","socketId":"U6X6dhgVwmfiZ82HAAAF","timestamp":"2026-01-15 02:48:52","userId":"695ae34503480665b8f821ed"}
