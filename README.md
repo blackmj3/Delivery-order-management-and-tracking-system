@@ -1,10 +1,9 @@
-# Delivery-order-management-and-tracking-system
+# Delivery-order-management-and-tracking-system :
 
 ## Postman_URL(Users-Ratings) : 
 - https://documenter.getpostman.com/view/49722654/2sBXVZpF4s
 
-## Delivery order management and tracking system :
-### API Documents : 
+### API Documents Users : 
 - USERS API :
 - GET  /users/profile/:id :  get user information
 - POST /users/local/:id : upload avatar user to multer
@@ -12,7 +11,7 @@
 - PUT /users/updateprofile/:id : update profile user 
 - DELETE /usres/deleteavatar/:id : delete user's avatar
 
-### API Documents :
+### API Documents Ratings :
 - RATING API :
 - GET /Rating/getratingdriver/:userId : get all rating that user creates it   
 - GET /Rating/getratingsforthisdriver/:driverID : get all ratings for the selected driver

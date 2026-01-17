@@ -21,13 +21,14 @@ async getUserById(req, res) {
         
         if (!userId) {
             logger.warn(`User ${id} not found.`);
-            return responseService.error(res, 404 , null);
+            return res.status(404).json({success : false , message : "User Not Found" });
         }
 
         await cache.set(`user_${id}, userId`);
 
         logger.info(`User ${id} retrieved from database.`);
-        return responseService.success(res, 200 , userId);
+       
+        return res.status(200).json({success : true , userId});
 }
 
 
@@ -41,7 +42,7 @@ async updateUserProfile(req, res) {
 
         if (!updateUser) {
             logger.warn(`User ${id} not found for update.`);
-            return responseService.error(res, 404 , null);
+            return res.status(404).json({success : false , message : "User Not Found" });
         }
 
         const newUser = await User.findByIdAndUpdate(
@@ -53,7 +54,8 @@ async updateUserProfile(req, res) {
         await cache.set(`user_${id}, newUser`);
 
         logger.info(`User ${id} updated successfully.`);
-        return responseService.success(res, 200 , newUser);
+
+        return res.status(200).json({success : true , newUser});
 }
 
 
@@ -73,7 +75,7 @@ uploadLocalByMulter = async (req, res) => {
         
         if (!addUserAvatar) {
             logger.warn(`User with ID ${id} not found.`);
-            return responseService.error(res, 404 , { message: "User not found." });
+            return res.status(404).json({success : false , data : "User Not Found" });
         }
 
         addUserAvatar.avatar =  fileUrl ;
@@ -82,7 +84,8 @@ uploadLocalByMulter = async (req, res) => {
         await cache.set(`user_${id}, addUserAvatar`);
 
         logger.info(`Avatar uploaded successfully for user ${id}.`);
-        return responseService.success(res, 201 , addUserAvatar);
+        
+        return res.status(201).json({success : true , addUserAvatar});
 }
 
 
@@ -102,7 +105,7 @@ uploadCloudByCloudinary = async (req, res) => {
         
         if (!addUserAvatarCloud) {
             logger.warn(`User with ID ${id} not found.`);
-            return responseService.error(res, 404 , { message: "User not found." });
+            return res.status(404).json({success : false , message : "User Not Found" });
         }
 
         addUserAvatarCloud.avatar =  path ;
@@ -111,7 +114,8 @@ uploadCloudByCloudinary = async (req, res) => {
         await cache.set(`user_${id}, addUserAvatarCloud`);
 
         logger.info(`Avatar uploaded successfully for user ${id}.`);
-        return responseService.success(res, 201 , addUserAvatarCloud);
+
+       return res.status(200).json({success : true , addUserAvatarCloud});
 }
 
 
@@ -122,19 +126,20 @@ DeleteAvatarUser = async (req, res) => {
         
         if (!deleteUserAvatar) {
             logger.warn(`User with ID ${id} not found.`);
-            return responseService.error(res, 404 , { message: "User not found." });
+            return res.status(404).json({success : false , message : "User Not Found" });
         }
 
         if (!deleteUserAvatar.avatar) {
             logger.warn(`Avatar not found for user with ID ${id}.`);
-            return responseService.error(res, 404, { message: "Avatar not found." });
+            return res.status(404).json({success : false , message : "Avatar Not Found" });
         }
 
         deleteUserAvatar.avatar = null;
         await deleteUserAvatar.save();
 
         logger.info(`Avatar deleted successfully for user ${id}.`);
-        return responseService.success(res, 200, { message: "Avatar deleted successfully." });
+        
+        return res.status(200).json({success : true , message : "Avatar Deleted Successfully"});
 }
 
 

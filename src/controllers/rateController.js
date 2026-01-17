@@ -15,7 +15,7 @@ async addDriverRating(req, res) {
     if (!userRate) {
         userRate = await User.findById(id);
         if (!userRate || userRate.role !== "DRIVER") {
-            return responseService.error(res, 400, 'User not found');
+             return res.status(404).json({success : false , message : "Driver Not Found" });
         }
         await cache.set(`driverRate_${id}, userRate, 600`); 
     }
@@ -40,7 +40,8 @@ async addDriverRating(req, res) {
     await userRate.save();
 
     logger.info(`Driver ${userID} rated driver ${id} with score ${score}`);
-    return responseService.success(res, 201 ,  userRate);
+
+    return res.status(200).json({success : true , userRate});
 }
 
 
@@ -57,13 +58,14 @@ async getuserRatings(req, res) {
             const ratings = await Rating.find({ userId }).populate("userId").populate("driverId").populate("orderId");
             if (!ratings || ratings.length === 0) {
                 logger.warn(`No ratings found for Driver: ${userId}`);
-                return responseService.error(res, "No ratings found for this Driver.", 404);
+                 return res.status(404).json({success : false , message : "User Do Not Write Ratings" });
             }
 
             await cache.set(`driverRatings:${userId}, ratings`);
 
             logger.info(`Retrieved ratings for Driver : ${userId}`);
-            return responseService.success(res, ratings);
+            
+            return res.status(200).json({success : true , ratings});
     }
 
 
@@ -80,13 +82,14 @@ async getDriverRatings(req, res) {
             const ratingsDriver = await Rating.find({ driverId : driverID }).populate("userId").populate("driverId").populate("orderId");
             if (!ratingsDriver || ratingsDriver.length === 0) {
                 logger.warn(`No ratings found for Driver: ${driverID}`);
-                return responseService.error(res, "No ratings found for this Driver.", 404);
+                 return res.status(404).json({success : false , message : "Driver Has Not Ratings" });
             }
 
             await cache.set(`driverRatings:${driverID}, ratings`);
 
             logger.info(`Retrieved ratings for Driver : ${driverID}`);
-            return responseService.success(res, ratingsDriver);
+            
+           return res.status(200).json({success : true , ratingsDriver});
     }
 
 
@@ -98,7 +101,7 @@ async updateRating(req, res) {
     const updateRatingUser = await Rating.findById(id);
     if (!updateRatingUser) {
         logger.warn(`Rating with ID ${id} not found`);
-        return responseService.error(res, 400, 'Rating not found');
+         return res.status(404).json({success : false , message : "This Rating Not Found" });
     }
 
     const { score, comment } = req.body;
@@ -146,7 +149,7 @@ async updateRating(req, res) {
 
     logger.info(`Rating with ID ${id} updated successfully with score ${score}`);
 
-    return responseService.success(res, 200, { message, data: result });
+    return res.status(200).json({success : true , message , result});
 }
 
 
@@ -157,7 +160,7 @@ async deleteDriverRating(req, res) {
 
     let user = await User.findById(driverId);
     if (!user || user.role !== "DRIVER") {
-        return responseService.error(res, 400, 'Driver not found');
+         return res.status(404).json({success : false , message : "Driver Not Found" });
     }
 
     const { ratingId } = req.body;
@@ -186,7 +189,8 @@ async deleteDriverRating(req, res) {
 
     logger.info(`Rating ${ratingId} deleted from user ${driverId}`);
     
-    return responseService.success(res, 200, { message: 'Rating deleted successfully' , deleteRating});
+    return res.status(200).json({success : true ,message: 'Rating deleted successfully' , deleteRating});
+
 }
 
 

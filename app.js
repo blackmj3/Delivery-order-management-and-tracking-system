@@ -25,15 +25,15 @@ app.use(xssSanitize);
 app.get("/", (req, res) => res.send("Hello world"));
 
 // User APIS
-app.use("/users" , require("./src/routes/userRoute"));
+app.use("/users" , require("./src/routes/userRoutes"));
 
 // Rating APIS
-app.use("/Rating" , require("./src/routes/rateRoute"));
+app.use("/Rating" , require("./src/routes/rateRoutes"));
 
-app.use("/api/v1/orders", require("./src/routes/orders.routes"));
+app.use("/api/v1/orders", require("./src/routes/ordersRoutes"));
 // Error Middleware
 app.use(require("./src/middlewares/errorMiddleware"));
 
 // Not Found
-app.use(require("./middlewares/notFound"));
+app.use(require("./src/middlewares/notFoundMiddleware"));
 module.exports = app;
