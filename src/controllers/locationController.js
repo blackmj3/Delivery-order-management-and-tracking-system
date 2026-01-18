@@ -1,20 +1,27 @@
 const Location = require("../models/Location");
 const User = require("../models/User");
 const Order = require("../models/Order");
-const cache = require("../utils/cacheService");
+const logger = require("../utils/logger");
+const asyncHandler = require("../utils/asyncHandler");
 const { success, error } = require("../utils/responseService");
 
 class LocationController {
-  async addLocation(req, res) {
+  addLocation = asyncHandler(async (req, res) => {
     const { driver, order, latitude, longitude } = req.body;
-    // log location
-    req.log.info("Driver location added", {
-      event: "LOCATION_UPDATE",
-      order,
-      driver,
-      latitude,
-      longitude,
-    });
+
+    // check if driver exist
+    const driverExists = await User.findById(driver).lean();
+    if (!driverExists) {
+      const resp = error("Driver not found", 404);
+      return res.status(resp.status).json(resp);
+    }
+
+    // check if order exist
+    const orderExists = await Order.findById(order).lean();
+    if (!orderExists) {
+      const resp = error("Order not found", 404);
+      return res.status(resp.status).json(resp);
+    }
 
     const location = await Location.findOneAndUpdate(
       { driver, order },
@@ -26,28 +33,45 @@ class LocationController {
           coordinates: [longitude, latitude],
         },
       },
-      { new: true, upsert: true }
+      { new: true, upsert: true },
     );
 
-    success(res, location, "Location added and broadcasted", 200);
-  }
+    logger.info("Driver location added", {
+      event: "LOCATION_UPDATE",
+      order,
+      driver,
+      latitude,
+      longitude,
+    });
 
-  async getOrderLocation(req, res) {
-    const orderId = req.params.orderId;
+    const resp = success(location, "Location added", 200);
+    return res.status(resp.status).json(resp);
+  });
+
+  getOrderLocation = asyncHandler(async (req, res) => {
+    const orderId = req.params.id;
+
     const order = await Order.findById(orderId);
     if (!order) {
-      return error(res, "Order not found", 404);
+      const resp = error("Order not found", 404);
+      return res.status(resp.status).json(resp);
     }
+
     const latestLocation = await Location.findOne({ order: orderId })
       .sort({ createdAt: -1 })
       .populate("driver", "name phone")
       .select("location createdAt");
 
     if (!latestLocation) {
-      return error(res, "No location found for this order", 404);
+      const resp = error("No location found for this order", 404);
+      return res.status(resp.status).json(resp);
     }
-
-    success(res, latestLocation, "Latest order location retrieved", 200);
-  }
+    const resp = success(
+      latestLocation,
+      "Latest order location retrieved",
+      200,
+    );
+    return res.status(resp.status).json(resp);
+  });
 }
 module.exports = new LocationController();
