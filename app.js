@@ -43,7 +43,9 @@ app.use(helmet({
 // Rate Limiter
 app.use(apiLimiter);
 
-app.use("/api/v1/orders", require("./src/routes/orders.routes"));
+//app.use("/api/v1/orders", require("./src/routes/orders.routes"));
+app.use("/api/v1/admin", require("./src/routes/admin.route"));
+app.use("/api/v1/auth", require("./src/routes/authRoutes"));
 // Error Middleware
 app.use(require("./src/middlewares/errorMiddleware"));
 

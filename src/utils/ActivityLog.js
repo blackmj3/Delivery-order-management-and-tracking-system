@@ -3,7 +3,7 @@ const admin = require('../models/Admin');
 const createLog=async({userId,role,orderId,action,details})=>{
 
     try {
-        await ActivityLog.create({
+        await admin.create({
 
             userId,
             role,

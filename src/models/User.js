@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const paginatePlugin = require('../pluging/paginate.js');
 
 const userSchema = new mongoose.Schema(
   {
@@ -79,5 +80,7 @@ const userSchema = new mongoose.Schema(
 );
 
 userSchema.index({ email: 1 });
+
+userSchema.plugin(paginatePlugin);
 
 module.exports = mongoose.model('User', userSchema);

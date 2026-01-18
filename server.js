@@ -7,6 +7,8 @@ const http = require("http");
 const { Server } = require("socket.io");
 const notificationController = require("./src/controllers/notificationController");
 
+require('dotenv').config();
+
 //http server
 const server = http.createServer(app);
 //socket server
