@@ -92,3 +92,4 @@
 {"clientId":"696913fd3d0adbdecf55cd81","level":"info","message":"Order created","orderId":"6969dd8450026996f28981e0","timestamp":"2026-01-16 06:41:08"}
 {"driverId":"696925f902c3284f205dffec","level":"info","message":"Order accepted","orderId":"6969dc8050026996f28981d4","timestamp":"2026-01-16 06:57:40"}
 {"driverId":"696925f902c3284f205dffec","level":"info","message":"Order accepted","orderId":"6969196118035e047b1d4845","timestamp":"2026-01-18 12:12:00"}
+{"level":"info","message":"Order status updated","orderId":"6969dc8050026996f28981d4","status":"ON_THE_WAY","timestamp":"2026-01-18 15:39:38"}
