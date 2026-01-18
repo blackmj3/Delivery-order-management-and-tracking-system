@@ -77,10 +77,7 @@ module.exports = (io, connectedUsers) => {
         );
 
         cache.set(dbCacheKey, Date.now(), 60);
-        logger.info("update on database and cache", {
-          dbCacheKey,
-          lastDbSave,
-        });
+        //update on database and cache
       }
       io.to(order).emit("locationUpdated", {
         driver,
