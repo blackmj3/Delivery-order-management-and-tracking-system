@@ -2,12 +2,18 @@ const Order = require("../models/Order");
 const cache = require("../utils/cacheService");
 const logger = require("../utils/logger");
 const { success, error } = require("../utils/responseService");
+const NotificationService = require("../services/NotificationService");
 
 class OrderController {
-
   // Create Order
   async createOrder(req, res) {
-    const { pickupAddress, description, expectedTime, deliveryLocation } = req.body;
+    const {
+      driver,
+      pickupAddress,
+      description,
+      expectedTime,
+      deliveryLocation,
+    } = req.body;
     const userId = req.user._id || req.user.id;
 
     if (
@@ -17,13 +23,15 @@ class OrderController {
     ) {
       const resp = error(
         "Delivery location is required and must be a GeoJSON Point",
-        400
+        400,
       );
+
       return res.status(resp.status).json(resp);
     }
 
     const order = await Order.create({
       client: userId,
+      driver,
       pickupAddress,
       description,
       expectedTime,
@@ -31,7 +39,10 @@ class OrderController {
     });
 
     logger.info("Order created", { orderId: order._id, clientId: userId });
-
+    //notification
+    const orderId = order._id;
+    NotificationService.sendNewOrderNotification({ driver, orderId });
+    //////////////
     const resp = success(order, "Order created successfully", 201);
     return res.status(resp.status).json(resp);
   }
@@ -89,7 +100,16 @@ class OrderController {
     await order.save();
 
     logger.info("Order accepted", { orderId: order._id, driverId: userId });
-
+    //notification
+    const client = order.client;
+    const driver = order.driver;
+    const orderId = order._id;
+    NotificationService.sendAcceptOrderNotification({
+      client,
+      driver,
+      orderId,
+    });
+    //////////////
     const resp = success(order, "Order accepted successfully");
     return res.status(resp.status).json(resp);
   }
@@ -105,10 +125,7 @@ class OrderController {
       return res.status(resp.status).json(resp);
     }
 
-    if (
-      req.user.role === "DRIVER" &&
-      order.driver?.toString() !== userId
-    ) {
+    if (req.user.role === "DRIVER" && order.driver?.toString() !== userId) {
       const resp = error("Not allowed to update this order", 403);
       return res.status(resp.status).json(resp);
     }
@@ -122,7 +139,7 @@ class OrderController {
     if (!allowedTransitions[order.status]?.includes(status)) {
       const resp = error(
         `Invalid status transition from ${order.status} to ${status}`,
-        400
+        400,
       );
       return res.status(resp.status).json(resp);
     }

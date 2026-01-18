@@ -1,15 +1,17 @@
 const { io } = require("socket.io-client");
 console.log("hello from driver");
 const socket = io("http://localhost:3000");
-const driverId = "65f8e1b9a2d9c1234567890a";
+const driverId = "696925f902c3284f205dffec";
 let locationInterval = null;
 const path = [
-  { lat: 24.816, lng: 46.778 },
-  { lat: 24.8155, lng: 46.7775 },
-  { lat: 24.815, lng: 46.777 },
-  { lat: 24.8145, lng: 46.7765 },
-  { lat: 24.71445, lng: 46.6772 },
-  { lat: 24.614, lng: 46.675 },
+  { lng: 35.92617117249986, lat: 31.945073172249863 },
+  { lng: 35.91861808471731, lat: 31.94492750789216 },
+  { lng: 35.91587150268629, lat: 31.94703961848269 },
+  { lng: 35.9125241058355, lat: 31.949515824242923 },
+  { lng: 35.90891921691946, lat: 31.951118039465612 },
+  { lng: 35.91170871429199, lat: 31.952359726181413 },
+  { lng: 35.91213953705042, lat: 31.95326641971097 },
+  { lng: 35.91081083068863, lat: 31.95376891501506 },
 ];
 
 let pathIndex = 0;
@@ -34,7 +36,7 @@ socket.on("orderAccepted", ({ orderId }) => {
       longitude: point.lng,
     });
 
-    console.log(`Driver location sent: ${point.lat}, ${point.lng}`);
+    console.log(`Driver location sent: ${point.lng}, ${point.lat}`);
 
     pathIndex++;
     //stop when path is end

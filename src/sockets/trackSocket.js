@@ -24,10 +24,10 @@ module.exports = (io, connectedUsers) => {
       let orderDoc = await Order.findById(orderId).lean();
       if (!orderDoc) {
         orderDoc = {
-          client: "695ae34503480665b8f821ed",
-          driver: "65f8e1b9a2d9c1234567890a",
+          client: "696913fd3d0adbdecf55cd81",
+          driver: "696925f902c3284f205dffec",
           deliveryLocation: {
-            coordinates: [46.6748, 24.7122],
+            coordinates: [35.91055, 31.9539],
           },
         };
       } //return
@@ -39,7 +39,7 @@ module.exports = (io, connectedUsers) => {
           deliveryLocation: orderDoc.deliveryLocation,
           isNearNotified: false,
         },
-        600
+        600,
       );
 
       logger.info("Socket joined order room", {
@@ -55,8 +55,8 @@ module.exports = (io, connectedUsers) => {
       const locationCacheKey = `order:${order}:location`;
       cache.set(
         locationCacheKey,
-        { driver, order, latitude, longitude, updatedAt: Date.now() },
-        30
+        { driver, order, longitude, latitude, updatedAt: Date.now() },
+        30,
       );
       //update in database but every 15 seconds
       const dbCacheKey = `order:${order}:lastDbSave`;
@@ -73,13 +73,11 @@ module.exports = (io, connectedUsers) => {
               coordinates: [longitude, latitude],
             },
           },
-          { new: true, upsert: true }
+          { new: true, upsert: true },
         );
+
         cache.set(dbCacheKey, Date.now(), 60);
-        logger.info("update on database and cache", {
-          dbCacheKey,
-          lastDbSave,
-        });
+        //update on database and cache
       }
       io.to(order).emit("locationUpdated", {
         driver,
@@ -92,7 +90,6 @@ module.exports = (io, connectedUsers) => {
       //get order document from cache to get client location
       const orderCached = cache.get(`order:${order}`);
       if (!orderCached) return;
-
       const [clientLng, clientLat] = orderCached.deliveryLocation.coordinates;
       //calculate distance
       const result = await Location.aggregate([
@@ -120,9 +117,7 @@ module.exports = (io, connectedUsers) => {
           const notification = await Notification.create({
             user: clientId,
             title: "Driver Nearby",
-            message: `Your driver is ${Math.round(
-              result[0].distance
-            )} meters away`,
+            message: `Your driver is just a few meters away`,
             type: "ORDER_NEARBY",
             order,
           });
