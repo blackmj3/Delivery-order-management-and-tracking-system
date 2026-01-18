@@ -11,6 +11,7 @@ const sendEmail = require('../utils/sendEmail');
 const cache = require('../utils/cacheService');
 const logger = require('../utils/logger');
 const { success, error } = require('../utils/responseService');
+const { createLog } = require('../utils/ActivityLog');
 
 const crypto = require('crypto');
 
@@ -35,7 +36,7 @@ class AuthController {
 
   // REGISTER
   register = asyncHandler(async (req, res) => {
-    const { name, email, password, phone } = req.body;
+    const { name, email, password, phone, role } = req.body;
 
     const existingUser = await User.findOne({ email });
     if (existingUser) {
@@ -46,7 +47,7 @@ class AuthController {
     passwordService.validatePasswordStrength(password);
     const hashedPassword = await passwordService.hashPassword(password);
 
-    const user = await User.create({ name, email, password: hashedPassword, phone });
+    const user = await User.create({ name, email, password: hashedPassword, phone, role });
 
     const verifyToken = crypto.randomBytes(32).toString('hex');
 
@@ -85,6 +86,14 @@ class AuthController {
     const user = await User.findOne({ email }).select('+password');
     if (!user) {
       cache.set(cacheKey, attempts + 1, 900);
+      
+      await createLog({
+        userId: null,
+        role: 'UNKNOWN',
+        action: 'FAILED_LOGIN',
+        details: `Login attempt with invalid email: ${email}`
+      })
+      
       const resp = error('Invalid email or password', 401);
       return res.status(resp.status).json(resp);
     }
@@ -98,6 +107,14 @@ class AuthController {
     if (!isValid) {
       cache.set(cacheKey, attempts + 1, 900);
       await this.handledFailedLogin(user);
+
+      await createLog({
+        userId: user._id,
+        role: user.role,    
+        action: 'FAILED_LOGIN',
+        details: 'Invalid password'
+      });
+
       const resp = error('Invalid email or password', 401);
       return res.status(resp.status).json(resp);
     }
@@ -117,6 +134,13 @@ class AuthController {
     { $set: { lastLogin: new Date() } }
     )
 
+    await createLog({
+      userId: user._id,
+      role: user.role,
+      action: 'LOGIN',
+      details: 'User logged in successfully'
+    });
+
     const resp = success(null, 'Login successful');
     return res.status(resp.status).json(resp);
   })
@@ -124,6 +148,14 @@ class AuthController {
   // LOGOUT
   logout = asyncHandler(async (req, res) => {
     cookieService.clearTokens(res);
+
+    await createLog({
+      userId: req.user.id,
+      role: req.user.role,
+      action: 'LOGOUT',
+      details: 'User logged out'
+    })
+
     const resp = success(null, 'Logged out successfully');
     return res.status(resp.status).json(resp);
   })
@@ -158,6 +190,13 @@ class AuthController {
 
     await User.findByIdAndUpdate(token.user, { isEmailVerified: true });
     await token.deleteOne();
+    await createLog({
+      userId: token.user,
+      role: 'CLIENT',
+      action: 'VERIFY_EMAIL',
+      details: 'Email verified successfully'
+    });
+
     logger.info('Email verified', { userId: token.user });
 
     const resp = success(null, 'Email verified successfully');
@@ -225,6 +264,12 @@ class AuthController {
 
     // delete token after use
     await tokenDoc.deleteOne();
+    await createLog({
+      userId: tokenDoc.user,
+      role: 'CLIENT',
+      action: 'RESET_PASSWORD',
+      details: 'Password reset via email token'
+    });
 
     logger.info('Password reset completed', { userId: tokenDoc.user });
     const resp = success(null, 'Password updated successfully');
@@ -245,6 +290,12 @@ class AuthController {
 
     const hashedPassword = await passwordService.hashPassword(newPassword);
     await User.findByIdAndUpdate(userId, { password: hashedPassword, passwordChangedAt: new Date() });
+    await createLog({
+      userId,
+      role: req.user.role,
+      action: 'UPDATE_PASSWORD',
+      details: 'User updated password'
+    });
 
     logger.info('Password updated', { userId });
     const resp = success(null, 'Password updated');
