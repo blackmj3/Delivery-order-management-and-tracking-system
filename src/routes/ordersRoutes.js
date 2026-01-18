@@ -16,7 +16,7 @@ router.get(
   "/my-orders",
   requireAuth,
   authorize("CLIENT", "DRIVER"),
-  asyncHandler(orderController.getMyOrders)
+  asyncHandler(orderController.getMyOrders),
 );
 
 // Get open orders
@@ -24,7 +24,7 @@ router.get(
   "/open",
   requireAuth,
   authorize("DRIVER"),
-  asyncHandler(orderController.getOpenOrders)
+  asyncHandler(orderController.getOpenOrders),
 );
 
 // Get order by id
@@ -32,7 +32,7 @@ router.get(
   "/:id",
   requireAuth,
   [...orderIdValidate, validate],
-  asyncHandler(orderController.getOrderById)
+  asyncHandler(orderController.getOrderById),
 );
 
 // POST
@@ -43,7 +43,7 @@ router.post(
   requireAuth,
   authorize("CLIENT"),
   [...createOrderValidate, validate],
-  asyncHandler(orderController.createOrder)
+  asyncHandler(orderController.createOrder),
 );
 
 // PUT
@@ -54,7 +54,7 @@ router.put(
   requireAuth,
   authorize("DRIVER"),
   [...orderIdValidate, validate],
-  asyncHandler(orderController.acceptOrder)
+  asyncHandler(orderController.acceptOrder),
 );
 
 // Update order status
@@ -63,7 +63,7 @@ router.put(
   requireAuth,
   authorize("DRIVER", "ADMIN"),
   [...orderIdValidate, ...updateOrderStatusValidate, validate],
-  asyncHandler(orderController.updateOrderStatus)
+  asyncHandler(orderController.updateOrderStatus),
 );
 
 module.exports = router;

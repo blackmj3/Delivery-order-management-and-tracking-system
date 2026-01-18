@@ -23,7 +23,7 @@ class OrderController {
     ) {
       const resp = error(
         "Delivery location is required and must be a GeoJSON Point",
-        400
+        400,
       );
 
       return res.status(resp.status).json(resp);
@@ -139,7 +139,7 @@ class OrderController {
     if (!allowedTransitions[order.status]?.includes(status)) {
       const resp = error(
         `Invalid status transition from ${order.status} to ${status}`,
-        400
+        400,
       );
       return res.status(resp.status).json(resp);
     }

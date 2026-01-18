@@ -1,6 +1,5 @@
 const express = require("express");
 const locationController = require("../controllers/locationController");
-const asyncHandler = require("../utils/asyncHandler");
 const validateCreateLocation = require("../validations/LocationValidator");
 const validate = require("../middlewares/validationMiddleware");
 const { orderIdValidate } = require("../validations/orderValidate");
@@ -12,7 +11,7 @@ router.post(
   requireAuth,
   authorize("DRIVER"),
   [...validateCreateLocation, validate],
-  asyncHandler(locationController.addLocation)
+  locationController.addLocation,
 );
 
 //get order location
@@ -20,7 +19,7 @@ router.get(
   "/order/:id/latest",
   requireAuth,
   [...orderIdValidate, validate],
-  asyncHandler(locationController.getOrderLocation)
+  locationController.getOrderLocation,
 );
 
 module.exports = router;

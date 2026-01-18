@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const asyncHandler = require("../utils/asyncHandler");
-const { requireAuth, authorize } = require("../middlewares/authMiddleware");
+const { requireAuth } = require("../middlewares/authMiddleware");
 const {
   validateNotificationId,
 } = require("../validations/notificationVlidator");
@@ -14,6 +13,6 @@ router.patch(
   "/:id/read",
   requireAuth,
   [...validateNotificationId, validate],
-  asyncHandler(NotificationController.markNotificationAsRead)
+  NotificationController.markNotificationAsRead,
 );
 module.exports = router;

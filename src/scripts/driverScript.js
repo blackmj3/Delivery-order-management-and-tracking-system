@@ -1,7 +1,7 @@
 const { io } = require("socket.io-client");
 console.log("hello from driver");
 const socket = io("http://localhost:3000");
-const driverId = "65f8e1b9a2d9c1234567890a";
+const driverId = "696925f902c3284f205dffec";
 let locationInterval = null;
 const path = [
   { lng: 35.92617117249986, lat: 31.945073172249863 },
