@@ -84,3 +84,13 @@
 {"level":"info","message":"Retrieved ratings for Driver : 69544b1e3ad0ef7fcc2c8ca3","timestamp":"2026-01-05 18:44:55"}
 {"level":"info","message":"Rating 695bc7e38758cfcc28ff0a31 deleted from user 69544b1e3ad0ef7fcc2c8ca3","timestamp":"2026-01-05 18:47:37"}
 {"level":"info","message":"Rating 695bbc4593a0478f80333d21 deleted from user 69544b1e3ad0ef7fcc2c8ca3","timestamp":"2026-01-05 18:49:57"}
+{"level":"info","message":"User registered","timestamp":"2026-01-15 16:02:43","userId":"6968e56f16208c97335e0490"}
+{"level":"info","message":"Email verified","timestamp":"2026-01-15 16:04:43","userId":"6968e56f16208c97335e0490"}
+{"level":"info","message":"Password reset requested","resetLink":"http://localhost:3000/reset-password/8f2e473ef07a4fe67f8bf4f52a814def9260cf413029290a4f1190407b1f43fa","timestamp":"2026-01-15 16:05:28","userId":"6968e56f16208c97335e0490"}
+{"level":"info","message":"Password reset completed","timestamp":"2026-01-15 16:07:35","userId":"6968e56f16208c97335e0490"}
+{"level":"info","message":"Email verified","timestamp":"2026-01-15 19:41:53","userId":"696913fd3d0adbdecf55cd81"}
+{"level":"info","message":"User registered","timestamp":"2026-01-15 20:32:31","userId":"696924a116208c97335e04ac"}
+{"level":"info","message":"User registered","timestamp":"2026-01-15 20:33:38","userId":"696924e116208c97335e04b1"}
+{"level":"info","message":"User registered","timestamp":"2026-01-15 20:38:18","userId":"696925f902c3284f205dffec"}
+{"level":"info","message":"User registered","timestamp":"2026-01-15 20:39:04","userId":"6969262702c3284f205dfff1"}
+{"level":"info","message":"Email verified","timestamp":"2026-01-15 20:40:42","userId":"696925f902c3284f205dffec"}
