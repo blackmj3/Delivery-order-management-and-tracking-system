@@ -2,20 +2,24 @@ const Rating = require("../models/Rate");
 const User = require("../models/User");
 const logger = require('../utils/logger');
 const cache = require('../utils/cacheService');   
-const responseService = require('../utils/responseService');    
+const {success,error} = require('../utils/responseService');    
+const asyncHandler = require("../utils/asyncHandler") ;
 
 class RatingController {
 
 // add driver rating
 
-async addDriverRating(req, res) {
-    const { id } = req.params; // driverId
-    let userRate = await cache.get(`driverRate_${id}`);
+ addDriverRating = asyncHandler (async (req, res) => {
+        const { id } = req.params; // driverId
+        
+         let userRate = await cache.get(`driverRate_${id}`);
     
     if (!userRate) {
         userRate = await User.findById(id);
         if (!userRate || userRate.role !== "DRIVER") {
-            return responseService.error(res, 400, 'User not found');
+             logger.error(`Driver ${id} not found.`);
+             const resp = error("Driver Not Found", 404);
+             return res.status(resp.status).json(resp);
         }
         await cache.set(`driverRate_${id}, userRate, 600`); 
     }
@@ -31,7 +35,8 @@ async addDriverRating(req, res) {
 
     if (ratings.length === 0) {
         logger.info(`No ratings found for user with ID ${id}`);
-        return responseService.error(res, 404, 'No ratings found for this driver');
+        const respratelength = error("Driver Has Not Ratings", 404);
+        return res.status(respratelength.status).json(respratelength);
     }
 
     const totalScore = ratings.reduce((sum, rating) => sum + rating.score, 0);
@@ -40,65 +45,76 @@ async addDriverRating(req, res) {
     await userRate.save();
 
     logger.info(`Driver ${userID} rated driver ${id} with score ${score}`);
-    return responseService.success(res, 201 ,  userRate);
-}
+
+    const respsuc = success( userRate , "add Driver's Rating successfully", 201);
+    return res.status(respsuc.status).json(respsuc);
+}) ;
 
 
 // get user ratings
 
-async getuserRatings(req, res) {
+ getuserRatings = asyncHandler ( async (req, res) => {
         const { userId } = req.params;
         const cachedRatings = await cache.get(`userRatings:${userId}`);
         if (cachedRatings) {
             logger.info(`Retrieved ratings from cache for Driver : ${userId}`);
-            return responseService.success(res, cachedRatings);
+            const respsuccache = success(cachedRatings , "success", 200);
+            return res.status(respsuccache.status).json(respsuccache);
         }
 
             const ratings = await Rating.find({ userId }).populate("userId").populate("driverId").populate("orderId");
             if (!ratings || ratings.length === 0) {
-                logger.warn(`No ratings found for Driver: ${userId}`);
-                return responseService.error(res, "No ratings found for this Driver.", 404);
+                logger.error(`this User ${userId} Do Not Write Ratings`);
+                const respratelength = error(`this User ${userId} Do Not Write Ratings`, 404);
+                return res.status(respratelength.status).json(respratelength);
             }
 
             await cache.set(`driverRatings:${userId}, ratings`);
 
             logger.info(`Retrieved ratings for Driver : ${userId}`);
-            return responseService.success(res, ratings);
-    }
+ 
+            const respsuc = success(ratings , `get Ratings that user ${userId} wrote it successfully`, 200);
+            return res.status(respsuc.status).json(respsuc);
+    }) ;
 
 
 // get Driver ratings
 
-async getDriverRatings(req, res) {
+ getDriverRatings = asyncHandler ( async (req, res)  => {
         const { driverID } = req.params;
         const cachedRatings = await cache.get(`userRatings:${driverID}`);
         if (cachedRatings) {
             logger.info(`Retrieved ratings from cache for Driver : ${driverID}`);
-            return responseService.success(res, cachedRatings);
+            const respsuccache = success(cachedRatings , "success", 200);
+            return res.status(respsuccache.status).json(respsuccache);
         }
 
             const ratingsDriver = await Rating.find({ driverId : driverID }).populate("userId").populate("driverId").populate("orderId");
             if (!ratingsDriver || ratingsDriver.length === 0) {
-                logger.warn(`No ratings found for Driver: ${driverID}`);
-                return responseService.error(res, "No ratings found for this Driver.", 404);
+                logger.error(`No ratings found for Driver: ${driverID}`);
+                const respratelength = error(`No ratings found for Driver: ${driverID}`, 404);
+                return res.status(respratelength.status).json(respratelength);
             }
 
             await cache.set(`driverRatings:${driverID}, ratings`);
 
             logger.info(`Retrieved ratings for Driver : ${driverID}`);
-            return responseService.success(res, ratingsDriver);
-    }
+            
+            const respsuc = success(ratingsDriver , `get Ratings for this Driver successfully`, 200);
+            return res.status(respsuc.status).json(respsuc);
+    }) ;
 
 
 // update rating for driver
 
-async updateRating(req, res) {
+ updateRating = asyncHandler ( async (req, res) => {
     const { id } = req.params;
 
     const updateRatingUser = await Rating.findById(id);
     if (!updateRatingUser) {
-        logger.warn(`Rating with ID ${id} not found`);
-        return responseService.error(res, 400, 'Rating not found');
+        logger.error(`Rating with ID ${id} not found`);
+        const resp = error("This Rating Not Found", 404);
+        return res.status(resp.status).json(resp);
     }
 
     const { score, comment } = req.body;
@@ -144,27 +160,32 @@ async updateRating(req, res) {
             message = "Rating updated successfully";
     }
 
-    logger.info(`Rating with ID ${id} updated successfully with score ${score}`);
+     logger.info(`Rating with ID ${id} updated successfully with score ${score}`);
+     const respsuc = success({result , message} , `Updated Rating successfully`, 200);
+     return res.status(respsuc.status).json(respsuc);
 
-    return responseService.success(res, 200, { message, data: result });
-}
+}) ;
 
 
 // delete driver rating
 
-async deleteDriverRating(req, res) {
+ deleteDriverRating = asyncHandler ( async (req, res) => {
     const { driverId } = req.params;
 
     let user = await User.findById(driverId);
     if (!user || user.role !== "DRIVER") {
-        return responseService.error(res, 400, 'Driver not found');
+        logger.error("This Driver Not Found");
+        const resp = error("This Driver Not Found", 404);
+        return res.status(resp.status).json(resp);
     }
 
     const { ratingId } = req.body;
 
     const rating = await Rating.findById(ratingId);
     if (!rating || rating.driverId.toString() !== driverId) {
-        return responseService.error(res, 404, 'Rating not found');
+        logger.warn("This Driver Not Found");
+        const resp = error("This Driver Not Found", 404);
+        return res.status(resp.status).json(resp);
     }
 
     const deleteRating = await Rating.findByIdAndDelete(ratingId)
@@ -185,9 +206,10 @@ async deleteDriverRating(req, res) {
     await user.save();
 
     logger.info(`Rating ${ratingId} deleted from user ${driverId}`);
-    
-    return responseService.success(res, 200, { message: 'Rating deleted successfully' , deleteRating});
-}
+
+     const respsuc = success( deleteRating , `Deleted this Rating successfully`, 200);
+     return res.status(respsuc.status).json(respsuc);
+});
 
 
 }

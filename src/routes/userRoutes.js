@@ -1,28 +1,23 @@
 const express = require("express") ;
 const router = express.Router();
 const userController = require("../controllers/userController") ;
-// const {requireAuth ,    auhtorize} = require("../middlewares/auth") ;
+const { requireAuth } = require("../middlewares/authMiddleware") ;
 const uploadLocal = require("../middlewares/uploadMiddleware");
 const multer = require("multer");
 const {addNewUserValidation , getByIdValidate} = require("../validations/userValidation") ;
-const asyncHandler = require("../utils/asyncHandler")
 
-// need requireAuth Middleware for all APIS
 
 // GET 
-router.get("/profile/:id" , [getByIdValidate]  , asyncHandler(userController.getUserById)) ;
-
+router.get("/profile/:id" , [requireAuth , getByIdValidate] , userController.getUserById) ;
 
 //POST
-
-router.post("/local/:id" , [getByIdValidate ,  uploadLocal.single("image")], asyncHandler(userController.uploadLocalByMulter));
-router.post("/cloud/:id", [getByIdValidate , multer().single("image")] , asyncHandler(userController.uploadCloudByCloudinary));
-
+router.post("/local/:id" , [requireAuth , getByIdValidate ,  uploadLocal.single("image")], userController.uploadLocalByMulter);
+router.post("/cloud/:id", [requireAuth , getByIdValidate , multer().single("image")] , userController.uploadCloudByCloudinary);
 
 // PUT 
-router.put("/updateprofile/:id" , [getByIdValidate , addNewUserValidation] , asyncHandler(userController.updateUserProfile));
+router.put("/updateprofile/:id" , [requireAuth , getByIdValidate , addNewUserValidation] , userController.updateUserProfile);
 
 // DELETE 
-router.delete("/deleteavatar/:id" , [getByIdValidate] , asyncHandler(userController.DeleteAvatarUser));
+router.delete("/deleteavatar/:id" , [requireAuth , getByIdValidate] , userController.DeleteAvatarUser);
 
 module.exports = router ;
