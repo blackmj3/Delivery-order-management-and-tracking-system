@@ -29,6 +29,7 @@ router.get(
 // Get order by id
 router.get(
   "/:id",  requireAuth,
+   authorize("CLIENT","DRIVER", "ADMIN"),
   [...orderIdValidate, validate],
   asyncHandler(orderController.getOrderById)
 );

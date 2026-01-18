@@ -84,3 +84,11 @@
 {"level":"info","message":"Retrieved ratings for Driver : 69544b1e3ad0ef7fcc2c8ca3","timestamp":"2026-01-05 18:44:55"}
 {"level":"info","message":"Rating 695bc7e38758cfcc28ff0a31 deleted from user 69544b1e3ad0ef7fcc2c8ca3","timestamp":"2026-01-05 18:47:37"}
 {"level":"info","message":"Rating 695bbc4593a0478f80333d21 deleted from user 69544b1e3ad0ef7fcc2c8ca3","timestamp":"2026-01-05 18:49:57"}
+{"clientId":"696913fd3d0adbdecf55cd81","level":"info","message":"Order created","orderId":"6969196118035e047b1d4845","timestamp":"2026-01-15 16:44:17"}
+{"clientId":"696913fd3d0adbdecf55cd81","level":"info","message":"Order created","orderId":"6969dc8050026996f28981d4","timestamp":"2026-01-16 06:36:48"}
+{"clientId":"696913fd3d0adbdecf55cd81","level":"info","message":"Order created","orderId":"6969dccb50026996f28981d7","timestamp":"2026-01-16 06:38:03"}
+{"clientId":"696913fd3d0adbdecf55cd81","level":"info","message":"Order created","orderId":"6969dcf750026996f28981da","timestamp":"2026-01-16 06:38:47"}
+{"clientId":"696913fd3d0adbdecf55cd81","level":"info","message":"Order created","orderId":"6969dd1b50026996f28981dd","timestamp":"2026-01-16 06:39:23"}
+{"clientId":"696913fd3d0adbdecf55cd81","level":"info","message":"Order created","orderId":"6969dd8450026996f28981e0","timestamp":"2026-01-16 06:41:08"}
+{"driverId":"696925f902c3284f205dffec","level":"info","message":"Order accepted","orderId":"6969dc8050026996f28981d4","timestamp":"2026-01-16 06:57:40"}
+{"driverId":"696925f902c3284f205dffec","level":"info","message":"Order accepted","orderId":"6969196118035e047b1d4845","timestamp":"2026-01-18 12:12:00"}
