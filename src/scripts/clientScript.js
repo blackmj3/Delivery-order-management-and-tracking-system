@@ -1,7 +1,7 @@
 const { io } = require("socket.io-client");
 
 const socket = io("http://localhost:3000");
-const clientId = "695ae34503480665b8f821ed";
+const clientId = "696913fd3d0adbdecf55cd81";
 console.log("hello from client");
 //add client to connectedUsers Map
 socket.emit("register", clientId);

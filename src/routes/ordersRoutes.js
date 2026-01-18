@@ -11,54 +11,59 @@ const {
   updateOrderStatusValidate,
 } = require("../validations/orderValidate");
 
-
 // Get my orders
 router.get(
-  "/my-orders",requireAuth,
+  "/my-orders",
+  requireAuth,
   authorize("CLIENT", "DRIVER"),
-  asyncHandler(orderController.getMyOrders)
+  asyncHandler(orderController.getMyOrders),
 );
 
 // Get open orders
 router.get(
-  "/open", requireAuth,
+  "/open",
+  requireAuth,
   authorize("DRIVER"),
-  asyncHandler(orderController.getOpenOrders)
+  asyncHandler(orderController.getOpenOrders),
 );
 
 // Get order by id
 router.get(
-  "/:id",  requireAuth,
+  "/:id",
+  requireAuth,
   [...orderIdValidate, validate],
-  asyncHandler(orderController.getOrderById)
+  asyncHandler(orderController.getOrderById),
 );
 
 // POST
 
 // Create order
 router.post(
-  "/",  requireAuth,
+  "/",
+  requireAuth,
   authorize("CLIENT"),
-  [...createOrderValidate, validate ],
-  asyncHandler(orderController.createOrder)
+  [...createOrderValidate, validate],
+  asyncHandler(orderController.createOrder),
 );
 
 // PUT
 
 // Accept order
 router.put(
-  "/:id/accept", requireAuth,
+  "/:id/accept",
+  requireAuth,
   authorize("DRIVER"),
-  [...orderIdValidate,validate],
-  asyncHandler(orderController.acceptOrder)
+  [...orderIdValidate, validate],
+  asyncHandler(orderController.acceptOrder),
 );
 
 // Update order status
 router.put(
-  "/:id/status",  requireAuth,
+  "/:id/status",
+  requireAuth,
   authorize("DRIVER", "ADMIN"),
-  [...orderIdValidate, ...updateOrderStatusValidate,validate],
-  asyncHandler(orderController.updateOrderStatus)
+  [...orderIdValidate, ...updateOrderStatusValidate, validate],
+  asyncHandler(orderController.updateOrderStatus),
 );
 
 module.exports = router;
