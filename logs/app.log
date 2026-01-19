@@ -215,3 +215,4 @@
 {"level":"warn","message":"User locked: blackmj123@gmail.com","timestamp":"2026-01-20 00:15:37"}
 {"level":"info","message":"User auto-unlocked after lock expiration: blackmj123@gmail.com","timestamp":"2026-01-20 00:24:22"}
 {"level":"warn","message":"User locked: blackmj123@gmail.com","timestamp":"2026-01-20 00:24:32"}
+{"level":"warn","message":"User locked: test1@example.com","timestamp":"2026-01-20 00:42:03"}
