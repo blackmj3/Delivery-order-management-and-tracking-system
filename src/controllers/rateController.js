@@ -48,11 +48,11 @@ class RatingController {
 
     const totalScore = ratings.reduce((sum, rating) => sum + rating.score, 0);
     userRate.averageRating = totalScore / ratings.length;
-    await userRate.save();
+    await userRate.save() ;
 
-    // clear related caches
-    await cache.del(`driverRatings:${id}`);
-    await cache.del(`userRatings:${userID}`);
+     // clear related caches
+    await cache.clear(`driverRatings:${id}`);
+    await cache.clear(`userRatings:${userID}`);
 
     logger.info(`Driver ${userID} rated driver ${id} with score ${score}`);
 
@@ -153,9 +153,9 @@ class RatingController {
       await user.save();
     }
 
-    // clear cache
-    await cache.del(`driverRatings:${driverId}`);
-    await cache.del(`userRatings:${updateRatingUser.userId}`);
+     // clear cache
+    await cache.clear(`driverRatings:${driverId}`);
+    await cache.clear(`userRatings:${updateRatingUser.userId}`);
 
     logger.info(`Rating with ID ${id} updated successfully with score ${score}`);
 
@@ -196,11 +196,11 @@ class RatingController {
       user.averageRating = 0;
     }
 
-    await user.save();
+    await user.save() ;
 
-    // clear cache
-    await cache.del(`driverRatings:${driverId}`);
-    await cache.del(`userRatings:${rating.userId}`);
+     // clear cache
+    await cache.clear(`driverRatings:${driverId}`);
+    await cache.clear(`userRatings:${rating.userId}`);
 
     logger.info(`Rating ${ratingId} deleted from driver ${driverId}`);
 

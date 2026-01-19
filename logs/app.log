@@ -196,3 +196,39 @@
 {"level":"info","message":"User 6964e38c141b7260db184bff retrieved from database.","timestamp":"2026-01-18 14:38:15"}
 {"level":"error","message":"User 6964e38c141b7260db184bfd not found.","timestamp":"2026-01-18 14:39:09"}
 {"level":"info","message":"User 6964e38c141b7260db184bff retrieved from database.","timestamp":"2026-01-18 14:39:22"}
+{"level":"error","message":"User not found","timestamp":"2026-01-19 18:47:31","userId":"6964e38c141b7260db184bff"}
+{"level":"error","message":"User not found","timestamp":"2026-01-19 18:48:07","userId":"6964e38c141b7260db184bff"}
+{"level":"error","message":"User not found","timestamp":"2026-01-19 18:48:09","userId":"6964e38c141b7260db184bff"}
+{"level":"info","message":"User retrieved from database","timestamp":"2026-01-19 18:49:10","userId":"6964e38c141b7260db184bff"}
+{"level":"warn","message":"No file uploaded","timestamp":"2026-01-19 19:25:16"}
+{"level":"info","message":"User updated successfully","timestamp":"2026-01-19 19:33:48","userId":"6964e38c141b7260db184bff"}
+{"level":"info","message":"User retrieved from database","timestamp":"2026-01-19 19:43:13","userId":"6964e38c141b7260db184bff"}
+{"level":"info","message":"Avatar uploaded locally","timestamp":"2026-01-19 19:49:00","userId":"6964e38c141b7260db184bff"}
+{"level":"warn","message":"Avatar not found","timestamp":"2026-01-19 19:58:07","userId":"6964e38c141b7260db184bff"}
+{"level":"info","message":"Avatar uploaded locally","timestamp":"2026-01-19 19:58:43","userId":"6964e38c141b7260db184bff"}
+{"level":"info","message":"Avatar deleted","timestamp":"2026-01-19 19:59:10","userId":"6964e38c141b7260db184bff"}
+{"level":"info","message":"Retrieved ratings for User: 69544ae53ad0ef7fcc2c8ca1","timestamp":"2026-01-19 20:09:18"}
+{"level":"info","message":"Retrieved ratings for Driver: 69544b1e3ad0ef7fcc2c8ca3","timestamp":"2026-01-19 20:11:53"}
+{"level":"info","message":"Driver 69544ae53ad0ef7fcc2c8ca1 rated driver 69544b1e3ad0ef7fcc2c8ca3 with score 4","timestamp":"2026-01-19 20:21:34"}
+{"level":"info","message":"Rating with ID 696c18df9c89b0091590a879 updated successfully with score 5","timestamp":"2026-01-19 20:25:22"}
+{"level":"warn","message":"This Rating Not Found","timestamp":"2026-01-19 20:28:23"}
+{"level":"warn","message":"This Rating Not Found","timestamp":"2026-01-19 20:29:34"}
+{"level":"info","message":"Rating 696e67f8224db912a7b87550 deleted from driver 69544b1e3ad0ef7fcc2c8ca3","timestamp":"2026-01-19 20:29:59"}
+{"level":"info","message":"User retrieved from database","timestamp":"2026-01-19 20:41:57","userId":"6964e38c141b7260db184bff"}
+{"level":"info","message":"User updated successfully","timestamp":"2026-01-19 20:45:50","userId":"6964e38c141b7260db184bff"}
+{"level":"info","message":"User retrieved from database","timestamp":"2026-01-19 20:47:35","userId":"6964e38c141b7260db184bff"}
+{"level":"info","message":"User retrieved from cache","timestamp":"2026-01-19 20:47:37","userId":"6964e38c141b7260db184bff"}
+{"level":"info","message":"User updated successfully","timestamp":"2026-01-19 20:49:49","userId":"6964e38c141b7260db184bff"}
+{"level":"info","message":"Avatar uploaded locally","timestamp":"2026-01-19 20:54:02","userId":"6964e38c141b7260db184bff"}
+{"level":"info","message":"Avatar deleted","timestamp":"2026-01-19 20:55:44","userId":"6964e38c141b7260db184bff"}
+{"level":"warn","message":"Avatar not found","timestamp":"2026-01-19 20:55:48","userId":"6964e38c141b7260db184bff"}
+{"level":"info","message":"Driver 69544ae53ad0ef7fcc2c8ca1 rated driver 69544b1e3ad0ef7fcc2c8ca3 with score 4","timestamp":"2026-01-19 21:00:09"}
+{"level":"info","message":"Retrieved ratings for User: 69544ae53ad0ef7fcc2c8ca1","timestamp":"2026-01-19 21:06:39"}
+{"level":"info","message":"Retrieved ratings for Driver: 69544b1e3ad0ef7fcc2c8ca3","timestamp":"2026-01-19 21:08:32"}
+{"level":"info","message":"Retrieved ratings from cache for Driver: 69544b1e3ad0ef7fcc2c8ca3","timestamp":"2026-01-19 21:08:42"}
+{"level":"error","message":"Rating with ID 696c18df9c89b0091590a879 not found","timestamp":"2026-01-19 21:09:47"}
+{"level":"info","message":"Rating with ID 696e681eaae702d5bae21b2a updated successfully with score 5","timestamp":"2026-01-19 21:10:17"}
+{"level":"warn","message":"This Rating Not Found","timestamp":"2026-01-19 21:12:32"}
+{"level":"warn","message":"This Rating Not Found","timestamp":"2026-01-19 21:13:00"}
+{"level":"warn","message":"This Rating Not Found","timestamp":"2026-01-19 21:13:02"}
+{"level":"info","message":"Rating 696e681eaae702d5bae21b2a deleted from driver 69544b1e3ad0ef7fcc2c8ca3","timestamp":"2026-01-19 21:13:20"}

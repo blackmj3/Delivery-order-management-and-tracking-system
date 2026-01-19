@@ -67,3 +67,7 @@ Driver: Can view open orders, accept orders, and update assigned orders
 Admin: Full access to all orders
 
 POSTMAN URL : https://razanhamad281-6647129.postman.co/workspace/student-fullstack-developer's-W~f3a2906e-a542-445c-842e-adbe9ef9e785/request/49734982-ff99622d-5c46-4085-8d53-b02dd6435774?action=share&creator=49734982 
+
+
+postman_url (User_Rating) :
+- https://documenter.getpostman.com/view/49722654/2sBXVZpF4s
