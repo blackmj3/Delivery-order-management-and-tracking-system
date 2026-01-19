@@ -4,21 +4,14 @@ const cors = require("cors");
 const helmet = require("helmet");
 const morgan = require("morgan");
 
-const logger = require("./utils/logger");
+const logger = require("./src/utils/logger");
 
 // Middlewares
-const xssSanitize = require("./middlewares/xssSanitize");
-const { apiLimiter } = require("./middlewares/rateLimiter");
-const responseHandler = require("./middlewares/responseHandler");
-const errorHandler = require("./middlewares/errorHandler");
-const notFound = require("./middlewares/notFound");
-
-// Routes
-const authRoutes = require("./routes/auth.routes");
-const orderRoutes = require("./routes/order.routes");
-const locationRoutes = require("./routes/location.routes");
-const ratingRoutes = require("./routes/rating.routes");
-const userRoutes = require("./routes/user.routes");
+const xssSanitize = require("./src/middlewares/xssMiddleware");
+const { apiLimiter } = require("./src/middlewares/limiter");
+const responseHandler = require("./src/middlewares/responseHandler");
+const errorHandler = require("./src/middlewares/errorMiddleware");
+const notFound = require("./src/middlewares/notFoundMiddleware");
 
 const app = express();
 
@@ -65,11 +58,11 @@ if (process.env.NODE_ENV === "development") {
    ROUTES
 ====================== */
 
-app.use("/api/auth", authRoutes);
-app.use("/api/orders", orderRoutes);
-app.use("/api/locations", locationRoutes);
-app.use("/api/ratings", ratingRoutes);
-app.use("/api/users", userRoutes);
+app.use("/api/auth", require("./src/routes/authRoutes"));
+app.use("/api/orders", require("./src/routes/ordersRoutes"));
+app.use("/api/locations", require("./src/routes/locationRoutes"));
+app.use("/api/ratings", require("./src/routes/rateRoutes"));
+app.use("/api/users", require("./src/routes/userRoutes"));
 
 /* ======================
    RESPONSE HANDLER

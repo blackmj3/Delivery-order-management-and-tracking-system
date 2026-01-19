@@ -1,0 +1,95 @@
+{
+	"info": {
+		"_postman_id": "782ef147-0261-4740-aa6f-cabade0292db",
+		"name": "tracking-system",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49214327",
+		"_collection_link": "https://shafika-gh97-5128001.postman.co/workspace/Shafika-Gh's-Workspace~7ef71ba0-6def-47ee-8485-30351b8a02c5/collection/49214327-782ef147-0261-4740-aa6f-cabade0292db?action=share&source=collection_link&creator=49214327"
+	},
+	"item": [
+		{
+			"name": "locationAndNotification",
+			"item": [
+				{
+					"name": "addLocation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"driver\": \"69f8e1b9a2d9c1234567890a\",\r\n  \"order\": \"61f8e1b9a2d9c1234567890a\",\r\n  \"latitude\": 33.5138,\r\n  \"longitude\": 36.2765\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/locations/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"locations",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOrderLocation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/locations/order/64f8e1b9a2d9c1234567890a/latest",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"locations",
+								"order",
+								"64f8e1b9a2d9c1234567890a",
+								"latest"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "markNotificationAsRead",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"driver\": \"65f8e1b9a2d9c1234567890a\",\r\n  \"order\": \"64f8e1b9a2d9c1234567890a\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/notifications/695abd523fde530d4306a463/read",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"notifications",
+								"695abd523fde530d4306a463",
+								"read"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

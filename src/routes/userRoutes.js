@@ -18,6 +18,6 @@ router.post("/cloud/:id", [requireAuth , getByIdValidate , multer().single("imag
 router.put("/updateprofile/:id" , [requireAuth , getByIdValidate , addNewUserValidation] , userController.updateUserProfile);
 
 // DELETE 
-router.delete("/deleteavatar/:id" , [requireAuth , getByIdValidate] , userController.DeleteAvatarUser);
+router.delete("/deleteavatar/:id" , [requireAuth , getByIdValidate] , userController.deleteAvatarUser);
 
 module.exports = router ;
