@@ -1,0 +1,2060 @@
+{
+  "info": {
+    "_postman_id": "80856572-19d3-48c0-9547-aa515b66d2dc",
+    "name": "Delivery",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "49879182",
+    "_collection_link": "https://go.postman.co/collection/49879182-80856572-19d3-48c0-9547-aa515b66d2dc?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "admin",
+      "item": [
+        {
+          "name": "login auther",
+          "request": {
+            "auth": {
+              "type": "bearer"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"admin@example.com\",\r\n    \"password\":\"StrongPassword123!\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/v1/auth/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "login auther",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\":\"admin@example.com\",\r\n    \"password\":\"StrongPassword123!\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/api/v1/auth/login",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "v1",
+                    "auth",
+                    "login"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self';script-src 'self' 'unsafe-inline';img-src 'self' data: https:;frame-ancestors 'none';form-action 'self';base-uri 'self';font-src 'self' https: data:;object-src 'none';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Resource-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Origin-Agent-Cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000; includeSubDomains; preload"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-DNS-Prefetch-Control",
+                  "value": "off"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "RateLimit-Policy",
+                  "value": "100;w=900"
+                },
+                {
+                  "key": "RateLimit-Limit",
+                  "value": "100"
+                },
+                {
+                  "key": "RateLimit-Remaining",
+                  "value": "98"
+                },
+                {
+                  "key": "RateLimit-Reset",
+                  "value": "900"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjY3ODFkOGQ3OWIwNWNlMDg0ZWUzNSIsInJvbGUiOiJBRE1JTiIsInR5cGUiOiJhY2Nlc3MiLCJpYXQiOjE3Njg1MDUzNjAsImV4cCI6MTc2ODUwNjI2MH0.jcAO8igw-F-TE_CxMprnghpgKnNFUtDHz6iKK61OcjU; Max-Age=900; Path=/; Expires=Thu, 15 Jan 2026 19:44:20 GMT; HttpOnly; SameSite=Strict"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjY3ODFkOGQ3OWIwNWNlMDg0ZWUzNSIsInJvbGUiOiJBRE1JTiIsInR5cGUiOiJyZWZyZXNoIiwiaWF0IjoxNzY4NTA1MzYwLCJleHAiOjE3NjkxMTAxNjB9.HrbAB0As-IvEmxuQiW1_FhSS5z9ukUdRRptOASty9n0; Max-Age=604800; Path=/; Expires=Thu, 22 Jan 2026 19:29:20 GMT; HttpOnly; SameSite=Strict"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "70"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"46-vB/DCAVy3/E9Ud8fd0pYLeQszdc\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 15 Jan 2026 19:29:20 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"status\": 200,\n    \"message\": \"Login successful\",\n    \"data\": null\n}"
+            }
+          ]
+        },
+        {
+          "name": "get allorders",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/v1/admin/ordersall",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "v1",
+                "admin",
+                "ordersall"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "get allorders",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/api/v1/admin/ordersall",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "v1",
+                    "admin",
+                    "ordersall"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self';script-src 'self' 'unsafe-inline';img-src 'self' data: https:;frame-ancestors 'none';form-action 'self';base-uri 'self';font-src 'self' https: data:;object-src 'none';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Resource-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Origin-Agent-Cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000; includeSubDomains; preload"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-DNS-Prefetch-Control",
+                  "value": "off"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "RateLimit-Policy",
+                  "value": "100;w=900"
+                },
+                {
+                  "key": "RateLimit-Limit",
+                  "value": "100"
+                },
+                {
+                  "key": "RateLimit-Remaining",
+                  "value": "95"
+                },
+                {
+                  "key": "RateLimit-Reset",
+                  "value": "828"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "471"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1d7-NPzfoDC7jkGorDKO6D5MlhJAa0o\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 15 Jan 2026 19:30:33 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"total\": 1,\n    \"page\": 1,\n    \"pages\": 1,\n    \"isNext\": false,\n    \"isPrevious\": false,\n    \"data\": [\n        {\n            \"deliveryLocation\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    36.2765,\n                    33.5138\n                ]\n            },\n            \"_id\": \"6969196118035e047b1d4845\",\n            \"client\": \"696913fd3d0adbdecf55cd81\",\n            \"driver\": null,\n            \"pickupAddress\": \"Main Street\",\n            \"isNearNotified\": false,\n            \"description\": \"Small package\",\n            \"status\": \"PENDING\",\n            \"expectedTime\": \"2026-01-10T14:00:00.000Z\",\n            \"createdAt\": \"2026-01-15T16:44:17.043Z\",\n            \"updatedAt\": \"2026-01-15T16:44:17.043Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+            },
+            {
+              "name": "get allorders",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/api/v1/admin/ordersall",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "v1",
+                    "admin",
+                    "ordersall"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self';script-src 'self' 'unsafe-inline';img-src 'self' data: https:;frame-ancestors 'none';form-action 'self';base-uri 'self';font-src 'self' https: data:;object-src 'none';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Resource-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Origin-Agent-Cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000; includeSubDomains; preload"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-DNS-Prefetch-Control",
+                  "value": "off"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "RateLimit-Policy",
+                  "value": "100;w=900"
+                },
+                {
+                  "key": "RateLimit-Limit",
+                  "value": "100"
+                },
+                {
+                  "key": "RateLimit-Remaining",
+                  "value": "99"
+                },
+                {
+                  "key": "RateLimit-Reset",
+                  "value": "900"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "2353"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"931-q0vwzUeZDLZImhvY128OMg0+O9I\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 16 Jan 2026 11:20:18 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"total\": 6,\n    \"page\": 1,\n    \"pages\": 2,\n    \"isNext\": true,\n    \"isPrevious\": false,\n    \"data\": [\n        {\n            \"deliveryLocation\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    36.2845,\n                    33.5072\n                ]\n            },\n            \"_id\": \"6969dd8450026996f28981e0\",\n            \"client\": \"696913fd3d0adbdecf55cd81\",\n            \"driver\": null,\n            \"pickupAddress\": \"Flowers & Gifts Shop, Baghdad Street\",\n            \"isNearNotified\": false,\n            \"description\": \"Flower bouquet and chocolate box with giftMessage ( Congratulations on your graduation! With love)\",\n            \"status\": \"PENDING\",\n            \"expectedTime\": \"2026-01-14T16:00:00.000Z\",\n            \"createdAt\": \"2026-01-16T06:41:08.740Z\",\n            \"updatedAt\": \"2026-01-16T06:41:08.740Z\",\n            \"__v\": 0\n        },\n        {\n            \"deliveryLocation\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    36.3123,\n                    33.4987\n                ]\n            },\n            \"_id\": \"6969dd1b50026996f28981dd\",\n            \"client\": \"696913fd3d0adbdecf55cd81\",\n            \"driver\": null,\n            \"pickupAddress\": \"Electronics Store, City Mall\",\n            \"isNearNotified\": false,\n            \"description\": \"New laptop - handle with care\",\n            \"status\": \"PENDING\",\n            \"expectedTime\": \"2026-01-13T11:00:00.000Z\",\n            \"createdAt\": \"2026-01-16T06:39:23.476Z\",\n            \"updatedAt\": \"2026-01-16T06:39:23.476Z\",\n            \"__v\": 0\n        },\n        {\n            \"deliveryLocation\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    36.2381,\n                    33.5214\n                ]\n            },\n            \"_id\": \"6969dcf750026996f28981da\",\n            \"client\": \"696913fd3d0adbdecf55cd81\",\n            \"driver\": null,\n            \"pickupAddress\": \"Law Office, Commerce Tower, 10th Floor\",\n            \"isNearNotified\": false,\n            \"description\": \"Sealed envelope containing legal documents\",\n            \"status\": \"PENDING\",\n            \"expectedTime\": \"2026-01-15T15:45:00.000Z\",\n            \"createdAt\": \"2026-01-16T06:38:47.004Z\",\n            \"updatedAt\": \"2026-01-16T06:38:47.004Z\",\n            \"__v\": 0\n        },\n        {\n            \"deliveryLocation\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    36.2958,\n                    33.5109\n                ]\n            },\n            \"_id\": \"6969dccb50026996f28981d7\",\n            \"client\": \"696913fd3d0adbdecf55cd81\",\n            \"driver\": null,\n            \"pickupAddress\": \"Life Pharmacy, Muhajireen District\",\n            \"isNearNotified\": false,\n            \"description\": \"Two medical prescriptions - requires refrigeration\",\n            \"status\": \"PENDING\",\n            \"expectedTime\": \"2026-01-11T10:00:00.000Z\",\n            \"createdAt\": \"2026-01-16T06:38:03.137Z\",\n            \"updatedAt\": \"2026-01-16T06:38:03.137Z\",\n            \"__v\": 0\n        },\n        {\n            \"deliveryLocation\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    35.9235,\n                    31.9562\n                ]\n            },\n            \"_id\": \"6969dc8050026996f28981d4\",\n            \"client\": \"696913fd3d0adbdecf55cd81\",\n            \"driver\": \"696925f902c3284f205dffec\",\n            \"pickupAddress\": \"Middle East Restaurant, Queen Rania Street\",\n            \"isNearNotified\": false,\n            \"description\": \"Two grilled chicken meals with rice and side dishes\",\n            \"status\": \"ACCEPTED\",\n            \"expectedTime\": \"2026-01-12T19:30:00.000Z\",\n            \"createdAt\": \"2026-01-16T06:36:48.447Z\",\n            \"updatedAt\": \"2026-01-16T06:57:40.359Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "get order by ID",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjY3ODFkOGQ3OWIwNWNlMDg0ZWUzNSIsInJvbGUiOiJBRE1JTiIsInR5cGUiOiJhY2Nlc3MiLCJpYXQiOjE3Njg1MDQxNDksImV4cCI6MTc2ODUwNTA0OX0.3VEjiMLFwCuRpvqeRmxYqnTY_EEg4ge7uN7K8I6OqeM",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/v1/admin/orders/6969196118035e047b1d4845",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "v1",
+                "admin",
+                "orders",
+                "6969196118035e047b1d4845"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "New Request",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/api/v1/admin/orders/6969196118035e047b1d4845",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "v1",
+                    "admin",
+                    "orders",
+                    "6969196118035e047b1d4845"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self';script-src 'self' 'unsafe-inline';img-src 'self' data: https:;frame-ancestors 'none';form-action 'self';base-uri 'self';font-src 'self' https: data:;object-src 'none';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Resource-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Origin-Agent-Cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000; includeSubDomains; preload"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-DNS-Prefetch-Control",
+                  "value": "off"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "RateLimit-Policy",
+                  "value": "100;w=900"
+                },
+                {
+                  "key": "RateLimit-Limit",
+                  "value": "100"
+                },
+                {
+                  "key": "RateLimit-Remaining",
+                  "value": "94"
+                },
+                {
+                  "key": "RateLimit-Reset",
+                  "value": "811"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "471"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1d7-NPzfoDC7jkGorDKO6D5MlhJAa0o\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 15 Jan 2026 19:30:50 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"total\": 1,\n    \"page\": 1,\n    \"pages\": 1,\n    \"isNext\": false,\n    \"isPrevious\": false,\n    \"data\": [\n        {\n            \"deliveryLocation\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    36.2765,\n                    33.5138\n                ]\n            },\n            \"_id\": \"6969196118035e047b1d4845\",\n            \"client\": \"696913fd3d0adbdecf55cd81\",\n            \"driver\": null,\n            \"pickupAddress\": \"Main Street\",\n            \"isNearNotified\": false,\n            \"description\": \"Small package\",\n            \"status\": \"PENDING\",\n            \"expectedTime\": \"2026-01-10T14:00:00.000Z\",\n            \"createdAt\": \"2026-01-15T16:44:17.043Z\",\n            \"updatedAt\": \"2026-01-15T16:44:17.043Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "get users",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/v1/admin/users",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "v1",
+                "admin",
+                "users"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "get users",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"role\":\"client\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/api/v1/admin/users/696925f902c3284f205dffec",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "v1",
+                    "admin",
+                    "users",
+                    "696925f902c3284f205dffec"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "",
+              "header": [
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self';script-src 'self' 'unsafe-inline';img-src 'self' data: https:;frame-ancestors 'none';form-action 'self';base-uri 'self';font-src 'self' https: data:;object-src 'none';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Resource-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Origin-Agent-Cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000; includeSubDomains; preload"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-DNS-Prefetch-Control",
+                  "value": "off"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "RateLimit-Policy",
+                  "value": "100;w=900"
+                },
+                {
+                  "key": "RateLimit-Limit",
+                  "value": "100"
+                },
+                {
+                  "key": "RateLimit-Remaining",
+                  "value": "94"
+                },
+                {
+                  "key": "RateLimit-Reset",
+                  "value": "646"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "1937"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"791-Fj0czICgHmPxc4P4q5b6v0bPg94\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 15 Jan 2026 22:38:34 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "body": "{\n    \"success\": true,\n    \"total\": 9,\n    \"page\": 1,\n    \"pages\": 2,\n    \"isNext\": true,\n    \"isPrevious\": false,\n    \"data\": [\n        {\n            \"_id\": \"696925f902c3284f205dffec\",\n            \"name\": \"driver user\",\n            \"email\": \"driver@gmail.com\",\n            \"phone\": \"0771234567\",\n            \"role\": \"DRIVER\",\n            \"isEmailVerified\": true,\n            \"isActive\": true,\n            \"averageRating\": 0,\n            \"ratingsCount\": 0,\n            \"avatar\": null,\n            \"isLocked\": false,\n            \"failedLoginAttempts\": 0,\n            \"createdAt\": \"2026-01-15T17:38:01.750Z\",\n            \"updatedAt\": \"2026-01-15T17:40:40.751Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"696913fd3d0adbdecf55cd81\",\n            \"name\": \"ٌRazan\",\n            \"email\": \"razan304@gmail.com\",\n            \"phone\": \"09988776655\",\n            \"role\": \"CLIENT\",\n            \"isEmailVerified\": true,\n            \"isActive\": true,\n            \"averageRating\": 0,\n            \"ratingsCount\": 0,\n            \"avatar\": null,\n            \"isLocked\": false,\n            \"failedLoginAttempts\": 0,\n            \"createdAt\": \"2026-01-15T16:21:17.168Z\",\n            \"updatedAt\": \"2026-01-15T17:13:48.339Z\",\n            \"__v\": 0,\n            \"lockedUntil\": null,\n            \"lastLogin\": \"2026-01-15T17:13:48.333Z\"\n        },\n        {\n            \"_id\": \"696911383d0adbdecf55cd79\",\n            \"name\": \"razan\",\n            \"email\": \"razan3114@gmail.com\",\n            \"phone\": \"09988776655\",\n            \"role\": \"CLIENT\",\n            \"isEmailVerified\": false,\n            \"isActive\": true,\n            \"averageRating\": 0,\n            \"ratingsCount\": 0,\n            \"avatar\": null,\n            \"isLocked\": false,\n            \"failedLoginAttempts\": 0,\n            \"createdAt\": \"2026-01-15T16:09:28.524Z\",\n            \"updatedAt\": \"2026-01-15T16:20:24.279Z\",\n            \"__v\": 0,\n            \"lockedUntil\": null\n        },\n        {\n            \"_id\": \"6968e56f16208c97335e0490\",\n            \"name\": \"new user\",\n            \"email\": \"mm123@gmail.com\",\n            \"phone\": \"0771234567\",\n            \"role\": \"CLIENT\",\n            \"isEmailVerified\": true,\n            \"isActive\": true,\n            \"averageRating\": 0,\n            \"ratingsCount\": 0,\n            \"avatar\": null,\n            \"isLocked\": false,\n            \"failedLoginAttempts\": 1,\n            \"createdAt\": \"2026-01-15T13:02:39.718Z\",\n            \"updatedAt\": \"2026-01-15T16:24:19.674Z\",\n            \"__v\": 0,\n            \"lockedUntil\": null,\n            \"lastLogin\": \"2026-01-15T13:05:09.207Z\",\n            \"passwordChangedAt\": \"2026-01-15T13:07:35.295Z\"\n        },\n        {\n            \"_id\": \"6966b8d15ea22ff08d573feb\",\n            \"name\": \"razan\",\n            \"email\": \"fsfsg3114@gmail.com\",\n            \"phone\": \"09988776655\",\n            \"role\": \"CLIENT\",\n            \"isEmailVerified\": false,\n            \"isActive\": true,\n            \"averageRating\": 0,\n            \"ratingsCount\": 0,\n            \"avatar\": null,\n            \"isLocked\": false,\n            \"failedLoginAttempts\": 0,\n            \"createdAt\": \"2026-01-13T21:27:45.622Z\",\n            \"updatedAt\": \"2026-01-13T21:27:45.622Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "get user by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/v1/admin/user/696925f902c3284f205dffec",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "v1",
+                "admin",
+                "user",
+                "696925f902c3284f205dffec"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "get user by ID",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/api/v1/admin/user/696925f902c3284f205dffec",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "v1",
+                    "admin",
+                    "user",
+                    "696925f902c3284f205dffec"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self';script-src 'self' 'unsafe-inline';img-src 'self' data: https:;frame-ancestors 'none';form-action 'self';base-uri 'self';font-src 'self' https: data:;object-src 'none';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Resource-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Origin-Agent-Cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000; includeSubDomains; preload"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-DNS-Prefetch-Control",
+                  "value": "off"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "RateLimit-Policy",
+                  "value": "100;w=900"
+                },
+                {
+                  "key": "RateLimit-Limit",
+                  "value": "100"
+                },
+                {
+                  "key": "RateLimit-Remaining",
+                  "value": "99"
+                },
+                {
+                  "key": "RateLimit-Reset",
+                  "value": "900"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "358"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"166-1ugc3L964AupjUj41Q+5bHJnvso\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 15 Jan 2026 22:44:27 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"696925f902c3284f205dffec\",\n        \"name\": \"driver user\",\n        \"email\": \"driver@gmail.com\",\n        \"phone\": \"0771234567\",\n        \"role\": \"DRIVER\",\n        \"isEmailVerified\": true,\n        \"isActive\": true,\n        \"averageRating\": 0,\n        \"ratingsCount\": 0,\n        \"avatar\": null,\n        \"isLocked\": false,\n        \"failedLoginAttempts\": 0,\n        \"createdAt\": \"2026-01-15T17:38:01.750Z\",\n        \"updatedAt\": \"2026-01-15T17:40:40.751Z\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Change Role",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"role\":\"driver\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/v1/admin/user/role/696911383d0adbdecf55cd79",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "v1",
+                "admin",
+                "user",
+                "role",
+                "696911383d0adbdecf55cd79"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "New Request",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"role\":\"driver\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/api/v1/admin/user/role/696911383d0adbdecf55cd79",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "v1",
+                    "admin",
+                    "user",
+                    "role",
+                    "696911383d0adbdecf55cd79"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self';script-src 'self' 'unsafe-inline';img-src 'self' data: https:;frame-ancestors 'none';form-action 'self';base-uri 'self';font-src 'self' https: data:;object-src 'none';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Resource-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Origin-Agent-Cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000; includeSubDomains; preload"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-DNS-Prefetch-Control",
+                  "value": "off"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "RateLimit-Policy",
+                  "value": "100;w=900"
+                },
+                {
+                  "key": "RateLimit-Limit",
+                  "value": "100"
+                },
+                {
+                  "key": "RateLimit-Remaining",
+                  "value": "94"
+                },
+                {
+                  "key": "RateLimit-Reset",
+                  "value": "805"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "376"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"178-fT+DIQbhjNgUJVkiWIZ7WZYJCto\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 15 Jan 2026 22:58:15 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"696911383d0adbdecf55cd79\",\n        \"name\": \"razan\",\n        \"email\": \"razan3114@gmail.com\",\n        \"phone\": \"09988776655\",\n        \"role\": \"driver\",\n        \"isEmailVerified\": false,\n        \"isActive\": true,\n        \"averageRating\": 0,\n        \"ratingsCount\": 0,\n        \"avatar\": null,\n        \"isLocked\": false,\n        \"failedLoginAttempts\": 0,\n        \"createdAt\": \"2026-01-15T16:09:28.524Z\",\n        \"updatedAt\": \"2026-01-15T22:58:15.548Z\",\n        \"__v\": 0,\n        \"lockedUntil\": null\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Change Status",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"isActive\": false\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/v1/admin/user/696911383d0adbdecf55cd79/status",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "v1",
+                "admin",
+                "user",
+                "696911383d0adbdecf55cd79",
+                "status"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Change Status",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"isActive\": false\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/api/v1/admin/user/696911383d0adbdecf55cd79/status",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "v1",
+                    "admin",
+                    "user",
+                    "696911383d0adbdecf55cd79",
+                    "status"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self';script-src 'self' 'unsafe-inline';img-src 'self' data: https:;frame-ancestors 'none';form-action 'self';base-uri 'self';font-src 'self' https: data:;object-src 'none';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Resource-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Origin-Agent-Cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000; includeSubDomains; preload"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-DNS-Prefetch-Control",
+                  "value": "off"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "RateLimit-Policy",
+                  "value": "100;w=900"
+                },
+                {
+                  "key": "RateLimit-Limit",
+                  "value": "100"
+                },
+                {
+                  "key": "RateLimit-Remaining",
+                  "value": "82"
+                },
+                {
+                  "key": "RateLimit-Reset",
+                  "value": "288"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "377"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"179-BaYudU1qxROBLi7yqqLeeYHDfxw\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 15 Jan 2026 23:06:53 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"data\": {\n        \"_id\": \"696911383d0adbdecf55cd79\",\n        \"name\": \"razan\",\n        \"email\": \"razan3114@gmail.com\",\n        \"phone\": \"09988776655\",\n        \"role\": \"driver\",\n        \"isEmailVerified\": false,\n        \"isActive\": false,\n        \"averageRating\": 0,\n        \"ratingsCount\": 0,\n        \"avatar\": null,\n        \"isLocked\": false,\n        \"failedLoginAttempts\": 0,\n        \"createdAt\": \"2026-01-15T16:09:28.524Z\",\n        \"updatedAt\": \"2026-01-15T23:06:52.737Z\",\n        \"__v\": 0,\n        \"lockedUntil\": null\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Delete User By ID",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/v1/admin/user/delete/6968e56f16208c97335e0490",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "v1",
+                "admin",
+                "user",
+                "delete",
+                "6968e56f16208c97335e0490"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Delete User By ID",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/api/v1/admin/user/delete/6968e56f16208c97335e0490",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "v1",
+                    "admin",
+                    "user",
+                    "delete",
+                    "6968e56f16208c97335e0490"
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self';script-src 'self' 'unsafe-inline';img-src 'self' data: https:;frame-ancestors 'none';form-action 'self';base-uri 'self';font-src 'self' https: data:;object-src 'none';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Resource-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Origin-Agent-Cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000; includeSubDomains; preload"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-DNS-Prefetch-Control",
+                  "value": "off"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "RateLimit-Policy",
+                  "value": "100;w=900"
+                },
+                {
+                  "key": "RateLimit-Limit",
+                  "value": "100"
+                },
+                {
+                  "key": "RateLimit-Remaining",
+                  "value": "95"
+                },
+                {
+                  "key": "RateLimit-Reset",
+                  "value": "724"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "71"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"47-duXIQBpkzFdwbB5bqgrq2u09YoM\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 18 Jan 2026 12:25:38 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": false,\n    \"status\": 404,\n    \"message\": \"User not found\",\n    \"errors\": null\n}"
+            }
+          ]
+        },
+        {
+          "name": "get user2",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/v1/admin/users",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "v1",
+                "admin",
+                "users"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Location",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/v1/admin/driver/696925f902c3284f205dffec/latest",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "v1",
+                "admin",
+                "driver",
+                "696925f902c3284f205dffec",
+                "latest"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Location",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/api/v1/admin/driver/696925f902c3284f205dffec/latest",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "v1",
+                    "admin",
+                    "driver",
+                    "696925f902c3284f205dffec",
+                    "latest"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self';script-src 'self' 'unsafe-inline';img-src 'self' data: https:;frame-ancestors 'none';form-action 'self';base-uri 'self';font-src 'self' https: data:;object-src 'none';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Resource-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Origin-Agent-Cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000; includeSubDomains; preload"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-DNS-Prefetch-Control",
+                  "value": "off"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "RateLimit-Policy",
+                  "value": "100;w=900"
+                },
+                {
+                  "key": "RateLimit-Limit",
+                  "value": "100"
+                },
+                {
+                  "key": "RateLimit-Remaining",
+                  "value": "96"
+                },
+                {
+                  "key": "RateLimit-Reset",
+                  "value": "747"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "1101"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"44d-IAhaYzAa4pcCfgeZYkE9NyQrYVM\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 18 Jan 2026 12:25:15 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"status\": 200,\n    \"message\": \"Driver location fetched successfully\",\n    \"data\": {\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                35.90891921691946,\n                31.951118039465612\n            ]\n        },\n        \"_id\": \"696ca1511f8962238361052e\",\n        \"order\": {\n            \"deliveryLocation\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    35.91055,\n                    31.9539\n                ]\n            },\n            \"_id\": \"696c9febc7256f3ddd6a98e6\",\n            \"client\": \"696913fd3d0adbdecf55cd81\",\n            \"driver\": \"696925f902c3284f205dffec\",\n            \"pickupAddress\": \"damascus\",\n            \"isNearNotified\": false,\n            \"description\": \"food delivery\",\n            \"status\": \"ACCEPTED\",\n            \"expectedTime\": \"2026-01-20T14:30:00.000Z\",\n            \"createdAt\": \"2026-01-18T08:55:07.299Z\",\n            \"updatedAt\": \"2026-01-18T08:59:24.658Z\",\n            \"__v\": 0\n        },\n        \"driver\": {\n            \"_id\": \"696925f902c3284f205dffec\",\n            \"name\": \"driver user\",\n            \"email\": \"driver@gmail.com\",\n            \"phone\": \"0771234567\",\n            \"role\": \"DRIVER\",\n            \"isEmailVerified\": true,\n            \"isActive\": true,\n            \"averageRating\": 0,\n            \"ratingsCount\": 0,\n            \"avatar\": null,\n            \"isLocked\": false,\n            \"failedLoginAttempts\": 1,\n            \"createdAt\": \"2026-01-15T17:38:01.750Z\",\n            \"updatedAt\": \"2026-01-17T11:49:14.455Z\",\n            \"__v\": 0,\n            \"lastLogin\": \"2026-01-17T11:37:57.649Z\",\n            \"lockedUntil\": null\n        },\n        \"__v\": 0,\n        \"createdAt\": \"2026-01-18T09:01:11.950Z\",\n        \"updatedAt\": \"2026-01-18T09:01:31.978Z\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Filter Order",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/v1/admin/orders?driver=696925f902c3284f205dffec",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "v1",
+                "admin",
+                "orders"
+              ],
+              "query": [
+                {
+                  "key": "pickupAddress",
+                  "value": "Main",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "status",
+                  "value": "accepted",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "driver",
+                  "value": "696925f902c3284f205dffec",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "New Request",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/api/v1/admin/orders?driver=696925f902c3284f205dffec",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "v1",
+                    "admin",
+                    "orders"
+                  ],
+                  "query": [
+                    {
+                      "key": "pickupAddress",
+                      "value": "Main",
+                      "type": "text",
+                      "disabled": true
+                    },
+                    {
+                      "key": "status",
+                      "value": "accepted",
+                      "type": "text",
+                      "disabled": true
+                    },
+                    {
+                      "key": "driver",
+                      "value": "696925f902c3284f205dffec",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self';script-src 'self' 'unsafe-inline';img-src 'self' data: https:;frame-ancestors 'none';form-action 'self';base-uri 'self';font-src 'self' https: data:;object-src 'none';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Resource-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Origin-Agent-Cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000; includeSubDomains; preload"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-DNS-Prefetch-Control",
+                  "value": "off"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "RateLimit-Policy",
+                  "value": "100;w=900"
+                },
+                {
+                  "key": "RateLimit-Limit",
+                  "value": "100"
+                },
+                {
+                  "key": "RateLimit-Remaining",
+                  "value": "94"
+                },
+                {
+                  "key": "RateLimit-Reset",
+                  "value": "703"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "563"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"233-7hg83NG+k9FuYqnKIsmuxyKRkow\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 16 Jan 2026 13:18:03 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"total\": 1,\n    \"page\": 1,\n    \"pages\": 1,\n    \"isNext\": false,\n    \"isPrevious\": false,\n    \"data\": [\n        {\n            \"deliveryLocation\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    35.9235,\n                    31.9562\n                ]\n            },\n            \"_id\": \"6969dc8050026996f28981d4\",\n            \"client\": \"696913fd3d0adbdecf55cd81\",\n            \"driver\": \"696925f902c3284f205dffec\",\n            \"pickupAddress\": \"Middle East Restaurant, Queen Rania Street\",\n            \"isNearNotified\": false,\n            \"description\": \"Two grilled chicken meals with rice and side dishes\",\n            \"status\": \"ACCEPTED\",\n            \"expectedTime\": \"2026-01-12T19:30:00.000Z\",\n            \"createdAt\": \"2026-01-16T06:36:48.447Z\",\n            \"updatedAt\": \"2026-01-16T06:57:40.359Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Export Order",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/v1/admin/orders/export",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "v1",
+                "admin",
+                "orders",
+                "export"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "PENDING",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Export Order",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/api/v1/admin/orders/export",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "v1",
+                    "admin",
+                    "orders",
+                    "export"
+                  ],
+                  "query": [
+                    {
+                      "key": "status",
+                      "value": "PENDING",
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self';script-src 'self' 'unsafe-inline';img-src 'self' data: https:;frame-ancestors 'none';form-action 'self';base-uri 'self';font-src 'self' https: data:;object-src 'none';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Resource-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Origin-Agent-Cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000; includeSubDomains; preload"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-DNS-Prefetch-Control",
+                  "value": "off"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "RateLimit-Policy",
+                  "value": "100;w=900"
+                },
+                {
+                  "key": "RateLimit-Limit",
+                  "value": "100"
+                },
+                {
+                  "key": "RateLimit-Remaining",
+                  "value": "97"
+                },
+                {
+                  "key": "RateLimit-Reset",
+                  "value": "872"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                },
+                {
+                  "key": "Content-Disposition",
+                  "value": "attachment; filename=\"orders.xlsx\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 18 Jan 2026 12:23:10 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "body": null
+            }
+          ]
+        },
+        {
+          "name": "Delete order",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/v1/admin/order/6969dd1b50026996f28981dd",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "v1",
+                "admin",
+                "order",
+                "6969dd1b50026996f28981dd"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "updateOrder",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \r\n    \"status\":\"ON_THE_WAY\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/v1/admin/order/6969dcf750026996f28981da",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "v1",
+                "admin",
+                "order",
+                "6969dcf750026996f28981da"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "updateOrder",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{ \r\n    \"status\":\"delivered\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/api/v1/admin/order/6969dd1b50026996f28981dd",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "v1",
+                    "admin",
+                    "order",
+                    "6969dd1b50026996f28981dd"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Security-Policy",
+                  "value": "default-src 'self';script-src 'self' 'unsafe-inline';img-src 'self' data: https:;frame-ancestors 'none';form-action 'self';base-uri 'self';font-src 'self' https: data:;object-src 'none';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+                },
+                {
+                  "key": "Cross-Origin-Opener-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Cross-Origin-Resource-Policy",
+                  "value": "same-origin"
+                },
+                {
+                  "key": "Origin-Agent-Cluster",
+                  "value": "?1"
+                },
+                {
+                  "key": "Referrer-Policy",
+                  "value": "strict-origin-when-cross-origin"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000; includeSubDomains; preload"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-DNS-Prefetch-Control",
+                  "value": "off"
+                },
+                {
+                  "key": "X-Download-Options",
+                  "value": "noopen"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "X-Permitted-Cross-Domain-Policies",
+                  "value": "none"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "RateLimit-Policy",
+                  "value": "100;w=900"
+                },
+                {
+                  "key": "RateLimit-Limit",
+                  "value": "100"
+                },
+                {
+                  "key": "RateLimit-Remaining",
+                  "value": "99"
+                },
+                {
+                  "key": "RateLimit-Reset",
+                  "value": "900"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "471"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1d7-8ltf+aXkiKJAxCi3ArtwISR+Y6M\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 16 Jan 2026 14:38:31 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Update successful\",\n    \"data\": {\n        \"deliveryLocation\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                36.3123,\n                33.4987\n            ]\n        },\n        \"_id\": \"6969dd1b50026996f28981dd\",\n        \"client\": \"696913fd3d0adbdecf55cd81\",\n        \"driver\": null,\n        \"pickupAddress\": \"Electronics Store, City Mall\",\n        \"isNearNotified\": false,\n        \"description\": \"New laptop - handle with care\",\n        \"status\": \"DELIVERED\",\n        \"expectedTime\": \"2026-01-13T11:00:00.000Z\",\n        \"createdAt\": \"2026-01-16T06:39:23.476Z\",\n        \"updatedAt\": \"2026-01-16T14:38:31.212Z\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -21,7 +21,6 @@ router.post('/register', apiLimiter, registerValidation, validate, authControlle
 // GET - Verify email
 router.get('/verify-email/:token', authController.verifyEmail);
 
-
 // POST - Login
 router.post('/login', loginLimiter, loginValidation, authController.login);
 
