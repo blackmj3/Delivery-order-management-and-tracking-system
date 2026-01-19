@@ -17,11 +17,11 @@ class OrderController {
       deliveryLocation,
     } = req.body;
 
-    const userId = (req.user._id  req.user.id).toString();
+    const userId = (req.user._id || req.user.id).toString();
 
     if (
-      !deliveryLocation 
-      !deliveryLocation.type 
+      !deliveryLocation ||
+      !deliveryLocation.type ||
       !deliveryLocation.coordinates
     ) {
       const resp = error(
@@ -40,7 +40,6 @@ class OrderController {
       deliveryLocation,
     });
 
-    // clear related cache
     cache.clear(`my-orders:${userId}`);
 
     logger.info("Order created", { orderId: order._id, clientId: userId });
@@ -53,7 +52,6 @@ class OrderController {
       details: "Client created a new order",
     });
 
-    // notify driver
     if (driver) {
       await NotificationService.sendNewOrderNotification({
         driver,
@@ -65,15 +63,13 @@ class OrderController {
     return res.status(resp.status).json(resp);
   });
 
-  // Get My Orders (CLIENT / DRIVER)
+  // Get My Orders
   getMyOrders = asyncHandler(async (req, res) => {
-    const userId = (req.user._id  req.user.id).toString();
-    const cacheKey = my-orders:${userId};
+    const userId = (req.user._id || req.user.id).toString();
+    const cacheKey = `my-orders:${userId}`;
 
     const cached = cache.get(cacheKey);
-    if (cached) {
-      return res.status(cached.status).json(cached);
-    }
+    if (cached) return res.status(cached.status).json(cached);
 
     let filter = {};
     if (req.user.role === "CLIENT") filter.client = userId;
@@ -90,7 +86,7 @@ class OrderController {
     return res.status(resp.status).json(resp);
   });
 
-  // Get Open Orders (DRIVER)
+  // Get Open Orders
   getOpenOrders = asyncHandler(async (req, res) => {
     const orders = await Order.find({ status: "PENDING" })
       .sort({ createdAt: -1 })
@@ -99,10 +95,10 @@ class OrderController {
     const resp = success(orders, "Open orders fetched");
     return res.status(resp.status).json(resp);
   });
-  
-  // Accept Order (DRIVER)
+
+  // Accept Order
   acceptOrder = asyncHandler(async (req, res) => {
-    const userId = (req.user._id  req.user.id).toString();
+    const userId = (req.user._id || req.user.id).toString();
     const order = await Order.findById(req.params.id);
 
     if (!order) {
@@ -122,10 +118,7 @@ class OrderController {
     cache.clear(`my-orders:${userId}`);
     cache.clear(`my-orders:${order.client.toString()}`);
 
-    logger.info("Order accepted", {
-      orderId: order._id,
-      driverId: userId,
-    });
+    logger.info("Order accepted", { orderId: order._id, driverId: userId });
 
     await createLog({
       userId,
@@ -145,9 +138,9 @@ class OrderController {
     return res.status(resp.status).json(resp);
   });
 
-  // Update Order Status (DRIVER / ADMIN)
+  // Update Order Status
   updateOrderStatus = asyncHandler(async (req, res) => {
-    const userId = (req.user._id  req.user.id).toString();
+    const userId = (req.user._id || req.user.id).toString();
     const { status } = req.body;
 
     const order = await Order.findById(req.params.id);
@@ -172,7 +165,7 @@ class OrderController {
 
     if (!allowedTransitions[order.status]?.includes(status)) {
       const resp = error(
-        Invalid status transition from ${order.status} to ${status},
+        `Invalid status transition from ${order.status} to ${status}`,
         400
       );
       return res.status(resp.status).json(resp);
@@ -181,22 +174,19 @@ class OrderController {
     order.status = status;
     await order.save();
 
-    cache.clear(my-orders:${order.client.toString()});
+    cache.clear(`my-orders:${order.client.toString()}`);
     if (order.driver) {
-      cache.clear(my-orders:${order.driver.toString()});
+      cache.clear(`my-orders:${order.driver.toString()}`);
     }
 
-    logger.info("Order status updated", {
-      orderId: order._id,
-      status,
-    });
+    logger.info("Order status updated", { orderId: order._id, status });
 
     await createLog({
       userId,
       role: req.user.role,
       orderId: order._id,
       action: "UPDATE_ORDER_STATUS",
-      details: Order status changed to ${status},
+      details: `Order status changed to ${status}`,
     });
 
     const resp = success(order, "Order status updated successfully");
@@ -205,7 +195,7 @@ class OrderController {
 
   // Get Order By ID
   getOrderById = asyncHandler(async (req, res) => {
-    const userId = (req.user._id  req.user.id).toString();
+    const userId = (req.user._id || req.user.id).toString();
 
     const order = await Order.findById(req.params.id)
       .populate("client", "name email")
@@ -217,7 +207,7 @@ class OrderController {
     }
 
     const isOwner =
-      order.client._id.toString() === userId 
+      order.client._id.toString() === userId ||
       order.driver?._id?.toString() === userId;
 
     if (!isOwner && req.user.role !== "ADMIN") {
