@@ -174,3 +174,6 @@
 {"level":"warn","message":"File upload failed: No file selected.","timestamp":"2026-01-18 02:48:38"}
 {"level":"info","message":"Avatar uploaded successfully for user 6964e38c141b7260db184bff.","timestamp":"2026-01-18 02:49:56"}
 {"level":"info","message":"Avatar deleted successfully for user 6964e38c141b7260db184bff.","timestamp":"2026-01-18 02:52:07"}
+{"level":"info","message":"User 6964e38c141b7260db184bff retrieved from database.","timestamp":"2026-01-18 14:38:15"}
+{"level":"error","message":"User 6964e38c141b7260db184bfd not found.","timestamp":"2026-01-18 14:39:09"}
+{"level":"info","message":"User 6964e38c141b7260db184bff retrieved from database.","timestamp":"2026-01-18 14:39:22"}
