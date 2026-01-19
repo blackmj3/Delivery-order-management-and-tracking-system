@@ -1,10 +1,17 @@
 const ExcelJs = require("exceljs");
+
 const Order = require("../models/Order");
 const User = require("../models/User");
 const Location = require("../models/Location");
+
+const { createLog } = require("../utils/ActivityLog");
+const asyncHandler = require("../utils/asyncHandler");
+const { success, error } = require("../utils/responseService");
+const cache = require("../utils/cacheService");
+const logger = require("../utils/logger");
+
 const { exportOrdersToExcel } = require("../services/orderExport.service");
 const { getOrders } = require("../services/filterService");
-const { createLog } = require("../utils/ActivityLog");
 const {
   getUsers,
   getUserById,
@@ -12,12 +19,9 @@ const {
   toggleUserStatus,
   deleteUser,
 } = require("../services/userService");
-const asyncHandler = require("../utils/asyncHandler");
-const { success, error } = require("../utils/responseService");
-const cache = require("../utils/cacheService");
-const logger = require("../utils/logger");
 
 class AdminController {
+  
   //show all orders in app (pending , accept ,delivered ,canceled)
   getAllOrders = asyncHandler(async (req, res) => {
     const page = parseInt(req.query.page) || 1;
@@ -37,10 +41,11 @@ class AdminController {
 
     const resp = success(result, "Orders fetched successfully", 200);
 
-    cache.set(cacheKey, result, 600);
+    cache.set(cacheKey, resp, 600);
 
     return res.status(resp.status).json(resp);
   });
+
   //show order by id
   getOrderById = asyncHandler(async (req, res) => {
     const { id } = req.params;
@@ -77,6 +82,7 @@ class AdminController {
     );
     return res.status(resp.status).json(resp);
   });
+
   //export orders to excel
   export = asyncHandler(async (req, res) => {
     logger.info("Exporting orders to Excel");
@@ -94,7 +100,6 @@ class AdminController {
   });
 
   //DELETE ORDER BY ID
-
   remove = asyncHandler(async (req, res) => {
     const { id } = req.params;
     const adminId = req.user ? req.user.id : null;
@@ -107,7 +112,7 @@ class AdminController {
     }
     await createLog({
       userId: adminId,
-      role: req.user.role,
+      role: req.user?.role || "ADMIN",
       orderId: id,
       action: "DELETE_ORDER",
       details: `Admin deleted order with ID: ${id}`,
@@ -120,7 +125,6 @@ class AdminController {
   });
 
   //Update order by id
-
   updateOrder = asyncHandler(async (req, res) => {
     const { id } = req.params;
 
@@ -170,6 +174,7 @@ class AdminController {
     const resp = success(users, "Users fetched successfully", 200);
     return res.status(resp.status).json(resp);
   });
+
   // Get user by ID
   getUserById = asyncHandler(async (req, res) => {
     const { id } = req.params;
@@ -182,6 +187,7 @@ class AdminController {
     const resp = success(user, "User fetched successfully", 200);
     return res.status(resp.status).json(resp);
   });
+
   // Update user role
   changeRole = asyncHandler(async (req, res) => {
     const { id } = req.params;
@@ -198,8 +204,8 @@ class AdminController {
     const resp = success(updatedUser, "User role updated successfully", 200);
     return res.status(resp.status).json(resp);
   });
-  // Activate or deactivate the user
 
+  // Activate or deactivate the user
   toggleStatus = asyncHandler(async (req, res) => {
     const { id } = req.params;
     const { isActive } = req.body;
@@ -215,6 +221,7 @@ class AdminController {
     const resp = success(user, "User status toggled successfully", 200);
     return res.status(resp.status).json(resp);
   });
+
   // Delete user
   removeUser = asyncHandler(async (req, res) => {
     const { id } = req.params;
@@ -230,8 +237,8 @@ class AdminController {
     const resp = success(deletedUser, "User deleted successfully", 200);
     return res.status(resp.status).json(resp);
   });
-  // Get latest driver location
 
+  // Get latest driver location
   getDriverLocation = asyncHandler(async (req, res) => {
     const driverId = req.params.driverId;
     const driver = await User.findById(driverId);

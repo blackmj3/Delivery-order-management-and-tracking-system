@@ -1,8 +1,10 @@
 const express = require("express");
 const locationController = require("../controllers/locationController");
+
 const validateCreateLocation = require("../validations/LocationValidator");
-const validate = require("../middlewares/validationMiddleware");
 const { orderIdValidate } = require("../validations/orderValidate");
+
+const validate = require("../middlewares/validationMiddleware");
 const { requireAuth, authorize } = require("../middlewares/authMiddleware");
 const router = express.Router();
 //add location by driver only

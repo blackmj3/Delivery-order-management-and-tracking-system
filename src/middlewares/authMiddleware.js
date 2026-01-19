@@ -17,6 +17,10 @@ const requireAuth = async (req, res, next) => {
         if (!user) {
             return res.status(401).json({ message: "User no longer exists" });
         }
+        
+        if (!user.isActive) {
+            return res.status(403).json({ message: "Account disabled" });
+        }
 
         if (user.isLocked && user.lockedUntil > Date.now()) {
             return res.status(403).json({ message: "Account is locked" });
