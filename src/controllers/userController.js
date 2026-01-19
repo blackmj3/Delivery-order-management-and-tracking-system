@@ -1,156 +1,148 @@
 const User = require("../models/User");
-const uploadToCloudinary = require("../utils/cloudinary")
-const logger = require('../utils/logger');
-const cache = require('../utils/cacheService');   
-const {success,error} = require('../utils/responseService');    
-const asyncHandler = require("../utils/asyncHandler") ;
 
-class UserController{   
+const uploadToCloudinary = require("../utils/cloudinary");
+const logger = require("../utils/logger");
+const cache = require("../utils/cacheService");
+const { success, error } = require("../utils/responseService");
+const asyncHandler = require("../utils/asyncHandler");
 
-// get user profile
+class UserController {
 
- getUserById = asyncHandler (async (req, res) => {
+  // Get user profile
+  getUserById = asyncHandler(async (req, res) => {
     const { id } = req.params;
 
-    const cachedUser = await cache.get(`user_${id}`);
+    const cachedUser = await cache.get(`user:${id}`);
     if (cachedUser) {
-        logger.info(`User ${id} retrieved from cache.`);
-         const respsuccache = success(cachedUser , "success", 200);
-         return res.status(respsuccache.status).json(respsuccache);
+      logger.info("User retrieved from cache", { userId: id });
+      const resp = success(cachedUser, "User retrieved successfully");
+      return res.status(resp.status).json(resp);
     }
 
-        const userId = await User.findById(id);
-        
-        if (!userId) {
-            logger.error(`User ${id} not found.`);
-            const resp = error("User Not Found", 404);
-            return res.status(resp.status).json(resp);
-        }
+    const user = await User.findById(id);
+    if (!user) {
+      logger.error("User not found", { userId: id });
+      const resp = error("User not found", 404);
+      return res.status(resp.status).json(resp);
+    }
 
-        await cache.set(`user_${id}, userId`);
+    await cache.set(`user:${id}`, user, 600);
 
-        logger.info(`User ${id} retrieved from database.`);
-       
-        const respsuc = success(userId , "get user's profile successfully", 200);
-        return res.status(respsuc.status).json(respsuc);
-}) ;
+    logger.info("User retrieved from database", { userId: id });
+    const resp = success(user, "User retrieved successfully");
+    return res.status(resp.status).json(resp);
+  });
 
-
-// Update user profile
-
- updateUserProfile = asyncHandler (async (req, res) => {
+  // Update user profile
+  updateUserProfile = asyncHandler(async (req, res) => {
     const { id } = req.params;
     const { name, phone, email } = req.body;
 
-        const updateUser = await User.findById(id);
+    const user = await User.findById(id);
+    if (!user) {
+      logger.error("User not found for update", { userId: id });
+      const resp = error("User not found", 404);
+      return res.status(resp.status).json(resp);
+    }
 
-        if (!updateUser) {
-            logger.error(`User ${id} not found for update.`);
-            const resp = error("User Not Found", 404);
-            return res.status(resp.status).json(resp);
-        }
+    const updatedUser = await User.findByIdAndUpdate(
+      id,
+      { name, phone, email },
+      { new: true }
+    );
 
-        const newUser = await User.findByIdAndUpdate(
-            id,
-            { name, phone, email },
-            { new: true }
-        ) ;
+    // clear cache
+    await cache.del(`user:${id}`);
 
-        logger.info(`User ${id} updated successfully.`);
+    logger.info("User updated successfully", { userId: id });
+    const resp = success(updatedUser, "User updated successfully");
+    return res.status(resp.status).json(resp);
+  });
 
-        const respsuc = success(newUser , "Update user's profile successfully", 200);
-        return res.status(respsuc.status).json(respsuc);
-}) ;
+  // Upload avatar (multer - local)
+  uploadLocalByMulter = asyncHandler(async (req, res) => {
+    if (!req.file) {
+      logger.warn("No file uploaded");
+      const resp = error("You must select a file", 400);
+      return res.status(resp.status).json(resp);
+    }
 
+    const { id } = req.params;
+    const user = await User.findById(id);
 
-// upload avatar user by multer
+    if (!user) {
+      logger.error("User not found", { userId: id });
+      const resp = error("User not found", 404);
+      return res.status(resp.status).json(resp);
+    }
 
-uploadLocalByMulter = asyncHandler  (async (req, res) => {
+    const fileUrl = `${req.protocol}://${req.get("host")}/${req.file.path}`;
 
-        if (!req.file) {
-            logger.warn("File upload failed: No file selected.");
-            const resperrorfile = error("You must select a file.", 404);
-            return res.status(resperrorfile.status).json(resperrorfile);
-        }
+    user.avatar = fileUrl;
+    await user.save();
 
-        const fileUrl = `${req.protocol}://${req.get('host')}/${req.file.path.replace('uploads/', '')}`;
-        
-        const { id } = req.params;
-        const addUserAvatar = await User.findById(id);
-        
-        if (!addUserAvatar) {
-            logger.warn(`User with ID ${id} not found.`);
-            const resp = error("User Not Found", 404);
-            return res.status(resp.status).json(resp);
-        }
+    await cache.del(`user:${id}`);
 
-        addUserAvatar.avatar =  fileUrl ;
-        await addUserAvatar.save() ;
+    logger.info("Avatar uploaded locally", { userId: id });
+    const resp = success(user, "Avatar uploaded successfully");
+    return res.status(resp.status).json(resp);
+  });
 
-        logger.info(`Avatar uploaded successfully for user ${id}.`);
-        const respsuc = success(addUserAvatar , "Upload user's avatar by multer successfully", 200);
-        return res.status(respsuc.status).json(respsuc);
+  // Upload avatar (cloudinary)
+  uploadCloudByCloudinary = asyncHandler(async (req, res) => {
+    if (!req.file) {
+      logger.warn("No file uploaded");
+      const resp = error("You must select a file", 400);
+      return res.status(resp.status).json(resp);
+    }
 
-}) ;
+    const { id } = req.params;
+    const user = await User.findById(id);
 
+    if (!user) {
+      logger.error("User not found", { userId: id });
+      const resp = error("User not found", 404);
+      return res.status(resp.status).json(resp);
+    }
 
-// upload avatar user by cloudinary
+    const imageUrl = await uploadToCloudinary(req.file);
 
-uploadCloudByCloudinary = asyncHandler (async (req, res) => {
-    
-        if (!req.file) {
-            logger.warn("File upload failed: No file selected.");
-            const resperrorfile = error("You must select a file.", 404);
-            return res.status(resperrorfile.status).json(resperrorfile);
-        }
+    user.avatar = imageUrl;
+    await user.save();
 
-        const path = await uploadToCloudinary(req.file);
-        
-        const { id } = req.params;
-        const addUserAvatarCloud = await User.findById(id);
-        
-        if (!addUserAvatarCloud) {
-            logger.warn(`User with ID ${id} not found.`);
-            const resp = error("User Not Found", 404);
-            return res.status(resp.status).json(resp);
-        }
+    await cache.del(`user:${id}`);
 
-        addUserAvatarCloud.avatar =  path ;
-        await addUserAvatarCloud.save() ;
+    logger.info("Avatar uploaded to cloudinary", { userId: id });
+    const resp = success(user, "Avatar uploaded successfully");
+    return res.status(resp.status).json(resp);
+  });
 
-        logger.info(`Avatar uploaded successfully for user ${id}.`);
-        const respsuc = success(addUserAvatar , "Upload user's avatar by cloudinary successfully", 200);
-        return res.status(respsuc.status).json(respsuc);
+  // Delete avatar
+  deleteAvatarUser = asyncHandler(async (req, res) => {
+    const { id } = req.params;
 
-}) ;
+    const user = await User.findById(id);
+    if (!user) {
+      logger.error("User not found", { userId: id });
+      const resp = error("User not found", 404);
+      return res.status(resp.status).json(resp);
+    }
 
+    if (!user.avatar) {
+      logger.warn("Avatar not found", { userId: id });
+      const resp = error("Avatar not found", 404);
+      return res.status(resp.status).json(resp);
+    }
 
-DeleteAvatarUser = asyncHandler (async (req, res) => {
-    
-        const { id } = req.params;
-        const deleteUserAvatar = await User.findById(id);
-        
-        if (!deleteUserAvatar) {
-            logger.error(`User with ID ${id} not found.`);
-            const resp = error("User Not Found", 404);
-            return res.status(resp.status).json(resp);
-        }
+    user.avatar = null;
+    await user.save();
 
-        if (!deleteUserAvatar.avatar) {
-            logger.warn(`Avatar not found for user with ID ${id}.`);
-            const resperroravatar = error("Avatar Not Found", 404);
-            return res.status(resperroravatar.status).json(resperroravatar);
-        }
+    await cache.del(`user:${id}`);
 
-        deleteUserAvatar.avatar = null;
-        await deleteUserAvatar.save();
-
-        logger.info(`Avatar deleted successfully for user ${id}.`);
-        const respsuc = success(deleteUserAvatar , "Deleted user's avatar successfully", 200);
-        return res.status(respsuc.status).json(respsuc);
-        
-}) ;
-
-
+    logger.info("Avatar deleted", { userId: id });
+    const resp = success(user, "Avatar deleted successfully");
+    return res.status(resp.status).json(resp);
+  });
 }
+
 module.exports = new UserController();

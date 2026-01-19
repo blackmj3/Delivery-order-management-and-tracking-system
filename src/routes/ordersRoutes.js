@@ -2,63 +2,71 @@ const express = require("express");
 const router = express.Router();
 
 const orderController = require("../controllers/orderController");
-const asyncHandler = require("../utils/asyncHandler");
 const validate = require("../middlewares/validationMiddleware");
 const { requireAuth, authorize } = require("../middlewares/authMiddleware");
+
 const {
   createOrderValidate,
   orderIdValidate,
   updateOrderStatusValidate,
 } = require("../validations/orderValidate");
 
+// GET
 
-// Get my orders
+// Get my orders (CLIENT / DRIVER)
 router.get(
-  "/my-orders",requireAuth,
+  "/my-orders",
+  requireAuth,
   authorize("CLIENT", "DRIVER"),
-  asyncHandler(orderController.getMyOrders)
+  orderController.getMyOrders
 );
 
-// Get open orders
+// Get open orders (DRIVER)
 router.get(
-  "/open", requireAuth,
+  "/open",
+  requireAuth,
   authorize("DRIVER"),
-  asyncHandler(orderController.getOpenOrders)
+  orderController.getOpenOrders
 );
 
-// Get order by id
+// Get order by id (CLIENT / DRIVER / ADMIN)
 router.get(
-  "/:id",  requireAuth,
+  "/:id",
+  requireAuth,
+  authorize("CLIENT", "DRIVER", "ADMIN"),
   [...orderIdValidate, validate],
-  asyncHandler(orderController.getOrderById)
+  orderController.getOrderById
 );
 
 // POST
 
-// Create order
+// Create order (CLIENT)
 router.post(
-  "/",  requireAuth,
+  "/",
+  requireAuth,
   authorize("CLIENT"),
-  [...createOrderValidate, validate ],
-  asyncHandler(orderController.createOrder)
+  [...createOrderValidate, validate],
+  orderController.createOrder
 );
 
 // PUT
 
-// Accept order
+// Accept order (DRIVER)
 router.put(
-  "/:id/accept", requireAuth,
+  "/:id/accept",
+  requireAuth,
   authorize("DRIVER"),
-  [...orderIdValidate,validate],
-  asyncHandler(orderController.acceptOrder)
+  [...orderIdValidate, validate],
+  orderController.acceptOrder
 );
 
-// Update order status
+// Update order status (DRIVER / ADMIN)
 router.put(
-  "/:id/status",  requireAuth,
+  "/:id/status",
+  requireAuth,
   authorize("DRIVER", "ADMIN"),
-  [...orderIdValidate, ...updateOrderStatusValidate,validate],
-  asyncHandler(orderController.updateOrderStatus)
+  [...orderIdValidate, ...updateOrderStatusValidate, validate],
+  orderController.updateOrderStatus
 );
 
 module.exports = router;

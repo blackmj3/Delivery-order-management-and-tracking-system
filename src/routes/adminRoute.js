@@ -1,34 +1,39 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const AdminController=require('../controllers/adminController');
-const {validateOrderUpdate}=require('../middlewares/OrderUpdate');
-const {validateOrderFilters} = require('../middlewares/orderFilters');
-const {validateUserRole} = require('../middlewares/validateUserRole');
+
+const AdminController = require("../controllers/adminController");
+const { validateOrderUpdate } = require("../middlewares/OrderUpdate");
+const { validateOrderFilters } = require("../middlewares/orderFilters");
+const { validateUserRole } = require("../middlewares/validateUserRole");
+const { requireAuth, authorize } = require("../middlewares/authMiddleware");
 
 //Order
-router.get('/admin/ordersall', AdminController.getAllOrders);
+router.get("/ordersall", AdminController.getAllOrders);
 
-router.get('/admin/orders',validateOrderFilters , AdminController.getOrdersByFilter);
+router.get("/orders", [validateOrderFilters], AdminController.getOrdersByFilter);
 
-router.get('/admin/orders/export',validateOrderFilters, AdminController.export);
+router.get("/orders/export", validateOrderFilters, AdminController.export);
 
-router.delete('/admin/order/:id', AdminController.remove);
+router.get("/orders/:id", [validateOrderFilters], AdminController.getOrderById);
 
-router.put('/admin/order/:id', validateOrderUpdate , AdminController.updateOrder);
+router.delete("/order/:id", AdminController.remove);
+
+router.put("/order/:id", [validateOrderUpdate], AdminController.updateOrder);
 
 //User
-router.get('/admin/users',validateUserRole, AdminController.listUsers);
 
-router.get('/admin/user/:id',validateUserRole, AdminController.getUserById);
+router.get("/users", AdminController.listUsers);
 
-router.put('/admin/user/:id/role',validateUserRole, AdminController.changeRole);
+router.get("/user/:id", AdminController.getUserById);
 
-router.put('/admin/user/:id/status',validateUserRole, AdminController.toggleStatus);
+router.put("/user/role/:id", [validateUserRole], AdminController.changeRole);
 
-router.delete('/admin/user/:id',validateUserRole, AdminController.removeUser);
+router.put("/user/:id/status", [validateUserRole], AdminController.toggleStatus);
 
-//location 
+router.delete("/user/delete/:id", AdminController.removeUser);
 
-router.get("/driver/:driverId/latest",asyncHandler(AdminController.getDriverLocation));
+//location
+
+router.get("/driver/:driverId/latest", AdminController.getDriverLocation);
 
 module.exports = router;

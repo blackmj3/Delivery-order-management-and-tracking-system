@@ -1,36 +1,69 @@
-# Delivery-order-management-and-tracking-system :
+﻿# Delivery-order-management-and-tracking-system
+The Order model represents a delivery request created by a client and handled by a driver.
 
-## Postman_URL(Users-Ratings) : 
-- https://documenter.getpostman.com/view/49722654/2sBXVZpF4s
+Fields
+Field	Type	Description
+client	ObjectId (User)	Client who created the order
+driver	ObjectId (User)	Assigned driver (nullable)
+pickupAddress	String	Pickup location
+deliveryAddress	String	Delivery location
+description	String	Order details
+status	String	Current order status
+expectedTime	Date	Expected delivery time
+createdAt	Date	Creation timestamp
+updatedAt	Date	Last update timestamp
+ Order Status Flow
 
-### API Documents Users : 
-- USERS API :
-- GET  /users/profile/:id :  get user information
-- POST /users/local/:id : upload avatar user to multer
-- POST /users/cloud/:id : upload avatar user to cloudinary
-- PUT /users/updateprofile/:id : update profile user 
-- DELETE /usres/deleteavatar/:id : delete user's avatar
+The order lifecycle follows a controlled state machine:
 
-### API Documents Ratings :
-- RATING API :
-- GET /Rating/getratingdriver/:userId : get all rating that user creates it   
-- GET /Rating/getratingsforthisdriver/:driverID : get all ratings for the selected driver
-- POST /Rating/addrate/:id : Add rating to driver with the user who rates and his order
-- PUT /Rating/updaterating/:id : update rating
-- DELETE /Rating/deletrating/:driverId : delete Rating
+PENDING → ACCEPTED → ON_THE_WAY → DELIVERED
+          ↘ CANCELLED
 
-## Security methods :
-- express-validator : for users and ratings Apis
-- express-rate-limit : for APIS and Login
-- xss
-- helmet
+Invalid transitions are rejected by the backend.
 
-## Error methods :
-- Handel Error 
-- Not Found
+ Order API Endpoints
+ Create Order (Client)
 
-## Upload Images methods :
-- Cloudinary
-- Multer
-﻿
-Name
+POST /orders
+
+Creates a new delivery order.
+
+Get My Orders (Client / Driver)
+
+GET /orders/my-orders
+
+Returns orders related to the authenticated user.
+
+Get Open Orders (Driver)
+
+GET /orders/open
+
+Returns all orders with status PENDING.
+
+ Accept Order (Driver)
+
+PUT /orders/:id/accept
+
+Allows a driver to accept an available order.
+
+ Update Order Status (Driver / Admin)
+
+PUT /orders/:id/status
+
+Updates the order status following allowed transitions.
+
+ Get Order By ID (All Authorized Roles)
+
+GET /orders/:id
+
+Returns detailed order information with access control.
+
+ Access Control Rules
+
+Client: Can create and view own orders
+
+Driver: Can view open orders, accept orders, and update assigned orders
+
+Admin: Full access to all orders
+
+POSTMAN URL : https://razanhamad281-6647129.postman.co/workspace/student-fullstack-developer's-W~f3a2906e-a542-445c-842e-adbe9ef9e785/request/49734982-ff99622d-5c46-4085-8d53-b02dd6435774?action=share&creator=49734982 

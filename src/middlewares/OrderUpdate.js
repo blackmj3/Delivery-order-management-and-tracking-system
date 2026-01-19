@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const Order = require('../models/Order'); 
 const User = require('../models/User');
 
+
 const validateOrderUpdate = async (req, res, next) => {
 
     const { status, driver } = req.body;
@@ -35,5 +36,6 @@ const validateOrderUpdate = async (req, res, next) => {
     req.validatedUpdates = updates;
     next();
 };
+
 
 module.exports = { validateOrderUpdate };

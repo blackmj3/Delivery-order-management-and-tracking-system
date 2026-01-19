@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const paginatePlugin = require('../pluging/paginate.js');
 
 const orderSchema = new mongoose.Schema(
   {
@@ -18,13 +19,7 @@ const orderSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-
-   /* deliveryAddress: {
-      type: String,
-      required: true 
-    },*/
-    
-    deliveryLocation: {
+       deliveryLocation: {
       type: {
         type: String,
         enum: ["Point"],
@@ -62,5 +57,7 @@ const orderSchema = new mongoose.Schema(
 ); 
 //To calculate distance
 orderSchema.index({ deliveryLocation: "2dsphere" });
+
+orderSchema.plugin(paginatePlugin);
 
 module.exports = mongoose.model("Order", orderSchema);
