@@ -1,42 +1,91 @@
-// app.js
 const express = require("express");
-const authRoutes = require("./src/routes/authRoutes");
-const logger = require("./src/utils/logger");
 const cookieParser = require("cookie-parser");
+const cors = require("cors");
+const helmet = require("helmet");
+const morgan = require("morgan");
+
+const logger = require("./utils/logger");
+
+// Middlewares
+const xssSanitize = require("./middlewares/xssSanitize");
+const { apiLimiter } = require("./middlewares/rateLimiter");
+const responseHandler = require("./middlewares/responseHandler");
+const errorHandler = require("./middlewares/errorHandler");
+const notFound = require("./middlewares/notFound");
+
+// Routes
+const authRoutes = require("./routes/auth.routes");
+const orderRoutes = require("./routes/order.routes");
+const locationRoutes = require("./routes/location.routes");
+const ratingRoutes = require("./routes/rating.routes");
+const userRoutes = require("./routes/user.routes");
 
 const app = express();
-app.use(express.json());
-app.use(express.static("public"));
+
+/* ======================
+   GLOBAL MIDDLEWARES
+====================== */
+
+// Security
+app.use(helmet());
+
+// CORS
+app.use(
+  cors({
+    origin: process.env.CLIENT_URL,
+    credentials: true,
+  })
+);
+
+// Body parser
+app.use(express.json({ limit: "10kb" }));
+app.use(express.urlencoded({ extended: true }));
+
+// Cookies
 app.use(cookieParser());
 
-const helmet = require("helmet");
-const xssSanitize = require("./src/middlewares/xssMiddleware");
-//
-app.use("/api/auth", authRoutes);
-app.use("/api/v1/orders", require("./src/routes/ordersRoutes"));
-app.use("/api/v1/locations", require("./src/routes/locationRoutes"));
-app.use("/api/v1/notifications", require("./src/routes/notificationRoute"));
-
-//
-
-// protect from xss
+// Sanitize input
 app.use(xssSanitize);
-// app.post("/api/auth/register", (req, res) => {
-//   res.json({ ok: true, body: req.body });
-// });
 
-app.get("/", (req, res) => res.send("Hello world"));
+// Rate limiting
+app.use("/api", apiLimiter);
 
-// User APIS
-app.use("/users" , require("./src/routes/userRoutes"));
+// HTTP logger (dev only)
+if (process.env.NODE_ENV === "development") {
+  app.use(
+    morgan("dev", {
+      stream: {
+        write: (message) => logger.info(message.trim()),
+      },
+    })
+  );
+}
 
-// Rating APIS
-app.use("/Rating" , require("./src/routes/rateRoutes"));
+/* ======================
+   ROUTES
+====================== */
 
-app.use("/api/v1/orders", require("./src/routes/ordersRoutes"));
-// Error Middleware
-app.use(require("./src/middlewares/errorMiddleware"));
+app.use("/api/auth", authRoutes);
+app.use("/api/orders", orderRoutes);
+app.use("/api/locations", locationRoutes);
+app.use("/api/ratings", ratingRoutes);
+app.use("/api/users", userRoutes);
 
-// Not Found
-app.use(require("./src/middlewares/notFoundMiddleware"));
+/* ======================
+   RESPONSE HANDLER
+====================== */
+
+// handles asyncHandler responses
+app.use(responseHandler);
+
+/* ======================
+   NOT FOUND
+====================== */
+app.use(notFound);
+
+/* ======================
+   ERROR HANDLER
+====================== */
+app.use(errorHandler);
+
 module.exports = app;
