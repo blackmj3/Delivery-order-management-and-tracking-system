@@ -1,0 +1,301 @@
+{
+  "info": {
+    "_postman_id": "84d3d539-fdf9-4758-88da-37221b187708",
+    "name": "Users&Rating",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "49722654",
+    "_collection_link": "https://go.postman.co/collection/49722654-84d3d539-fdf9-4758-88da-37221b187708?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "add avatar user",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "image",
+                  "type": "file",
+                  "uuid": "73799e65-21bd-4371-af1c-e9539277dd06",
+                  "src": "/C:/Users/LENOVO/Desktop/images (1).jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/users/local/6964e38c141b7260db184bff",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "users",
+                "local",
+                "6964e38c141b7260db184bff"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get user by id",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/users/profile/6964e38c141b7260db184bff",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "users",
+                "profile",
+                "6964e38c141b7260db184bff"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update user by id",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \"name\" : \"mr\"\r\n, \"phone\" : 122345568 ,\r\n\"email\" : \"mrk@gmail.com\"\r\n } ",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/users/updateprofile/6964e38c141b7260db184bff",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "users",
+                "updateprofile",
+                "6964e38c141b7260db184bff"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete avatar",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/users/deleteavatar/6964e38c141b7260db184bff",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "users",
+                "deleteavatar",
+                "6964e38c141b7260db184bff"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Rating",
+      "item": [
+        {
+          "name": "get rating user",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{  \"score\" : 2\r\n , \"comment\" : \"Acceoted job\"\r\n }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/ratings/getratingdriver/69544ae53ad0ef7fcc2c8ca1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "ratings",
+                "getratingdriver",
+                "69544ae53ad0ef7fcc2c8ca1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get ratings for driver",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{  \"score\" : 2\r\n , \"comment\" : \"Acceoted job\"\r\n }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/ratings/getratingsforthisdriver/69544b1e3ad0ef7fcc2c8ca3",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "ratings",
+                "getratingsforthisdriver",
+                "69544b1e3ad0ef7fcc2c8ca3"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add rating to Driver",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{  \"score\" : 4\r\n , \"comment\" : \"thank you man you are the best around the world\" ,\r\n \"userID\" : \"69544ae53ad0ef7fcc2c8ca1\"  \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/ratings/addrate/69544b1e3ad0ef7fcc2c8ca3",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "ratings",
+                "addrate",
+                "69544b1e3ad0ef7fcc2c8ca3"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Rating",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{  \"score\" : 5\r\n , \"comment\" : \"i am pleasure very much that improve your self good luck\"\r\n }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/ratings/updaterating/696e681eaae702d5bae21b2a",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "ratings",
+                "updaterating",
+                "696e681eaae702d5bae21b2a"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Rating",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{  \"ratingId\" : \"696e681eaae702d5bae21b2a\"\r\n }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/ratings/deleterating/69544b1e3ad0ef7fcc2c8ca3",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "ratings",
+                "deleterating",
+                "69544b1e3ad0ef7fcc2c8ca3"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
