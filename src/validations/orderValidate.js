@@ -3,9 +3,14 @@ const Order = require("../models/Order");
 
 // Create Order Validation (CLIENT)
 const createOrderValidate = [
+  body("driver").isMongoId().withMessage("Invalid driver id"),
+
   body("pickupAddress")
-    .isString().withMessage("Pickup address must be a string").bail()
-    .isLength({ min: 3 }).withMessage("Pickup address is too short"),
+    .isString()
+    .withMessage("Pickup address must be a string")
+    .bail()
+    .isLength({ min: 3 })
+    .withMessage("Pickup address is too short"),
 
   body("deliveryLocation.type")
     .equals("Point")
@@ -25,8 +30,11 @@ const createOrderValidate = [
     .withMessage("Latitude must be between -90 and 90"),
 
   body("description")
-    .isString().withMessage("Description must be a string").bail()
-    .isLength({ min: 3 }).withMessage("Description is too short"),
+    .isString()
+    .withMessage("Description must be a string")
+    .bail()
+    .isLength({ min: 3 })
+    .withMessage("Description is too short"),
 
   body("expectedTime")
     .optional()
@@ -36,9 +44,7 @@ const createOrderValidate = [
 
 // Order ID Param Validation
 const orderIdValidate = [
-  param("id")
-    .isMongoId()
-    .withMessage("Invalid order id"),
+  param("id").isMongoId().withMessage("Invalid order id"),
 ];
 
 // Update Order Status Validation
