@@ -79,8 +79,6 @@ const userSchema = new mongoose.Schema(
   }
 );
 
-userSchema.index({ email: 1 });
-
 userSchema.plugin(paginatePlugin);
 
 module.exports = mongoose.model('User', userSchema);

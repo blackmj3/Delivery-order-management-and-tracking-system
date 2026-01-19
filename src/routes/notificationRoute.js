@@ -1,19 +1,18 @@
 const express = require("express");
 const router = express.Router();
-const asyncHandler = require("../utils/asyncHandler");
-const validateCreateLocation = require("../validations/LocationValidator");
+const { requireAuth } = require("../middlewares/authMiddleware");
+const {
+  validateNotificationId,
+} = require("../validations/notificationVlidator");
 const validate = require("../middlewares/validationMiddleware");
+
 const NotificationController = require("../controllers/notificationController");
-router.post(
-  "/newOrder",
-  asyncHandler(NotificationController.newOrderNotification)
-);
-router.post(
-  "/orderAccepted",
-  asyncHandler(NotificationController.acceptOrderNotification)
-);
+
+//mark as read notification
 router.patch(
   "/:id/read",
-  asyncHandler(NotificationController.markNotificationAsRead)
+  requireAuth,
+  [...validateNotificationId, validate],
+  NotificationController.markNotificationAsRead,
 );
 module.exports = router;

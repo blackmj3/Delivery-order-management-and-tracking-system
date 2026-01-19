@@ -1,0 +1,203 @@
+{
+  "info": {
+    "_postman_id": "1d6bf807-31f1-44e7-8bc2-838c432d2728",
+    "name": "Orders managment",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "49734982",
+    "_collection_link": "https://go.postman.co/collection/49734982-1d6bf807-31f1-44e7-8bc2-838c432d2728?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "user",
+      "item": [
+        {
+          "name": "register",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\" : \"razan\",\r\n     \"email\" : \"razan3114@gmail.com\",\r\n      \"password\" : \"Qqwer432!!\",\r\n       \"phone\" :\"09988776655\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/auth/register",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "login",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "logout",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "CLIENT",
+      "item": [
+        {
+          "name": "create order",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"pickupAddress\": \"Law Office, Commerce Tower, 10th Floor\",\r\n  \"deliveryLocation\": {\r\n    \"type\": \"Point\",\r\n    \"coordinates\": [36.2381, 33.5214]\r\n  },\r\n  \"description\": \"Sealed envelope containing legal documents\",\r\n  \"expectedTime\": \"2026-01-15T15:45:00Z\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/v1/orders",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "v1",
+                "orders"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get my orders",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "get order by id",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "DRIVER",
+      "item": [
+        {
+          "name": "open orders",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/v1/orders/open",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "v1",
+                "orders",
+                "open"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "accept order",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/v1/orders/6969dc8050026996f28981d4/accept",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "v1",
+                "orders",
+                "6969dc8050026996f28981d4",
+                "accept"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update status",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"status\": \"ON_THE_WAY\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/v1/orders/6969dc8050026996f28981d4/status",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "v1",
+                "orders",
+                "6969dc8050026996f28981d4",
+                "status"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get orders by id",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
