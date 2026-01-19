@@ -2,12 +2,17 @@ const express = require("express");
 const router = express.Router();
 
 const AdminController = require("../controllers/adminController");
+
 const { validateOrderUpdate } = require("../middlewares/OrderUpdate");
 const { validateOrderFilters } = require("../middlewares/orderFilters");
 const { validateUserRole } = require("../middlewares/validateUserRole");
 const { requireAuth, authorize } = require("../middlewares/authMiddleware");
 
+router.use(requireAuth);
+router.use(authorize("ADMIN"));
+
 //Order
+
 router.get("/ordersall", AdminController.getAllOrders);
 
 router.get("/orders", [validateOrderFilters], AdminController.getOrdersByFilter);

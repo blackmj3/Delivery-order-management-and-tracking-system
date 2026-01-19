@@ -73,17 +73,10 @@ class AuthController {
   // LOGIN
   login = asyncHandler(async (req, res) => {
     const { email, password } = req.body;
-
     const cacheKey = `login-attempts:${email}`;
     const attempts = cache.get(cacheKey) || 0;
-
-    if (attempts >= 5) {
-      logger.warn('Too many login attempts', { email });
-      const resp = error('Too many login attempts, try later', 429);
-      return res.status(resp.status).json(resp);
-    }
-
     const user = await User.findOne({ email }).select('+password');
+
     if (!user) {
       cache.set(cacheKey, attempts + 1, 900);
       
@@ -98,8 +91,23 @@ class AuthController {
       return res.status(resp.status).json(resp);
     }
 
+    if (user.isLocked && user.lockedUntil && user.lockedUntil < Date.now()) {
+      user.isLocked = false;
+      user.failedLoginAttempts = 0;
+      user.lockedUntil = null;
+      await user.save();
+
+      logger.info(`User auto-unlocked after lock expiration: ${user.email}`);
+    }
+
     if (user.isLocked && user.lockedUntil > Date.now()) {
-      const resp = error('Account temporarily locked', 403);
+      const resp = error(`Account locked until ${user.lockedUntil.toLocaleTimeString()}`, 403);
+      return res.status(resp.status).json(resp);
+    }
+
+    if (attempts >= 5) {
+      logger.warn('Too many login attempts', { email });
+      const resp = error('Too many login attempts, try later', 429);
       return res.status(resp.status).json(resp);
     }
 

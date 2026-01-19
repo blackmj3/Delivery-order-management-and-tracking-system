@@ -59,6 +59,7 @@ if (process.env.NODE_ENV === "development") {
 ====================== */
 
 app.use("/api/auth", require("./src/routes/authRoutes"));
+app.use("/api/admin", require("./src/routes/adminRoute"))
 app.use("/api/orders", require("./src/routes/ordersRoutes"));
 app.use("/api/locations", require("./src/routes/locationRoutes"));
 app.use("/api/ratings", require("./src/routes/rateRoutes"));

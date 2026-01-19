@@ -1,8 +1,8 @@
 const express = require("express") ;
-const router = express.Router();
 const rateController = require("../controllers/rateController") ;
 const { requireAuth } = require("../middlewares/authMiddleware") ;
 const {addNewRateValidation , getByIdValidate} = require("../validations/rateValidation") ;
+const router = express.Router();
 
 
 // GET 
