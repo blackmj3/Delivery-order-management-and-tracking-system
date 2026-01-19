@@ -1,10 +1,12 @@
 const express = require("express") ;
-const router = express.Router();
 const userController = require("../controllers/userController") ;
+
 const { requireAuth } = require("../middlewares/authMiddleware") ;
 const uploadLocal = require("../middlewares/uploadMiddleware");
-const multer = require("multer");
+
 const {addNewUserValidation , getByIdValidate} = require("../validations/userValidation") ;
+const multer = require("multer");
+const router = express.Router();
 
 
 // GET 

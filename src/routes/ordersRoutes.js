@@ -1,7 +1,6 @@
 const express = require("express");
-const router = express.Router();
-
 const orderController = require("../controllers/orderController");
+
 const validate = require("../middlewares/validationMiddleware");
 const { requireAuth, authorize } = require("../middlewares/authMiddleware");
 
@@ -10,6 +9,7 @@ const {
   orderIdValidate,
   updateOrderStatusValidate,
 } = require("../validations/orderValidate");
+const router = express.Router();
 
 // GET
 

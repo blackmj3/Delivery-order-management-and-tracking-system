@@ -193,3 +193,26 @@
 {"level":"warn","message":"File upload failed: No file selected.","timestamp":"2026-01-18 02:48:38"}
 {"level":"info","message":"Avatar uploaded successfully for user 6964e38c141b7260db184bff.","timestamp":"2026-01-18 02:49:56"}
 {"level":"info","message":"Avatar deleted successfully for user 6964e38c141b7260db184bff.","timestamp":"2026-01-18 02:52:07"}
+{"level":"info","message":"User role updated","newRole":"driver","timestamp":"2026-01-19 22:10:38","userId":"6966b8d15ea22ff08d573feb"}
+{"isActive":false,"level":"info","message":"User status toggled","timestamp":"2026-01-19 22:11:30","userId":"6966b8d15ea22ff08d573feb"}
+{"level":"info","message":"Exporting orders to Excel","timestamp":"2026-01-19 22:14:15"}
+{"level":"info","message":"Excel file generated successfully","timestamp":"2026-01-19 22:14:18"}
+{"level":"info","message":"Exporting orders to Excel","timestamp":"2026-01-19 22:14:38"}
+{"level":"info","message":"Excel file generated successfully","timestamp":"2026-01-19 22:14:45"}
+{"adminId":null,"level":"warn","message":"Order deleted","orderId":"6969dccb50026996f28981d7","timestamp":"2026-01-19 22:21:33"}
+{"level":"info","message":"Exporting orders to Excel","timestamp":"2026-01-19 23:10:08"}
+{"level":"info","message":"Excel file generated successfully","timestamp":"2026-01-19 23:10:09"}
+{"adminId":"6966781d8d79b05ce084ee35","level":"warn","message":"Order deleted","orderId":"6969196118035e047b1d4845","timestamp":"2026-01-19 23:10:28"}
+{"level":"info","message":"Fetching orders from cache","timestamp":"2026-01-19 23:11:43"}
+{"level":"info","message":"Fetching orders from cache","timestamp":"2026-01-19 23:11:53"}
+{"level":"info","message":"User role updated","newRole":"driver","timestamp":"2026-01-19 23:12:20","userId":"6966b8d15ea22ff08d573feb"}
+{"level":"info","message":"Fetching orders from cache","timestamp":"2026-01-19 23:13:44"}
+{"level":"info","message":"Order updated","orderId":"6969dcf750026996f28981da","timestamp":"2026-01-19 23:27:19","updates":{"status":"ON_THE_WAY"}}
+{"level":"info","message":"User registered","timestamp":"2026-01-20 00:05:53","userId":"696e9cab3bb43560ad55a98d"}
+{"level":"info","message":"Email verified","timestamp":"2026-01-20 00:06:19","userId":"696e9cab3bb43560ad55a98d"}
+{"level":"warn","message":"User locked: blackmj123@gmail.com","timestamp":"2026-01-20 00:07:17"}
+{"level":"info","message":"User auto-unlocked after lock expiration: blackmj123@gmail.com","timestamp":"2026-01-20 00:15:25"}
+{"level":"warn","message":"User locked: blackmj123@gmail.com","timestamp":"2026-01-20 00:15:37"}
+{"level":"info","message":"User auto-unlocked after lock expiration: blackmj123@gmail.com","timestamp":"2026-01-20 00:24:22"}
+{"level":"warn","message":"User locked: blackmj123@gmail.com","timestamp":"2026-01-20 00:24:32"}
+{"level":"warn","message":"User locked: test1@example.com","timestamp":"2026-01-20 00:42:03"}

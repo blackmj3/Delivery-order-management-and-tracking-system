@@ -1,12 +1,11 @@
 const express = require("express");
-const router = express.Router();
+const NotificationController = require("../controllers/notificationController");
+
 const { requireAuth } = require("../middlewares/authMiddleware");
-const {
-  validateNotificationId,
-} = require("../validations/notificationVlidator");
 const validate = require("../middlewares/validationMiddleware");
 
-const NotificationController = require("../controllers/notificationController");
+const {validateNotificationId} = require("../validations/notificationVlidator");
+const router = express.Router();
 
 //mark as read notification
 router.patch(
