@@ -255,3 +255,5 @@
 {"level":"info","message":"User auto-unlocked after lock expiration: blackmj123@gmail.com","timestamp":"2026-01-20 00:24:22"}
 {"level":"warn","message":"User locked: blackmj123@gmail.com","timestamp":"2026-01-20 00:24:32"}
 {"level":"warn","message":"User locked: test1@example.com","timestamp":"2026-01-20 00:42:03"}
+{"level":"error","message":"User not found","timestamp":"2026-01-20 13:37:33","userId":"6964e38c141b7260db184bff"}
+{"level":"info","message":"User retrieved from database","timestamp":"2026-01-20 13:38:25","userId":"696925f902c3284f205dffec"}
