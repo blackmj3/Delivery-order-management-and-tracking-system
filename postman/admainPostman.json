@@ -1,10 +1,10 @@
 {
   "info": {
-    "_postman_id": "80856572-19d3-48c0-9547-aa515b66d2dc",
+    "_postman_id": "d91c153e-e8cf-4f1a-9afb-3eeadd50a5ba",
     "name": "Delivery",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "49879182",
-    "_collection_link": "https://go.postman.co/collection/49879182-80856572-19d3-48c0-9547-aa515b66d2dc?source=collection_link"
+    "_exporter_id": "48337371",
+    "_collection_link": "https://go.postman.co/collection/48337371-d91c153e-e8cf-4f1a-9afb-3eeadd50a5ba?source=collection_link"
   },
   "item": [
     {
@@ -74,7 +74,7 @@
               },
               "status": "OK",
               "code": 200,
-              "_postman_previewlanguage": null,
+              "_postman_previewlanguage": "Text",
               "header": [
                 {
                   "key": "Content-Security-Policy",
@@ -184,7 +184,7 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://localhost:3000/api/v1/admin/ordersall",
+              "raw": "http://localhost:3000/api/admin/ordersall",
               "protocol": "http",
               "host": [
                 "localhost"
@@ -192,7 +192,6 @@
               "port": "3000",
               "path": [
                 "api",
-                "v1",
                 "admin",
                 "ordersall"
               ]
@@ -221,7 +220,7 @@
               },
               "status": "OK",
               "code": 200,
-              "_postman_previewlanguage": null,
+              "_postman_previewlanguage": "Text",
               "header": [
                 {
                   "key": "Content-Security-Policy",
@@ -337,7 +336,7 @@
               },
               "status": "OK",
               "code": 200,
-              "_postman_previewlanguage": null,
+              "_postman_previewlanguage": "Text",
               "header": [
                 {
                   "key": "Content-Security-Policy",
@@ -449,7 +448,7 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://localhost:3000/api/v1/admin/orders/6969196118035e047b1d4845",
+              "raw": "http://localhost:3000/api/admin/orders/696d30cf524d3ed735857a09",
               "protocol": "http",
               "host": [
                 "localhost"
@@ -457,10 +456,9 @@
               "port": "3000",
               "path": [
                 "api",
-                "v1",
                 "admin",
                 "orders",
-                "6969196118035e047b1d4845"
+                "696d30cf524d3ed735857a09"
               ]
             }
           },
@@ -488,7 +486,7 @@
               },
               "status": "OK",
               "code": 200,
-              "_postman_previewlanguage": null,
+              "_postman_previewlanguage": "Text",
               "header": [
                 {
                   "key": "Content-Security-Policy",
@@ -602,7 +600,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:3000/api/v1/admin/users",
+              "raw": "http://localhost:3000/api/admin/users",
               "protocol": "http",
               "host": [
                 "localhost"
@@ -610,7 +608,6 @@
               "port": "3000",
               "path": [
                 "api",
-                "v1",
                 "admin",
                 "users"
               ]
@@ -622,15 +619,6 @@
               "originalRequest": {
                 "method": "GET",
                 "header": [],
-                "body": {
-                  "mode": "raw",
-                  "raw": "{\r\n    \"role\":\"client\"\r\n}",
-                  "options": {
-                    "raw": {
-                      "language": "json"
-                    }
-                  }
-                },
                 "url": {
                   "raw": "http://localhost:3000/api/v1/admin/users/696925f902c3284f205dffec",
                   "protocol": "http",
@@ -649,7 +637,7 @@
               },
               "status": "OK",
               "code": 200,
-              "_postman_previewlanguage": "",
+              "_postman_previewlanguage": "Text",
               "header": [
                 {
                   "key": "Content-Security-Policy",
@@ -757,7 +745,7 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://localhost:3000/api/v1/admin/user/696925f902c3284f205dffec",
+              "raw": "http://localhost:3000/api/admin/user/696925f902c3284f205dffec",
               "protocol": "http",
               "host": [
                 "localhost"
@@ -765,7 +753,6 @@
               "port": "3000",
               "path": [
                 "api",
-                "v1",
                 "admin",
                 "user",
                 "696925f902c3284f205dffec"
@@ -796,7 +783,7 @@
               },
               "status": "OK",
               "code": 200,
-              "_postman_previewlanguage": null,
+              "_postman_previewlanguage": "Text",
               "header": [
                 {
                   "key": "Content-Security-Policy",
@@ -907,7 +894,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:3000/api/v1/admin/user/role/696911383d0adbdecf55cd79",
+              "raw": "http://localhost:3000/api/admin/user/role/6966b8d15ea22ff08d573feb",
               "protocol": "http",
               "host": [
                 "localhost"
@@ -915,11 +902,10 @@
               "port": "3000",
               "path": [
                 "api",
-                "v1",
                 "admin",
                 "user",
                 "role",
-                "696911383d0adbdecf55cd79"
+                "6966b8d15ea22ff08d573feb"
               ]
             }
           },
@@ -957,7 +943,7 @@
               },
               "status": "OK",
               "code": 200,
-              "_postman_previewlanguage": null,
+              "_postman_previewlanguage": "Text",
               "header": [
                 {
                   "key": "Content-Security-Policy",
@@ -1068,7 +1054,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:3000/api/v1/admin/user/696911383d0adbdecf55cd79/status",
+              "raw": "http://localhost:3000/api/admin/user/6966b8d15ea22ff08d573feb/status",
               "protocol": "http",
               "host": [
                 "localhost"
@@ -1076,10 +1062,9 @@
               "port": "3000",
               "path": [
                 "api",
-                "v1",
                 "admin",
                 "user",
-                "696911383d0adbdecf55cd79",
+                "6966b8d15ea22ff08d573feb",
                 "status"
               ]
             }
@@ -1118,7 +1103,7 @@
               },
               "status": "OK",
               "code": 200,
-              "_postman_previewlanguage": null,
+              "_postman_previewlanguage": "Text",
               "header": [
                 {
                   "key": "Content-Security-Policy",
@@ -1229,7 +1214,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:3000/api/v1/admin/user/delete/6968e56f16208c97335e0490",
+              "raw": "http://localhost:3000/api/admin/user/delete/6968e56f16208c97335e0490",
               "protocol": "http",
               "host": [
                 "localhost"
@@ -1237,7 +1222,6 @@
               "port": "3000",
               "path": [
                 "api",
-                "v1",
                 "admin",
                 "user",
                 "delete",
@@ -1279,7 +1263,7 @@
               },
               "status": "Not Found",
               "code": 404,
-              "_postman_previewlanguage": null,
+              "_postman_previewlanguage": "Text",
               "header": [
                 {
                   "key": "Content-Security-Policy",
@@ -1381,7 +1365,7 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://localhost:3000/api/v1/admin/users",
+              "raw": "http://localhost:3000/api/admin/users",
               "protocol": "http",
               "host": [
                 "localhost"
@@ -1389,7 +1373,6 @@
               "port": "3000",
               "path": [
                 "api",
-                "v1",
                 "admin",
                 "users"
               ]
@@ -1403,7 +1386,7 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://localhost:3000/api/v1/admin/driver/696925f902c3284f205dffec/latest",
+              "raw": "http://localhost:3000/api/admin/driver/695ae34503480665b8f821ed/latest",
               "protocol": "http",
               "host": [
                 "localhost"
@@ -1411,10 +1394,9 @@
               "port": "3000",
               "path": [
                 "api",
-                "v1",
                 "admin",
                 "driver",
-                "696925f902c3284f205dffec",
+                "695ae34503480665b8f821ed",
                 "latest"
               ]
             }
@@ -1444,7 +1426,7 @@
               },
               "status": "OK",
               "code": 200,
-              "_postman_previewlanguage": null,
+              "_postman_previewlanguage": "Text",
               "header": [
                 {
                   "key": "Content-Security-Policy",
@@ -1546,7 +1528,7 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://localhost:3000/api/v1/admin/orders?driver=696925f902c3284f205dffec",
+              "raw": "http://localhost:3000/api/admin/orders?driver=696925f902c3284f205dffec",
               "protocol": "http",
               "host": [
                 "localhost"
@@ -1554,7 +1536,6 @@
               "port": "3000",
               "path": [
                 "api",
-                "v1",
                 "admin",
                 "orders"
               ],
@@ -1573,8 +1554,7 @@
                 },
                 {
                   "key": "driver",
-                  "value": "696925f902c3284f205dffec",
-                  "type": "text"
+                  "value": "696925f902c3284f205dffec"
                 }
               ]
             }
@@ -1621,7 +1601,7 @@
               },
               "status": "OK",
               "code": 200,
-              "_postman_previewlanguage": null,
+              "_postman_previewlanguage": "Text",
               "header": [
                 {
                   "key": "Content-Security-Policy",
@@ -1723,7 +1703,7 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://localhost:3000/api/v1/admin/orders/export",
+              "raw": "http://localhost:3000/api/admin/orders/export",
               "protocol": "http",
               "host": [
                 "localhost"
@@ -1731,7 +1711,6 @@
               "port": "3000",
               "path": [
                 "api",
-                "v1",
                 "admin",
                 "orders",
                 "export"
@@ -1776,7 +1755,7 @@
               },
               "status": "OK",
               "code": 200,
-              "_postman_previewlanguage": null,
+              "_postman_previewlanguage": "Text",
               "header": [
                 {
                   "key": "Content-Security-Policy",
@@ -1868,7 +1847,7 @@
                 }
               ],
               "cookie": [],
-              "body": null
+              "body": ""
             }
           ]
         },
@@ -1878,7 +1857,7 @@
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "http://localhost:3000/api/v1/admin/order/6969dd1b50026996f28981dd",
+              "raw": "http://localhost:3000/api/admin/order/6969196118035e047b1d4845",
               "protocol": "http",
               "host": [
                 "localhost"
@@ -1886,10 +1865,9 @@
               "port": "3000",
               "path": [
                 "api",
-                "v1",
                 "admin",
                 "order",
-                "6969dd1b50026996f28981dd"
+                "6969196118035e047b1d4845"
               ]
             }
           },
@@ -1910,7 +1888,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:3000/api/v1/admin/order/6969dcf750026996f28981da",
+              "raw": "http://localhost:3000/api/admin/order/6969dcf750026996f28981da",
               "protocol": "http",
               "host": [
                 "localhost"
@@ -1918,7 +1896,6 @@
               "port": "3000",
               "path": [
                 "api",
-                "v1",
                 "admin",
                 "order",
                 "6969dcf750026996f28981da"
@@ -1958,7 +1935,7 @@
               },
               "status": "OK",
               "code": 200,
-              "_postman_previewlanguage": null,
+              "_postman_previewlanguage": "Text",
               "header": [
                 {
                   "key": "Content-Security-Policy",

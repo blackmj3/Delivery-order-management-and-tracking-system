@@ -49,10 +49,10 @@ class UserController {
       id,
       { name, phone, email },
       { new: true }
-    );
+    ) ;
 
     // clear cache
-    await cache.del(`user:${id}`);
+    await cache.clear(`user:${id}`);
 
     logger.info("User updated successfully", { userId: id });
     const resp = success(updatedUser, "User updated successfully");
@@ -79,9 +79,10 @@ class UserController {
     const fileUrl = `${req.protocol}://${req.get("host")}/${req.file.path}`;
 
     user.avatar = fileUrl;
-    await user.save();
+    await user.save() ;
 
-    await cache.del(`user:${id}`);
+     // clear cache
+    await cache.clear(`user:${id}`);
 
     logger.info("Avatar uploaded locally", { userId: id });
     const resp = success(user, "Avatar uploaded successfully");
@@ -108,9 +109,10 @@ class UserController {
     const imageUrl = await uploadToCloudinary(req.file);
 
     user.avatar = imageUrl;
-    await user.save();
+    await user.save() ;
 
-    await cache.del(`user:${id}`);
+    // clear cache
+    await cache.clear(`user:${id}`);
 
     logger.info("Avatar uploaded to cloudinary", { userId: id });
     const resp = success(user, "Avatar uploaded successfully");
@@ -135,10 +137,11 @@ class UserController {
     }
 
     user.avatar = null;
-    await user.save();
+    await user.save() ;
 
-    await cache.del(`user:${id}`);
-
+    // clear cache
+    await cache.clear(`user:${id}`);
+    
     logger.info("Avatar deleted", { userId: id });
     const resp = success(user, "Avatar deleted successfully");
     return res.status(resp.status).json(resp);
